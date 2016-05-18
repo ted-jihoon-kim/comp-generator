@@ -95,6 +95,7 @@ function updateCurrentComponentCodeToPreivew() {
   
   //현재 컴포넌트가 버튼 일 경우
   if(currentComponent == 'jui-button') {
+	
 	$('.output-section.preview').append(buttonComponentCode);
 	
 	$('#preview-components').bind( 'click', componentClick );
@@ -113,11 +114,35 @@ function updateCurrentComponentCodeToPreivew() {
 
 
 
+//버튼 컴포넌트 html (tip : 스페이스 + \ 입력하면 변수 안에서도 줄바꿈을 표현할 수 있음! )
 
-var buttonComponentCode = "<button id='preview-components' class='jui-button--round jui-type--body--default jui-color--primary'><i class='icon-angle-down'></i><i class='editable icon-check'></i><span>Confirm</span><label>7</label></button>";
+var buttonComponentCode = 
+"<button id='preview-components' \
+         class='jui-button--round jui-type--body--default jui-color--primary'> \
+   <i class='icon-angle-down'></i> \
+   <i class='editable icon-check'></i> \
+   <span>Confirm</span> \
+   <label>7</label> \
+</button>";
+
+//buttonComponentCode = buttonComponentCode.replace(/\s+/g, '');
 
 
-var navTabComponentCode = "<div id='preview-components' class='jui-nav--tab jui-nav--tab_round jui-type--body--default jui-color--primary'><ul class='jui-nav--tab--tabs'><li><a class='is_active'><i class='editable icon-check'></i><span>First tab title</span></a></li><li class=''><a><i class='editable icon-check'></i><span>Second tab title</span></a></li></ul></div>";
+//네비게이션 - 탭 컴포넌트 html
+var navTabComponentCode = 
+"<div id='preview-components' \
+      class='jui-nav--tab jui-nav--tab_round jui-type--body--default jui-color--primary'> \
+   <ul class='jui-nav--tab--tabs'> \
+     <li><a class='is_active'> \
+       <i class='editable icon-check'></i> \
+       <span>First tab title</span> \
+     </a></li> \
+     <li><a> \
+       <i class='editable icon-check'></i> \
+       <span>Second tab title</span> \
+     </a></li> \
+   </ul> \
+ </div>";
 
 
 
