@@ -91,13 +91,16 @@ function replaceSelectOptions(targetOption, currentOption) {
 
 
 function updateCurrentComponentCodeToPreivew() {
-  $('.output-section.preview').empty();
+  $('.output-section.preview').empty(); //아웃풋 섹션을 비운다.
   
+  //현재 컴포넌트가 버튼 일 경우
   if(currentComponent == 'jui-button') {
 	$('.output-section.preview').append(buttonComponentCode);
 	
 	$('#preview-components').bind( 'click', componentClick );
   }
+  
+  //현재 컴포넌트가 네비게이션 > 탭 일 경우
   else if(currentComponent == 'jui-nav--tab') {
 	$('.output-section.preview').append(navTabComponentCode);
 	
@@ -483,7 +486,7 @@ function updateColorTarget() {
 }
 
 
-
+/* toolip은 i 버튼에 hover할 경우에 노출한다. */
 
 var currentTooltip;
 
