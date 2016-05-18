@@ -1,0 +1,83 @@
+/* 
+ * JANDI User Interface Style - Grid
+ * 
+ * Last Update : 2016/04/21
+ * 
+ */
+ 
+ 
+
+/*
+ * jandi grid common rule
+ */
+ 
+[class*="jui-grid--"] {
+  float:left; 
+  margin:0 10px;
+}
+[class*="jui-grid--"]:first-of-type {
+  margin-left: 0px;
+}
+[class*="jui-grid--"]:last-of-type {
+  margin-right: 0px;
+}
+
+/*
+ * jandi grid size spec
+ */
+
+.jui-grid--1_of_12 {
+  width: calc((100% - (12/1 - 1) * 20px) / 12 * 1);
+}
+.jui-grid--2_of_12 {
+  width: calc((100% - (12/2 - 1) * 20px) / 12 * 2);
+}
+.jui-grid--3_of_12 {
+  width: calc((100% - (12/3 - 1) * 20px) / 12 * 3);
+}
+.jui-grid--4_of_12 {
+  width: calc((100% - (12/4 - 1) * 20px) / 12 * 4);
+}
+.jui-grid--5_of_12 {
+  width: calc((100% - (12/5 - 1) * 20px) / 12 * 5);
+}
+.jui-grid--6_of_12 {
+  width: calc((100% - (12/6 - 1) * 20px) / 12 * 6);
+}
+.jui-grid--7_of_12 {
+  width: calc((100% - (12/7 - 1) * 20px) / 12 * 7);
+}
+.jui-grid--8_of_12 {
+  width: calc((100% - (12/8 - 1) * 20px) / 12 * 8);
+}
+.jui-grid--9_of_12 {
+  width: calc((100% - (12/9 - 1) * 20px) / 12 * 9);
+}
+.jui-grid--10_of_12 {
+  width: calc((100% - (12/10 - 1) * 20px) / 12 * 10);
+}
+.jui-grid--11_of_12 {
+  width: calc((100% - (12/11 - 1) * 20px) / 12 * 11);
+}
+.jui-grid--12_of_12 {
+  width: calc((100% - (12/12 - 1) * 20px) / 12 * 12);
+  margin: 0;
+}
+
+/* temporary style */
+section:after, section:before {
+  content: '';
+  display: table;
+}
+section:after {
+  clear: both;
+}
+
+
+.horizontal-view > div {
+  float: left;
+}
+
+.jnd-float-left {
+  float: left;
+}

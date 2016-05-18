@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>JANDI Component Generator</title>
+  
+  <link rel="stylesheet" href="./css/jui-live-mockup.css" />
+  <link rel="stylesheet" href="./css/jui-common.css" />
+  <link rel="stylesheet" href="./css/jandi-icon.css" />
+  <link rel="stylesheet" href="./css/jui-form-button.css" />
+  <link rel="stylesheet" href="./css/jui-form-nav-tab.css" />
+  <link rel="stylesheet" href="./css/jui-color.css" />
+  <link rel="stylesheet" href="./css/jui-grid.css" />
+  <link rel="stylesheet" href="./css/jui-type.css" />
+ 
+  <style>
+  </style>
+  
+</head>
+
+<body>
+	
+  <div class="contents">
+	<h1 class="jui-type--heading--default jui-color--brand">잔디 컴포넌트 생성기</h1>
+	<h3 class="jui-type--body--default jui-color--brand">직접 클래스를 조합하여 컴포넌트를 생성할 수 있는 페이지입니다. 현재 버튼 컴포넌트와 탭 버튼을 선택할 수 있습니다. 계속 업데이트 됩니다. (2016/04/28)</h3>
+	
+	<hr style="opacity: 0.25;">
+	
+	<div id="edit-section">
+	  
+	  <section class="button-section jui-grid--12_of_12">
+		<form id="button-class">
+		  <h2 class="jui-type--heading--small jui-color--brand">Form</h2>
+		  
+		  <div class="jui-grid--3_of_12">
+		    
+		    <h3 class="jui-type--body--small jui-color--brand"
+			    id="1">
+			  <!--1st depth-->
+			  component
+			  <i class="icon-info-fill"></i>
+			</h3>
+		    <select id="Component1stDepth" class="button-1st-depth jui-grid--12_of_12">
+			  <option selected="selected">jui-button</option>
+			  <option>jui-nav--tab</option>
+		    </select>
+		  </div>
+		  
+		  <div id="form2Depth" class="jui-grid--3_of_12">
+		    
+		    <h3 class="jui-type--body--small jui-color--brand"
+			    id="2">
+			  <!--2nd depth-->
+			  appearance
+			  <i class="icon-info-fill"></i>
+			</h3>
+		    
+		    <!-- button 2nd depth class list -->
+		    <select id="Button2Depth" class="button-2nd-depth jui-grid--12_of_12">
+			  <option selected="selected">jui-button--round</option>
+			  <option>jui-button--round_angular</option>
+			  <option>jui-button--round_circular</option>
+			  <option>jui-button--text</option>
+		    </select>
+		    
+		    <!-- nav 2nd depth class list 
+		    <select id="Nav2ndDepth" class="nav-2nd-depth jui-grid--12_of_12">
+			  <option selected="selected">jui-nav--tab</option>
+		    </select>-->
+		    
+		  </div>
+		  
+		  <div id="form3Depth" class="jui-grid--3_of_12">
+		    <h3 class="jui-type--body--small jui-color--brand"
+			    id="3">
+			  <!--3rd depth-->
+			  type
+			  <i class="icon-info-fill"></i>
+			</h3>
+		    
+		    <!-- button 3rd depth class list -->
+		    <select id="Button3Depth" class="button-3rd-depth jui-grid--12_of_12">
+			  <option selected="selected">default</option>
+			  <option>is_invert</option>
+			  <option>is_outline</option>
+			  <option>is_outline_invert</option>
+			  <option>is_transparent</option>
+			  <option>is_icon_only</option>
+			  <option>is_icon_only_invert</option>
+			  <option>is_icon_only_transparent</option>
+		    </select>
+		    
+		    <!-- nav 3rd depth class list 
+		    <select id="Nav3rdDepth" class="nav-3rd-depth jui-grid--12_of_12">
+			  <option selected="selected">is_fill</option>
+			  <option>is_border</option>
+		    </select>-->
+		    
+		  </div>
+		  
+		  <div id="form4Depth" class="jui-grid--3_of_12">
+		    <h3 class="jui-type--body--small jui-color--brand"
+			    id="4">
+			  <!--4th depth-->
+			  layout
+			  <i class="icon-info-fill"></i>
+			</h3>
+		    
+		    <select id="Button4Depth" class="button-4th-depth jui-grid--12_of_12">
+			  <option selected="selected">default</option>
+			  <option>has_left_icon</option>
+			  <option>has_right_icon</option>
+			  <option>has_dn_arrow</option> 
+			  <option>has_arrow_and_count</option>
+		    </select>
+		    
+		    
+		  </div>
+		  
+		</form>
+	  </section>
+	  
+	  <section class="color-section jui-grid--12_of_12">
+		<form id="color-class">
+		  <h2 class="jui-type--heading--small jui-color--brand">Color</h2>
+		  
+		  <div class="jui-grid--4_of_12">
+		    <h3 class="jui-type--body--small jui-color--brand"
+			    id="5">
+			  <!--1st depth-->
+			  Fundamental
+			  <i class="icon-info-fill"></i>
+			</h3>
+		    <select id="Color1stDepth" class="color-1st-depth jui-grid--12_of_12">
+			  <option value="0" label="" selected="selected" >jui-color--primary</option>
+			  <option value="1" label="">jui-color--brand</option>
+			  <option value="2" label="">jui-color--mono</option>
+			  <option value="3" label="">jui-color--alert</option>
+			  <option value="4" label="">jui-color--notification</option>
+			  <option value="4" label="">jui-color--white</option>
+		    </select>
+		  </div>
+		  
+		  <div class="jui-grid--4_of_12">
+		    <h3 class="jui-type--body--small jui-color--brand"
+			    id="6">
+			  <!--2nd depth-->
+			  target
+			  <i class="icon-info-fill"></i>
+			</h3>
+		    <select id="" class="color-2nd-depth jui-grid--12_of_12" disabled>
+			  <option value="0" label="" selected="selected">jui-button--round</option>
+		    </select>
+		  </div>
+		  
+		  
+		  <div class="jui-grid--4_of_12">
+		    <h3 class="jui-type--body--small jui-color--brand"
+			    id="7">
+			  <!--4th depth (interaction)-->
+			  state
+			  <i class="icon-info-fill"></i>
+			</h3>
+		    <select id="Color4thDepth" class="color-4th-depth jui-grid--12_of_12">
+			  <option value="0" label="" selected="selected">default</option>
+			  <option value="0" label="">hover</option>
+			  <option value="1" label="">active</option>
+			  <option value="2" label="">focus</option>
+			  <option value="3" label="">disabled</option>
+		    </select>
+		  </div>
+		  
+		</form>
+	  </section>
+	  
+	  
+	  <section class="type-section jui-grid--6_of_12">
+		<form id="type-class">
+		  <h2 class="jui-type--heading--small jui-color--brand">Type</h2>
+		  
+		  <div class="jui-grid--12_of_12">
+		    <h3 class="jui-type--body--small jui-color--brand">type size</h3>
+		    <select id="Type1stDepth" class="type-1st-depth jui-grid--12_of_12">
+			  <option value="0" label="">jui-type--heading--large</option>
+			  <option value="0" label="">jui-type--heading--default</option>
+			  <option value="0" label="">jui-type--heading--small</option>
+			  <option value="1" label="">jui-type--body--name</option>
+			  <option value="1" label="" selected="selected">jui-type--body--default</option>
+			  <option value="1" label="">jui-type--body--small</option>
+			  <option value="2" label="">jui-type--caption-name</option>
+			  <option value="2" label="">jui-type--caption-default</option>
+			  <option value="2" label="">jui-type--caption-small</option>
+		    </select>
+		  </div>
+		  
+<!--
+		  <div class="jui-grid--6_of_12">
+		    <h3 class="jui-type--body is_small jui-color--brand">2nd depth</h3>
+		    <select class="type-2nd-depth jui-grid--12_of_12">
+			  <option value="0" label="" selected="selected">is_default</option>
+			  <option value="1" label="">is_large</option>
+			  <option value="2" label="">is_small</option>
+		    </select>
+		  </div>
+-->
+		  
+		</form>
+	  </section>
+	  
+	  <section class="grid-section jui-grid--6_of_12">
+		<form id="type-class">
+		  <h2 class="jui-type--heading--small jui-color--brand">Grid</h2>
+		  
+		  <div class="jui-grid--12_of_12">
+		    <h3 class="jui-type--body--small jui-color--brand">specific width</h3>
+		    <select id="Grid1stDepth" class="grid-1st-depth jui-grid--12_of_12">
+			  <option value="0" label="">auto</option>
+			  <option value="1" label="">jui-grid--1_of_12</option>
+			  <option value="2" label="">jui-grid--2_of_12</option>
+			  <option value="3" label="">jui-grid--3_of_12</option>
+			  <option value="4" label="">jui-grid--4_of_12</option>
+			  <option value="5" label="">jui-grid--5_of_12</option>
+			  <option value="6" label="">jui-grid--6_of_12</option>
+			  <option value="7" label="">jui-grid--7_of_12</option>
+			  <option value="8" label="">jui-grid--8_of_12</option>
+			  <option value="9" label="">jui-grid--9_of_12</option>
+			  <option value="10" label="">jui-grid--10_of_12</option>
+			  <option value="11" label="">jui-grid--11_of_12</option>
+			  <option value="12" label="">jui-grid--12_of_12</option>
+		    </select>
+		  </div>
+
+		  
+		</form>
+	  </section>
+	  
+	  
+	  <section style="clear: both;"></section>
+	  
+	</div>
+	
+	<hr style="opacity: 0.25;">
+	
+	<div id="preview-area" class="jui-grid--12_of_12"> 
+	  <h2 class="jui-type--heading--small jui-color--brand ">Preview Area</h2>
+	  
+	  <div class="jui-grid--6_of_12">
+		<h2 class="jui-type--body--small jui-color--brand">background color</h2>
+		
+	    <select id="select-background" class="select-background jui-grid--12_of_12">
+		  <option value="0" label="" selected="selected">default</option>
+		  <option value="1" label="">white</option>
+		  <option value="2" label="">navy</option>
+	    </select>
+	  </div>
+	  
+	  <div class="jui-grid--6_of_12">
+		<h2 class="jui-type--body--small jui-color--brand">icon</h2>
+		
+	    <select id="select-icon" class="select-icon jui-grid--12_of_12">
+		  <option value="0" label="" selected="selected">icon-check</option>
+		  <option value="1" label="">icon-bell</option>
+		  <option value="2" label="">icon-cog</option>
+		  <option value="2" label="">icon-cog-fill</option>
+		  <option value="3" label="">icon-refresh</option>
+		  <option value="3" label="">icon-user-plus</option>
+		  <option value="3" label="">icon-user</option>
+		  <option value="3" label="">icon-reorder</option>
+		  <option value="3" label="">icon-more</option>
+		  <option value="3" label="">icon-long-arrow-left</option>
+		  <option value="3" label="">icon-plus</option>
+		  <option value="3" label="">icon-upload</option>
+		  <option value="3" label="">icon-star-off</option>
+		  <option value="3" label="">icon-file</option>
+		  <option value="3" label="">icon-chat</option>
+		  <option value="3" label="">icon-at</option>
+		  
+		  <option value="3" label="">icon-wrench</option>
+		  <option value="3" label="">icon-lock</option>
+		  <option value="3" label="">icon-angle-right</option>
+		  <option value="3" label="">icon-arrow-right</option>
+	    </select>
+	  </div>
+
+	  
+	  <section class="output-section preview jui-grid--12_of_12">
+		
+		<!-- Button -->
+		<button id="preview-components"
+				class="jui-button--round
+					   jui-type--body--default
+					   jui-color--primary">
+		  <i class="icon-angle-down"></i>
+		  <i class="editable icon-check"></i>
+		  <span>Confirm</span>
+		  <label>7</label>
+		</button>
+		
+		<!-- navigation, Tabs -->
+		<div id="preview-components"
+				class="jui-nav--tab
+					   jui-nav--tab_round
+					   jui-type--body--default
+					   jui-color--primary">
+		  <ul class="jui-nav--tab--tabs">
+			<li>
+			  <a class="is_active">
+				<i class="editable icon-check"></i>
+			    <span>First tab title</span>
+			  </a>
+			</li>
+			<li class="">
+			  <a>
+				<i class="editable icon-check"></i>
+			    <span>Second tab title</span>
+			  </a>
+			</li>
+		  </ul>
+		</div>
+		
+		
+		
+		
+		
+	  </section>
+	  
+	  <section class="output-section code-block jui-grid--12_of_12">
+		<p>
+		  <!-- selected component's code will be placed here. -->
+		</p>
+	  </section>
+	  
+	  
+	</div>
+  </div>
+  
+  <script src="./js/jquery-1.11.3.min.js"></script>
+  <script src="./js/jui-live-mockup.js"></script>
+  <script src="./js/component-handler.js"></script>
+  
+  <div class="tooltip">
+	<span>
+	</span>
+  </div>
+  
+</body>
+
+</html>

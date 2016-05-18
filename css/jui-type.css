@@ -1,0 +1,86 @@
+/* 
+ * JANDI User Interface Style - Type
+ *
+ * Last Update : 2016/04/21 
+ *
+ */
+ 
+
+
+/*
+ * jandi type default rule
+ */
+ 
+[class*="jui-type--"] {
+  margin: 0;
+}
+[class*="jui-type--heading--"] {
+  font-weight: bold;
+  font-weight: 600;
+  line-height: 1.35em;
+}
+[class*="jui-type--body--"],
+[class*="jui-type--caption--"] {
+  font-weight: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+
+
+/* Heading type size (h1, h2, h3) */
+.jui-type--heading--large {
+  font-size: 42px;
+}
+.jui-type--heading--default {
+  font-size: 21px;
+}
+.jui-type--heading--small {
+  font-size: 18px;
+  margin: 0.25em 0;
+}
+
+
+
+/* Body type size */
+.jui-type--body--name {
+  font-size: 16px;
+}
+.jui-type--body--default {
+  font-size: 15px;
+  margin: 0.5em 0;
+}
+.jui-type--body--small {
+  font-size: 14px;
+  margin: 0.15em 0;
+}
+
+
+
+/* Caption type size */
+.jui-type--caption--name {
+  font-size: 14px;
+}
+.jui-type--caption--default {
+  font-size: 13px;
+}
+.jui-type--caption--small {
+  font-size: 10px;
+}
+
+
+
+/* compounded width button(is_fill) type size */
+[class*="jui-button--"][class*="jui-type--heading--"],
+[class*="jui-button--"][class*="jui-type--body--"],
+[class*="jui-button--"][class*="jui-type--caption--"] {
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* compounded width button(is_outline) type size */
+[class*="jui-button--"][class*="jui-type--heading--"].is_outline,
+[class*="jui-button--"][class*="jui-type--body--"].is_outline,
+[class*="jui-button--"][class*="jui-type--caption--"].is_outline {
+  font-weight: 700;
+}

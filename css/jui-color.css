@@ -1,0 +1,1038 @@
+/* 
+ * JANDI User Interface Style - Color
+ * 
+ * Last Update : 2016/04/21
+ * 
+ */
+ 
+ 
+ 
+ /*
+  * Fundamental Color
+  */
+  
+.jui-color--primary {
+  color: #00ACE9; /* JANDI Sky Blue */
+  border-color: #00ACE9;
+}
+
+.jui-color--brand {
+  color: #11476F; /* JANDI Navy */
+  border-color: #11476F;
+}
+
+.jui-color--brand_yellow {
+  color: #FBBA00; /* JANDI Yellow */
+}
+
+.jui-color--mono {
+  color: #666; /* JANDI Gray */
+}
+
+.jui-color--alert {
+  color: #EA4D20; /* JANDI Red */
+}
+
+.jui-color--notification {
+  color: #F39000; /* JANDI Orange */
+}
+.jui-color--white {
+  color: #FFF;
+}
+
+
+/*
+ * Color Variation 
+ */
+  
+.jui-color--sub_brand {
+  color: #0075B9; /* JANDI Blue */
+}
+
+.jui-color--sub_purple {
+  color: #585FA8; /* JANDI Purple */
+}
+
+.jui-color--sub_brown {
+  color: #8B6B41; /* JANDI Brown */
+}
+
+.jui-color--sub_light_brown {
+  color: #AB9568; /* JANDI Light Brown */
+}
+
+.jui-color--sub_green {
+  color: #3FA535; /* JANDI Green */
+}
+
+.jui-color--sub_light_green {
+  color: #A2C617; /* JANDI Light Green */
+}
+
+
+/*
+ * Multiply Color Variation 
+ *
+ *
+ * Transparent Round Button : Hover, Active
+ * background-color: rgba(72, 85, 190, 0.05);
+ *
+ *
+ */
+
+
+
+/* ------------ Primary Color ------------ */
+
+/* 
+	Primary button, 
+	round (default)
+*/
+.jui-color--primary[class*="jui-button--round"] {
+  color: #FFF;
+  background-color: #00ABEB;
+  border-color: #00ABEB;
+}
+
+.jui-color--primary[class*="jui-button--round"]:hover,
+.jui-color--primary[class*="jui-button--round"].hover {
+  background-color: #049BD9;
+  border-color: #049BD9;
+}
+
+.jui-color--primary[class*="jui-button--round"]:active,
+.jui-color--primary[class*="jui-button--round"]:focus,
+.jui-color--primary[class*="jui-button--round"].active,
+.jui-color--primary[class*="jui-button--round"].focus {
+  background-color: #0090D2;
+  border-color: #0090D2;
+}
+
+
+
+/* 
+	Primary button, 
+	round (is_invert)
+*/
+.jui-color--primary[class*="jui-button--round"].is_invert,
+.jui-color--primary[class*="jui-button--round"].is_icon_only_invert {
+  color: #00ABEB;
+  background-color: #FFF;
+  border-color: transparent;
+}
+
+.jui-color--primary[class*="jui-button--round"].is_invert:hover,
+.jui-color--primary[class*="jui-button--round"].is_invert.hover,
+.jui-color--primary[class*="jui-button--round"].is_icon_only_invert:hover,
+.jui-color--primary[class*="jui-button--round"].is_icon_only_invert.hover {
+  color: #049BD9;
+  background-color: #F8F9FD; /*#FFF;*/
+  border-color: transparent; /* #FFF;*/
+}
+
+.jui-color--primary[class*="jui-button--round"].is_invert:active,
+.jui-color--primary[class*="jui-button--round"].is_invert:focus,
+.jui-color--primary[class*="jui-button--round"].is_invert.active,
+.jui-color--primary[class*="jui-button--round"].is_invert.focus,
+.jui-color--primary[class*="jui-button--round"].is_icon_only_invert:active,
+.jui-color--primary[class*="jui-button--round"].is_icon_only_invert:focus,
+.jui-color--primary[class*="jui-button--round"].is_icon_only_invert.active,
+.jui-color--primary[class*="jui-button--round"].is_icon_only_invert.focus {
+  color: #0090D2;
+  background-color: #F1F1F4; /*#FFF;*/
+  border-color: transparent; /*#FFF;*/
+}
+
+
+
+/* 
+	Primary button, 
+	round (is_outline)
+*/
+.jui-color--primary[class*="jui-button--round"].is_outline {
+  background-color: transparent;
+  border-color: #00ABEB;
+  color: #00ABEB;
+}
+
+.jui-color--primary[class*="jui-button--round"].is_outline:hover,
+.jui-color--primary[class*="jui-button--round"].is_outline.hover {
+  color: #FFF;
+  background-color: #00ABEB;
+  border-color: #00ABEB;
+}
+
+.jui-color--primary[class*="jui-button--round"].is_outline:active,
+.jui-color--primary[class*="jui-button--round"].is_outline:focus,
+.jui-color--primary[class*="jui-button--round"].is_outline.active,
+.jui-color--primary[class*="jui-button--round"].is_outline.focus {
+  color: #FFF;
+  background-color: #0090D2;
+  border-color: #0090D2;
+}
+
+
+
+/* 
+	Primary button, 
+	round (is_outline_invert)
+*/
+.jui-color--primary[class*="jui-button--round"].is_outline_invert {
+  background-color: transparent;
+  border-color: #FFF;
+  color: #FFF;
+}
+
+.jui-color--primary[class*="jui-button--round"].is_outline_invert:hover,
+.jui-color--primary[class*="jui-button--round"].is_outline_invert.hover {
+  color: #00ABEB;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+.jui-color--primary[class*="jui-button--round"].is_outline_invert:active,
+.jui-color--primary[class*="jui-button--round"].is_outline_invert:focus,
+.jui-color--primary[class*="jui-button--round"].is_outline_invert.active,
+.jui-color--primary[class*="jui-button--round"].is_outline_invert.focus {
+  color: #0090D2;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+
+
+/* 
+	Primary button, 
+	round (is_transparent) 
+*/
+.jui-color--primary[class*="jui-button--round"][class*="_transparent"] {
+  background-color: transparent;
+  border-color: transparent;
+  color: #00ABEB;
+}
+
+.jui-color--primary[class*="jui-button--round"][class*="_transparent"]:hover,
+.jui-color--primary[class*="jui-button--round"][class*="_transparent"].hover {
+/*   background-color: #F8F9FD; */
+  background-color: rgba(72, 85, 190, 0.05); /* multiply background color */
+}
+
+.jui-color--primary[class*="jui-button--round"][class*="_transparent"]:active,
+.jui-color--primary[class*="jui-button--round"][class*="_transparent"]:focus,
+.jui-color--primary[class*="jui-button--round"][class*="_transparent"].active,
+.jui-color--primary[class*="jui-button--round"][class*="_transparent"].focus {
+  color: #0090D2;
+  background-color: rgba(72, 85, 190, 0.05); /* multiply background color */
+}
+
+
+
+
+/* 
+	Primary button, 
+	Text (all type supported)
+ */
+.jui-color--primary.jui-button--text {
+  color: #00ABEB;
+  background-color: #00ABEB;
+  border-color: transparent;
+  color: #00ABEB;
+}
+
+.jui-color--primary.jui-button--text:hover,
+.jui-color--primary.jui-button--text.hover {
+  background-color: transparent;
+  border-color: transparent;
+  color: #049BD9;
+}
+
+.jui-color--primary.jui-button--text:active,
+.jui-color--primary.jui-button--text:focus,
+.jui-color--primary.jui-button--text.active,
+.jui-color--primary.jui-button--text.focus {
+  background-color: transparent;
+  border-color: transparent;
+  color: #0090D2;
+}
+
+
+
+
+/* ------------ Navy Color ------------ */
+
+/* 
+	Navy button, 
+	round (default)
+*/
+.jui-color--brand[class*="jui-button--round"] {
+  color: #FFF;
+  background-color: #11476F;
+  border-color: #11476F;
+}
+
+.jui-color--brand[class*="jui-button--round"]:hover,
+.jui-color--brand[class*="jui-button--round"].hover {
+  background-color: #11476F;
+  border-color: #11476F;
+}
+
+.jui-color--brand[class*="jui-button--round"]:active,
+.jui-color--brand[class*="jui-button--round"]:focus,
+.jui-color--brand[class*="jui-button--round"].active,
+.jui-color--brand[class*="jui-button--round"].focus {
+  background-color: #003353;
+  border-color: #003353;
+}
+
+
+
+/* 
+	Navy button, 
+	round (is_invert)
+*/
+.jui-color--brand[class*="jui-button--round"].is_invert,
+.jui-color--brand[class*="jui-button--round"].is_icon_only_invert {
+  color: #11476F;
+  background-color: #FFF;
+  border-color: transparent;
+}
+
+.jui-color--brand[class*="jui-button--round"].is_invert:hover,
+.jui-color--brand[class*="jui-button--round"].is_invert.hover,
+.jui-color--brand[class*="jui-button--round"].is_icon_only_invert:hover,
+.jui-color--brand[class*="jui-button--round"].is_icon_only_invert.hover {
+  color: #11476F;
+  background-color: #F8F9FD; /*#FFF;*/
+  border-color: transparent; /* #FFF;*/
+}
+
+.jui-color--brand[class*="jui-button--round"].is_invert:active,
+.jui-color--brand[class*="jui-button--round"].is_invert:focus,
+.jui-color--brand[class*="jui-button--round"].is_invert.active,
+.jui-color--brand[class*="jui-button--round"].is_invert.focus,
+.jui-color--brand[class*="jui-button--round"].is_icon_only_invert:active,
+.jui-color--brand[class*="jui-button--round"].is_icon_only_invert:focus,
+.jui-color--brand[class*="jui-button--round"].is_icon_only_invert.active,
+.jui-color--brand[class*="jui-button--round"].is_icon_only_invert.focus {
+  color: #003353;
+  background-color: #F1F1F4; /*#FFF;*/
+  border-color: transparent; /*#FFF;*/
+}
+
+
+
+/* 
+	Navy button, 
+	round (is_outline)
+*/
+.jui-color--brand[class*="jui-button--round"].is_outline {
+  background-color: transparent;
+  border-color: #11476F;
+  color: #11476F;
+}
+
+.jui-color--brand[class*="jui-button--round"].is_outline:hover,
+.jui-color--brand[class*="jui-button--round"].is_outline.hover {
+  color: #FFF;
+  background-color: #11476F;
+  border-color: #11476F;
+}
+
+.jui-color--brand[class*="jui-button--round"].is_outline:active,
+.jui-color--brand[class*="jui-button--round"].is_outline:focus,
+.jui-color--brand[class*="jui-button--round"].is_outline.active,
+.jui-color--brand[class*="jui-button--round"].is_outline.focus {
+  color: #FFF;
+  background-color: #003353;
+  border-color: #003353;
+}
+
+
+
+/* 
+	Navy button, 
+	round (is_outline_invert)
+*/
+.jui-color--brand[class*="jui-button--round"].is_outline_invert {
+  background-color: transparent;
+  border-color: #FFF;
+  color: #FFF;
+}
+
+.jui-color--brand[class*="jui-button--round"].is_outline_invert:hover,
+.jui-color--brand[class*="jui-button--round"].is_outline_invert.hover {
+  color: #11476F;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+.jui-color--brand[class*="jui-button--round"].is_outline_invert:active,
+.jui-color--brand[class*="jui-button--round"].is_outline_invert:focus,
+.jui-color--brand[class*="jui-button--round"].is_outline_invert.active,
+.jui-color--brand[class*="jui-button--round"].is_outline_invert.focus {
+  color: #003353;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+
+
+/* 
+	Navy button, 
+	round (is_transparent) 
+*/
+.jui-color--brand[class*="jui-button--round"][class*="_transparent"] {
+  background-color: transparent;
+  border-color: transparent;
+  color: #11476F;
+}
+
+.jui-color--brand[class*="jui-button--round"][class*="_transparent"]:hover,
+.jui-color--brand[class*="jui-button--round"][class*="_transparent"].hover {
+/*   background-color: #F8F9FD; */
+  background-color: rgba(9, 35, 97, 0.05) /* multiply background color */
+}
+
+.jui-color--brand[class*="jui-button--round"][class*="_transparent"]:active,
+.jui-color--brand[class*="jui-button--round"][class*="_transparent"]:focus,
+.jui-color--brand[class*="jui-button--round"][class*="_transparent"].active,
+.jui-color--brand[class*="jui-button--round"][class*="_transparent"].focus {
+  color: #003353;
+  background-color: rgba(9, 35, 97, 0.075); /* multiply background color */
+}
+
+
+
+
+/* 
+	Navy button, 
+	Text (all type supported)
+ */
+.jui-color--brand.jui-button--text {
+  color: #11476F;
+  background-color: #11476F;
+  border-color: transparent;
+  color: #11476F;
+}
+
+.jui-color--brand.jui-button--text:hover,
+.jui-color--brand.jui-button--text.hover {
+  background-color: transparent;
+  border-color: transparent;
+  color: #11476F;
+}
+
+.jui-color--brand.jui-button--text:active,
+.jui-color--brand.jui-button--text:focus,
+.jui-color--brand.jui-button--text.active,
+.jui-color--brand.jui-button--text.focus {
+  background-color: transparent;
+  border-color: transparent;
+  color: #003353;
+}
+
+
+
+
+
+/* ------------ Black Color ------------ */
+
+/* 
+	Black button, 
+	round (default)
+*/
+.jui-color--mono[class*="jui-button--round"] {
+  color: #FFF;
+  background-color: #CACBC9;
+  border-color: #CACBC9;
+}
+
+.jui-color--mono[class*="jui-button--round"]:hover,
+.jui-color--mono[class*="jui-button--round"].hover {
+  background-color: #999A98;
+  border-color: #999A98;
+}
+
+.jui-color--mono[class*="jui-button--round"]:active,
+.jui-color--mono[class*="jui-button--round"]:focus,
+.jui-color--mono[class*="jui-button--round"].active,
+.jui-color--mono[class*="jui-button--round"].focus {
+  background-color: #666;
+  border-color: #666;
+}
+
+
+
+/* 
+	Black button, 
+	round (is_invert)
+*/
+.jui-color--mono[class*="jui-button--round"].is_invert,
+.jui-color--mono[class*="jui-button--round"].is_icon_only_invert {
+  color: #666;
+  background-color: #FFF;
+  border-color: #DCDCDC;
+}
+
+.jui-color--mono[class*="jui-button--round"].is_invert:hover,
+.jui-color--mono[class*="jui-button--round"].is_invert.hover,
+.jui-color--mono[class*="jui-button--round"].is_icon_only_invert:hover,
+.jui-color--mono[class*="jui-button--round"].is_icon_only_invert.hover {
+  color: #666;
+  background-color: #FEFEFE; /*#FFF;*/
+  border-color: #CACBC9; /* #FFF;*/
+}
+
+.jui-color--mono[class*="jui-button--round"].is_invert:active,
+.jui-color--mono[class*="jui-button--round"].is_invert:focus,
+.jui-color--mono[class*="jui-button--round"].is_invert.active,
+.jui-color--mono[class*="jui-button--round"].is_invert.focus,
+.jui-color--mono[class*="jui-button--round"].is_icon_only_invert:active,
+.jui-color--mono[class*="jui-button--round"].is_icon_only_invert:focus,
+.jui-color--mono[class*="jui-button--round"].is_icon_only_invert.active,
+.jui-color--mono[class*="jui-button--round"].is_icon_only_invert.focus {
+  color: #333;
+  background-color: #FDFDFD; /*#FFF;*/
+  border-color: #B5B5B5; /*#FFF;*/
+}
+
+
+
+/* 
+	Black button, 
+	round (is_outline)
+*/
+.jui-color--mono[class*="jui-button--round"].is_outline {
+  background-color: transparent;
+  border-color: #666;
+  color: #666;
+}
+
+.jui-color--mono[class*="jui-button--round"].is_outline:hover,
+.jui-color--mono[class*="jui-button--round"].is_outline.hover {
+  color: #FFF;
+  background-color: #666;
+  border-color: #666;
+}
+
+.jui-color--mono[class*="jui-button--round"].is_outline:active,
+.jui-color--mono[class*="jui-button--round"].is_outline:focus,
+.jui-color--mono[class*="jui-button--round"].is_outline.active,
+.jui-color--mono[class*="jui-button--round"].is_outline.focus {
+  color: #FFF;
+  background-color: #333;
+  border-color: #333;
+}
+
+
+
+/* 
+	Black button, 
+	round (is_outline_invert)
+*/
+.jui-color--mono[class*="jui-button--round"].is_outline_invert {
+  background-color: transparent;
+  border-color: #FFF;
+  color: #FFF;
+}
+
+.jui-color--mono[class*="jui-button--round"].is_outline_invert:hover,
+.jui-color--mono[class*="jui-button--round"].is_outline_invert.hover {
+  color: #666;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+.jui-color--mono[class*="jui-button--round"].is_outline_invert:active,
+.jui-color--mono[class*="jui-button--round"].is_outline_invert:focus,
+.jui-color--mono[class*="jui-button--round"].is_outline_invert.active,
+.jui-color--mono[class*="jui-button--round"].is_outline_invert.focus {
+  color: #333;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+
+
+/* 
+	Black button, 
+	round (is_transparent) 
+*/
+.jui-color--mono[class*="jui-button--round"][class*="_transparent"] {
+  background-color: transparent;
+  border-color: transparent;
+  color: #666;
+}
+
+.jui-color--mono[class*="jui-button--round"][class*="_transparent"]:hover,
+.jui-color--mono[class*="jui-button--round"][class*="_transparent"].hover {
+/*   background-color: #F8F9FD; */
+  background-color: rgba(9, 35, 97, 0.05) /* multiply background color */
+}
+
+.jui-color--mono[class*="jui-button--round"][class*="_transparent"]:active,
+.jui-color--mono[class*="jui-button--round"][class*="_transparent"]:focus,
+.jui-color--mono[class*="jui-button--round"][class*="_transparent"].active,
+.jui-color--mono[class*="jui-button--round"][class*="_transparent"].focus {
+  color: #333;
+  background-color: rgba(9, 35, 97, 0.075); /* multiply background color */
+}
+
+
+
+
+/* 
+	Black button, 
+	Text (all type supported)
+ */
+.jui-color--mono.jui-button--text {
+  color: #666;
+  background-color: #666;
+  border-color: transparent;
+  color: #666;
+}
+
+.jui-color--mono.jui-button--text:hover,
+.jui-color--mono.jui-button--text.hover {
+  background-color: transparent;
+  border-color: transparent;
+  color: #666;
+}
+
+.jui-color--mono.jui-button--text:active,
+.jui-color--mono.jui-button--text:focus,
+.jui-color--mono.jui-button--text.active,
+.jui-color--mono.jui-button--text.focus {
+  background-color: transparent;
+  border-color: transparent;
+  color: #333;
+}
+
+
+
+
+
+/* ------------ Alert Color ------------ */
+
+/* 
+	Alert button, 
+	round (default)
+*/
+.jui-color--alert[class*="jui-button--round"] {
+  color: #FFF;
+  background-color: #EA4D20;
+  border-color: #EA4D20;
+}
+
+.jui-color--alert[class*="jui-button--round"]:hover,
+.jui-color--alert[class*="jui-button--round"].hover {
+  background-color: #D23712;
+  border-color: #D23712;
+}
+
+.jui-color--alert[class*="jui-button--round"]:active,
+.jui-color--alert[class*="jui-button--round"]:focus,
+.jui-color--alert[class*="jui-button--round"].active,
+.jui-color--alert[class*="jui-button--round"].focus {
+  background-color: #C12C01;
+  border-color: #C12C01;
+}
+
+
+
+/* 
+	Alert button, 
+	round (is_invert)
+*/
+.jui-color--alert[class*="jui-button--round"].is_invert,
+.jui-color--alert[class*="jui-button--round"].is_icon_only_invert {
+  color: #EA4D20;
+  background-color: #FFF;
+  border-color: transparent;
+}
+
+.jui-color--alert[class*="jui-button--round"].is_invert:hover,
+.jui-color--alert[class*="jui-button--round"].is_invert.hover,
+.jui-color--alert[class*="jui-button--round"].is_icon_only_invert:hover,
+.jui-color--alert[class*="jui-button--round"].is_icon_only_invert.hover {
+  color: #D23712;
+  background-color: #F8F9FD; /*#FFF;*/
+  border-color: transparent; /* #FFF;*/
+}
+
+.jui-color--alert[class*="jui-button--round"].is_invert:active,
+.jui-color--alert[class*="jui-button--round"].is_invert:focus,
+.jui-color--alert[class*="jui-button--round"].is_invert.active,
+.jui-color--alert[class*="jui-button--round"].is_invert.focus,
+.jui-color--alert[class*="jui-button--round"].is_icon_only_invert:active,
+.jui-color--alert[class*="jui-button--round"].is_icon_only_invert:focus,
+.jui-color--alert[class*="jui-button--round"].is_icon_only_invert.active,
+.jui-color--alert[class*="jui-button--round"].is_icon_only_invert.focus {
+  color: #C12C01;
+  background-color: #F1F1F4; /*#FFF;*/
+  border-color: transparent; /*#FFF;*/
+}
+
+
+
+/* 
+	Alert button, 
+	round (is_outline)
+*/
+.jui-color--alert[class*="jui-button--round"].is_outline {
+  background-color: transparent;
+  border-color: #EA4D20;
+  color: #EA4D20;
+}
+
+.jui-color--alert[class*="jui-button--round"].is_outline:hover,
+.jui-color--alert[class*="jui-button--round"].is_outline.hover {
+  color: #FFF;
+  background-color: #D23712;
+  border-color: #D23712;
+}
+
+.jui-color--alert[class*="jui-button--round"].is_outline:active,
+.jui-color--alert[class*="jui-button--round"].is_outline:focus,
+.jui-color--alert[class*="jui-button--round"].is_outline.active,
+.jui-color--alert[class*="jui-button--round"].is_outline.focus {
+  color: #FFF;
+  background-color: #C12C01;
+  border-color: #C12C01;
+}
+
+
+
+/* 
+	Alert button, 
+	round (is_outline_invert)
+*/
+.jui-color--alert[class*="jui-button--round"].is_outline_invert {
+  background-color: transparent;
+  border-color: #FFF;
+  color: #FFF;
+}
+
+.jui-color--alert[class*="jui-button--round"].is_outline_invert:hover,
+.jui-color--alert[class*="jui-button--round"].is_outline_invert.hover {
+  color: #EA4D20;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+.jui-color--alert[class*="jui-button--round"].is_outline_invert:active,
+.jui-color--alert[class*="jui-button--round"].is_outline_invert:focus,
+.jui-color--alert[class*="jui-button--round"].is_outline_invert.active,
+.jui-color--alert[class*="jui-button--round"].is_outline_invert.focus {
+  color: #C12C01;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+
+
+/* 
+	Alert button, 
+	round (is_transparent) 
+*/
+.jui-color--alert[class*="jui-button--round"][class*="_transparent"] {
+  background-color: transparent;
+  border-color: transparent;
+  color: #EA4D20;
+}
+
+.jui-color--alert[class*="jui-button--round"][class*="_transparent"]:hover,
+.jui-color--alert[class*="jui-button--round"][class*="_transparent"].hover {
+/*   background-color: #F8F9FD; */
+  background-color: rgba(72, 85, 190, 0.05); /* multiply background color */
+}
+
+.jui-color--alert[class*="jui-button--round"][class*="_transparent"]:active,
+.jui-color--alert[class*="jui-button--round"][class*="_transparent"]:focus,
+.jui-color--alert[class*="jui-button--round"][class*="_transparent"].active,
+.jui-color--alert[class*="jui-button--round"][class*="_transparent"].focus {
+  color: #C12C01;
+  background-color: rgba(72, 85, 190, 0.05); /* multiply background color */
+}
+
+
+
+
+/* 
+	Alert button, 
+	Text (all type supported)
+ */
+.jui-color--alert.jui-button--text {
+  color: #EA4D20;
+  background-color: #EA4D20;
+  border-color: transparent;
+  color: #EA4D20;
+}
+
+.jui-color--alert.jui-button--text:hover,
+.jui-color--alert.jui-button--text.hover {
+  background-color: transparent;
+  border-color: transparent;
+  color: #D23712;
+}
+
+.jui-color--alert.jui-button--text:active,
+.jui-color--alert.jui-button--text:focus,
+.jui-color--alert.jui-button--text.active,
+.jui-color--alert.jui-button--text.focus {
+  background-color: transparent;
+  border-color: transparent;
+  color: #C12C01;
+}
+
+
+
+
+
+
+/* ------------ Notification Color ------------ */
+
+/* 
+	Notification button, 
+	round (default)
+*/
+.jui-color--notification[class*="jui-button--round"] {
+  color: #FFF;
+  background-color: #F39000;
+  border-color: #F39000;
+}
+
+.jui-color--notification[class*="jui-button--round"]:hover,
+.jui-color--notification[class*="jui-button--round"].hover {
+  background-color: #F37E00;
+  border-color: #F37E00;
+}
+
+.jui-color--notification[class*="jui-button--round"]:active,
+.jui-color--notification[class*="jui-button--round"]:focus,
+.jui-color--notification[class*="jui-button--round"].active,
+.jui-color--notification[class*="jui-button--round"].focus {
+  background-color: #F37300;
+  border-color: #F37300;
+}
+
+
+
+/* 
+	Notification button, 
+	round (is_invert)
+*/
+.jui-color--notification[class*="jui-button--round"].is_invert,
+.jui-color--notification[class*="jui-button--round"].is_icon_only_invert {
+  color: #F39000;
+  background-color: #FFF;
+  border-color: transparent;
+}
+
+.jui-color--notification[class*="jui-button--round"].is_invert:hover,
+.jui-color--notification[class*="jui-button--round"].is_invert.hover,
+.jui-color--notification[class*="jui-button--round"].is_icon_only_invert:hover,
+.jui-color--notification[class*="jui-button--round"].is_icon_only_invert.hover {
+  color: #F37E00;
+  background-color: #F8F9FD; /*#FFF;*/
+  border-color: transparent; /* #FFF;*/
+}
+
+.jui-color--notification[class*="jui-button--round"].is_invert:active,
+.jui-color--notification[class*="jui-button--round"].is_invert:focus,
+.jui-color--notification[class*="jui-button--round"].is_invert.active,
+.jui-color--notification[class*="jui-button--round"].is_invert.focus,
+.jui-color--notification[class*="jui-button--round"].is_icon_only_invert:active,
+.jui-color--notification[class*="jui-button--round"].is_icon_only_invert:focus,
+.jui-color--notification[class*="jui-button--round"].is_icon_only_invert.active,
+.jui-color--notification[class*="jui-button--round"].is_icon_only_invert.focus {
+  color: #F37300;
+  background-color: #F1F1F4; /*#FFF;*/
+  border-color: transparent; /*#FFF;*/
+}
+
+
+
+/* 
+	Notification button, 
+	round (is_outline)
+*/
+.jui-color--notification[class*="jui-button--round"].is_outline {
+  background-color: transparent;
+  border-color: #F39000;
+  color: #F39000;
+}
+
+.jui-color--notification[class*="jui-button--round"].is_outline:hover,
+.jui-color--notification[class*="jui-button--round"].is_outline.hover {
+  color: #FFF;
+  background-color: #F39000;
+  border-color: #F39000;
+}
+
+.jui-color--notification[class*="jui-button--round"].is_outline:active,
+.jui-color--notification[class*="jui-button--round"].is_outline:focus,
+.jui-color--notification[class*="jui-button--round"].is_outline.active,
+.jui-color--notification[class*="jui-button--round"].is_outline.focus {
+  color: #FFF;
+  background-color: #F37300;
+  border-color: #F37300;
+}
+
+
+
+/* 
+	Notification button, 
+	round (is_outline_invert)
+*/
+.jui-color--notification[class*="jui-button--round"].is_outline_invert {
+  background-color: transparent;
+  border-color: #FFF;
+  color: #FFF;
+}
+
+.jui-color--notification[class*="jui-button--round"].is_outline_invert:hover,
+.jui-color--notification[class*="jui-button--round"].is_outline_invert.hover {
+  color: #F39000;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+.jui-color--notification[class*="jui-button--round"].is_outline_invert:active,
+.jui-color--notification[class*="jui-button--round"].is_outline_invert:focus,
+.jui-color--notification[class*="jui-button--round"].is_outline_invert.active,
+.jui-color--notification[class*="jui-button--round"].is_outline_invert.focus {
+  color: #F37300;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+
+
+/* 
+	Notification button, 
+	round (is_transparent) 
+*/
+.jui-color--notification[class*="jui-button--round"][class*="_transparent"] {
+  background-color: transparent;
+  border-color: transparent;
+  color: #F39000;
+}
+
+.jui-color--notification[class*="jui-button--round"][class*="_transparent"]:hover,
+.jui-color--notification[class*="jui-button--round"][class*="_transparent"].hover {
+/*   background-color: #F8F9FD; */
+  background-color: rgba(72, 85, 190, 0.05); /* multiply background color */
+}
+
+.jui-color--notification[class*="jui-button--round"][class*="_transparent"]:active,
+.jui-color--notification[class*="jui-button--round"][class*="_transparent"]:focus,
+.jui-color--notification[class*="jui-button--round"][class*="_transparent"].active,
+.jui-color--notification[class*="jui-button--round"][class*="_transparent"].focus {
+  color: #F37300;
+  background-color: rgba(72, 85, 190, 0.05); /* multiply background color */
+}
+
+
+
+
+/* 
+	Notification button, 
+	Text (all type supported)
+ */
+.jui-color--notification.jui-button--text {
+  color: #F39000;
+  background-color: #F39000;
+  border-color: transparent;
+  color: #F39000;
+}
+
+.jui-color--notification.jui-button--text:hover,
+.jui-color--notification.jui-button--text.hover {
+  background-color: transparent;
+  border-color: transparent;
+  color: #F37E00;
+}
+
+.jui-color--notification.jui-button--text:active,
+.jui-color--notification.jui-button--text:focus,
+.jui-color--notification.jui-button--text.active,
+.jui-color--notification.jui-button--text.focus {
+  background-color: transparent;
+  border-color: transparent;
+  color: #F37300;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ Disabled Color ------------ */
+
+/* 
+	Disabled, 
+	All Button 
+*/
+[class*="jui-color--"][class*="jui-button--"][disabled],
+[class*="jui-color--"][class*="jui-button--"][disabled]:hover,
+[class*="jui-color--"][class*="jui-button--"][disabled]:active,
+[class*="jui-color--"][class*="jui-button--"][disabled]:focus {
+  background-color: #DCDDDD;
+  border-color: #DCDDDD;
+  color: #FFF;
+}
+
+
+/* 
+	Disabled, 
+	Outlined Button 
+*/
+[class*="jui-color--"][class*="jui-button--"][class*="is_outline"][disabled],
+[class*="jui-color--"][class*="jui-button--"][class*="is_outline"][disabled]:hover,
+[class*="jui-color--"][class*="jui-button--"][class*="is_outline"][disabled]:active,
+[class*="jui-color--"][class*="jui-button--"][class*="is_outline"][disabled]:focus {
+  background-color: transparent;
+  border-color: #CACBC9;
+  color: #CACBC9;
+}
+
+/* 
+	Disabled, 
+	Invert Button 
+*/
+[class*="jui-color--"][class*="jui-button--"].is_invert[disabled],
+[class*="jui-color--"][class*="jui-button--"].is_invert[disabled]:hover,
+[class*="jui-color--"][class*="jui-button--"].is_invert[disabled]:active,
+[class*="jui-color--"][class*="jui-button--"].is_invert[disabled]:focus,
+[class*="jui-color--"][class*="jui-button--"].is_icon_only_invert[disabled],
+[class*="jui-color--"][class*="jui-button--"].is_icon_only_invert[disabled]:hover,
+[class*="jui-color--"][class*="jui-button--"].is_icon_only_invert[disabled]:active,
+[class*="jui-color--"][class*="jui-button--"].is_icon_only_invert[disabled]:focus {
+  background-color: #FFF;
+  border-color: #FFF;
+  color: #CACBC9;
+}
+
+
+/* 
+	Disabled, 
+	Transparent & Text Button 
+*/
+[class*="jui-color--"][class*="jui-button--"].is_transparent[disabled],
+[class*="jui-color--"][class*="jui-button--"].is_transparent[disabled]:hover,
+[class*="jui-color--"][class*="jui-button--"].is_transparent[disabled]:active,
+[class*="jui-color--"][class*="jui-button--"].is_transparent[disabled]:focus,
+[class*="jui-color--"].jui-button--text[disabled],
+[class*="jui-color--"].jui-button--text[disabled]:hover,
+[class*="jui-color--"].jui-button--text[disabled]:active,
+[class*="jui-color--"].jui-button--text[disabled]:focus {
+  background-color: transparent;
+  border-color: transparent;
+  color: #CACBC9;
+}

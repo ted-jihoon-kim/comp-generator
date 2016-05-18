@@ -1,0 +1,55 @@
+/* 
+ * JANDI User Interface Style - Common
+ *  
+ * Last Update : 2016/04/21
+ *
+ */
+ 
+html, body  {
+  font-family: 'Roboto','Noto Sans Korean','Apple SD Gothic Neo', 'Malgun Gothic', 'Dotum', Arial, Tahoma, sans-serif, serif;
+  -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding:0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+button {
+  font-family: 'Roboto','Noto Sans Korean','Apple SD Gothic Neo', 'Malgun Gothic', 'Dotum', Arial, Tahoma, sans-serif, serif;
+}
+
+*[disabled]:hover {
+  cursor: not-allowed;
+}
+
+
+
+/* 
+ * button groups
+ */
+
+.button-group .btn-confirm {
+  display: inline-block;
+}
+
+.button-group .btn-confirm:first-child {
+  margin-right: 4px;
+}
+
+
+
+/* 
+ * jnd animations
+ */
+
+.jnd-animate-all {
+  -webkit-transition: all ease-out .15s;
+  transition: all ease-out .15s;
+}
+
+
+
+
