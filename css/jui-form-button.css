@@ -75,14 +75,14 @@
   font-weight: 500;
   line-height: 1em;
 }
-[class*="jui-button--"] > i.icon-angle-down {
+[class*="jui-button--"] > i:not(.editable) {
   display: none;
 }
 
 [class*="jui-button--"][class*="_arrow"] {
   padding-right: 1.05em;
 }
-[class*="jui-button--"][class*="_arrow"] > i.icon-angle-down {
+[class*="jui-button--"][class*="_arrow"] > i:not(.editable) {
   display: inline-block;
   position: absolute;
   right: 0.2em;

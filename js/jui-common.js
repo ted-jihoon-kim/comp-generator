@@ -119,8 +119,8 @@ function updateCurrentComponentCodeToPreivew() {
 var buttonComponentCode = 
 "<button id='preview-components' \
          class='jui-button--round jui-type--body--default jui-color--primary'> \
-   <i class='icon-angle-down'></i> \
-   <i class='editable icon-check'></i> \
+   <i class='typcn typcn-arrow-sorted-down'></i> \
+   <i class='editable typcn typcn-heart'></i> \
    <span>Confirm</span> \
    <label>7</label> \
 </button>";
@@ -134,11 +134,11 @@ var navTabComponentCode =
       class='jui-nav--tab jui-nav--tab_round jui-type--body--default jui-color--primary'> \
    <ul class='jui-nav--tab--tabs'> \
      <li><a class='is_active'> \
-       <i class='editable icon-check'></i> \
+       <i class='editable typcn typcn-heart'></i> \
        <span>First tab title</span> \
      </a></li> \
      <li><a> \
-       <i class='editable icon-check'></i> \
+       <i class='editable typcn typcn-heart'></i> \
        <span>Second tab title</span> \
      </a></li> \
    </ul> \
@@ -273,26 +273,9 @@ classListObject.Grid1stDepth = Grid1stDepthAr;
 
 					
 var previewIcon = ['',
-				   'icon-check',
-				   'icon-bell',
-				   'icon-cog',
-				   'icon-cog-fill',
-				   'icon-refresh',
-				   'icon-user-plus',
-				   'icon-user',
-				   'icon-reorder',
-				   'icon-more',
-				   'icon-long-arrow-left',
-				   'icon-plus',
-				   'icon-upload',
-				   'icon-star-off',
-				   'icon-file',
-				   'icon-chat',
-				   'icon-at',
-				   'icon-wrench',
-				   'icon-lock',
-				   'icon-angle-right',
-				   'icon-arrow-right' ];
+				   'typcn-heart',
+				   'typcn-pin',
+				   'typcn-cog'];
 
 
 var tooltipText = ['',
