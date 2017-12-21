@@ -1,2 +1,14 @@
+/* base variables */
+/* Mixin */
 body {
-  font-size: 16px; }
+  -webkit-font-smoothing: antialiased; }
+
+.jui-button {
+  background-color: #00ACE9;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 0.2em; }
+  .jui-button label {
+    color: #FFF;
+    font-weight: 600;
+    font-size: 15px; }

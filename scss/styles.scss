@@ -1,5 +1,39 @@
-$base-font-size: 16px;
+/* base variables */
+
+$base-font-size: 15px;
+$base-font-weight: 600;
+$border-round-base: 0.2em;
+
+$color-confirm: #00ACE9;
+$color-white: #FFF;
+
+$padding-base: 6px 12px;
+
+$border-default-transpaerent: 1px solid transparent;
+
+
+
+
+
+/* Mixin */
 
 body {
-	font-size: $base-font-size;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+
+.jui-button {
+	
+	background-color: $color-confirm;
+	padding: $padding-base;
+	border: $border-default-transpaerent;
+	border-radius: $border-round-base;
+	
+	label {
+		color: $color-white;
+		font-weight: $base-font-weight;
+		font-size: $base-font-size;
+	}
+	
 }
