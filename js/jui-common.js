@@ -82,6 +82,7 @@ function replaceSelectOptions(targetOption, currentOption) {
   var currentOptionArrayLength = currentOptionArray.length;
 
   //console.log(currentOptionArray, currentOptionArrayLength);
+  console.log(classListObject);
   
   for(var secondArrayCount=1; secondArrayCount<currentOptionArrayLength; secondArrayCount++) {
 	$(targetOption + '> select').append('<option>' + currentOptionArray[secondArrayCount]+ '</option>');
