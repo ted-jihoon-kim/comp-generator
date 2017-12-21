@@ -1,14 +1,20 @@
 /* base variables */
-/* Mixin */
 body {
   -webkit-font-smoothing: antialiased; }
 
-.jui-button {
+/* Nesting */
+.jui-button, .jui-button[disabled] {
   background-color: #00ACE9;
   padding: 6px 12px;
   border: 1px solid transparent;
   border-radius: 0.2em; }
-  .jui-button label {
+  .jui-button label, .jui-button[disabled] label {
     color: #FFF;
     font-weight: 600;
-    font-size: 15px; }
+    font-size: 15px;
+    pointer-events: none; }
+
+/* Extend */
+[disabled].jui-button {
+  cursor: not-allowed;
+  background-color: #CCC; }
