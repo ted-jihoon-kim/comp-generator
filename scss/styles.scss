@@ -5,13 +5,24 @@ $base-font-weight: 600;
 $border-round-base: 0.2em;
 
 $color-confirm: #00ACE9;
+$color-confirm-hovered: #0092D8;
+$color-confirm-pressed: #0389C8;
+
 $color-white: #FFF;
+
 $color-mono: #CCC;
+
+$color-alert: #D94516;
+
 $padding-base: 6px 12px;
 
 $border-default-transpaerent: 1px solid transparent;
 
+$box-shadow-button-inset: inset 0 1px 2px 0 rgba(0,0,0,0.12);
 
+$value-none: none;
+
+$valur-pointer: pointer;
 
 
 
@@ -19,27 +30,38 @@ $border-default-transpaerent: 1px solid transparent;
 
 body {
 	-webkit-font-smoothing: antialiased;
+	font-family: Helvetica Neue, sans-serif;
 }
 
 
 /* Nesting */
 
 .jui-button {
+	outline: $value-none;
+	cursor: $valur-pointer;
 	
-	background-color: $color-confirm;
 	padding: $padding-base;
 	border: $border-default-transpaerent;
 	border-radius: $border-round-base;
 	
+	background-color: $color-confirm;
+	
 	label {
 		color: $color-white;
+		
 		font-weight: $base-font-weight;
 		font-size: $base-font-size;
 		
-		pointer-events: none;
+		pointer-events: $value-none;
+	}
+	
+	&:active {
+		box-shadow: $box-shadow-button-inset;
 	}
 	
 }
+
+
 
 /* Extend */
 
@@ -47,6 +69,41 @@ body {
 	@extend .jui-button;
 	cursor: not-allowed;
 	background-color: $color-mono;
+	
+	label {
+		color: $color-white;
+	}
+	
+}
+
+.jui-button-confirm {
+	@extend .jui-button;
+	background-color: $color-confirm;
+	
+	label {
+		color: $color-white;
+	}
+	
+	&:hover {
+		background-color: $color-confirm-hovered;
+	}
+	
+	&:active {
+		background-color: $color-confirm-pressed;
+	}
+	
+	&:focus {
+		background-color: $color-confirm-pressed;
+	}
 }
 
 
+.jui-button-alert {
+	@extend .jui-button;
+	background-color: $color-alert;
+	
+	label {
+		color: $color-white;
+	}
+	
+}
