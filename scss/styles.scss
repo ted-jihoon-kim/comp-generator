@@ -47,7 +47,7 @@ body {
 	border: $border-default-transpaerent;
 	border-radius: $border-round-base;
 	
-	background-color: $color-confirm;
+	background-color: $color-mono;
 	
 	label {
 		color: $color-white;
@@ -58,7 +58,7 @@ body {
 		pointer-events: $value-none;
 	}
 	
-	&:active {
+	&:not(.disabled):active {
 		box-shadow: $box-shadow-button-inset;
 	}
 	
@@ -71,8 +71,7 @@ body {
 .jui-button[disabled] {
 	@extend .jui-button;
 	cursor: not-allowed;
-	background-color: $color-mono;
-	
+
 	label {
 		color: $color-white;
 	}
