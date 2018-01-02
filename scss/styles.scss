@@ -1,4 +1,4 @@
-/* base variables */
+/* Default Variables */
 
 $base-font-size: 15px;
 $base-font-weight: 600;
@@ -13,6 +13,8 @@ $color-white: #FFF;
 $color-mono: #CCC;
 
 $color-alert: #D94516;
+$color-alert-hovered: #C9302C;
+$color-alert-pressed: #BB2A27;
 
 $padding-base: 6px 12px;
 
@@ -34,7 +36,8 @@ body {
 }
 
 
-/* Nesting */
+
+/* Base & Nesting */
 
 .jui-button {
 	outline: $value-none;
@@ -106,4 +109,15 @@ body {
 		color: $color-white;
 	}
 	
+	&:hover {
+		background-color: $color-alert-hovered;
+	}
+	
+	&:active {
+		background-color: $color-alert-pressed;
+	}
+	
+	&:focus {
+		background-color: $color-alert-pressed;
+	}
 }

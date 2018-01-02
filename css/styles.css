@@ -1,9 +1,9 @@
-/* base variables */
+/* Default Variables */
 body {
   -webkit-font-smoothing: antialiased;
   font-family: Helvetica Neue, sans-serif; }
 
-/* Nesting */
+/* Base & Nesting */
 .jui-button, .jui-button[disabled], .jui-button-confirm, .jui-button-alert {
   outline: none;
   cursor: pointer;
@@ -41,3 +41,9 @@ body {
   background-color: #D94516; }
   .jui-button-alert label {
     color: #FFF; }
+  .jui-button-alert:hover {
+    background-color: #C9302C; }
+  .jui-button-alert:active {
+    background-color: #BB2A27; }
+  .jui-button-alert:focus {
+    background-color: #BB2A27; }
