@@ -24,7 +24,7 @@ $box-shadow-button-inset: inset 0 1px 2px 0 rgba(0,0,0,0.12);
 
 $value-none: none;
 
-$valur-pointer: pointer;
+$value-pointer: pointer;
 
 
 
@@ -41,7 +41,7 @@ body {
 
 .jui-button {
 	outline: $value-none;
-	cursor: $valur-pointer;
+	cursor: $value-pointer;
 	
 	padding: $padding-base;
 	border: $border-default-transpaerent;
