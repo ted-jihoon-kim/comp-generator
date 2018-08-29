@@ -1,8 +1,10 @@
 /* Default Variables */
 
+$light-font-weight: 500;
 $base-font-size: 15px;
 $base-font-weight: 600;
 $border-round-base: 0.2em;
+$base-line-height: 1.25em;
 
 $color-confirm: #00ACE9;
 $color-confirm-hovered: #0092D8;
@@ -17,6 +19,11 @@ $color-badge: #FF5B49;
 $color-alert: #D94516;
 $color-alert-hovered: #C9302C;
 $color-alert-pressed: #BB2A27;
+
+$color-cancel: #617B8E;
+$color-cancel-hovered: #F2F3F4;
+$color-cancel-pressed: #F2F3F4;
+$color-cancel-border: #C9D4DB;
 
 $padding-base: 6px 12px;
 
@@ -40,6 +47,9 @@ body {
 
 
 /* Base & Nesting */
+.button {
+  position: relative;
+}
 
 .jui-button {
 	outline: $value-none;
@@ -58,6 +68,7 @@ body {
 		font-size: $base-font-size;
 		
 		pointer-events: $value-none;
+		line-height: $base-line-height;
 	}
 	
 	&:not(.disabled):active {
@@ -121,4 +132,55 @@ body {
 	&:focus {
 		background-color: $color-alert-pressed;
 	}
+}
+
+.jui-button-cancel {
+	@extend .jui-button;
+	background-color: $color-white;
+	border-color: $color-cancel-border;
+	
+	label {
+		color: $color-cancel;
+	}
+	
+	&:hover {
+		background-color: $color-cancel-hovered;
+	}
+	
+	&:active {
+		background-color: $color-cancel-pressed;
+	}
+	
+	&:focus {
+		background-color: $color-cancel-pressed;
+	}
+}
+
+.left-arrow-shaped {
+  padding-left: 7px;
+  margin-left: 14px;
+  
+  &:before {
+	content: '';
+    position: absolute;
+    left: -12px;
+    top: 3px;
+    z-index: 0;
+    width: 22px;
+    border-style: solid;
+    height: 22px;
+    border-radius: 5px 4px 0 3px;
+    border-color: inherit;
+    border-width: 1px 0px 0px 1px;
+    background-color: inherit;
+    transform: rotate(-45deg);
+    box-shadow: inherit;
+  }
+  
+  label {
+	padding: 0;
+    
+    position: relative;
+  }
+  
 }
