@@ -21,8 +21,8 @@ button[class*="jui-button"] {
   outline: $value-none;
   cursor: $value-pointer;
 	
-  padding: $padding-base;
-  border: $border-default-transpaerent;
+  padding: $padding-base $padding-base*2;
+  border: $border-default-transparent;
   border-radius: $border-round-base;
 	
   background-color: $color-mono;
