@@ -10,9 +10,9 @@ $color-confirm: #00ACE9;
 $color-confirm-hovered: #0092D8;
 $color-confirm-pressed: #0389C8;
 
-$color-white: #FFF;
+$color-white: rgba(255, 255, 255, 1);
 
-$color-mono: #CCC;
+$color-mono: rgba(204, 204, 204, 1);
 
 $color-badge: #FF5B49;
 
@@ -35,7 +35,20 @@ $value-none: none;
 
 $value-pointer: pointer;
 
+$value-not-allowed: not-allowed;
 
+$pos-relative: relative;
+$pos-absolute: absolute;
+$pos-fixed: fixed;
+$pos-sticky: sticky;
+$pos-static: static;
+
+
+
+@mixin when-disabled() {
+  cursor: $value-not-allowed;
+  background-color: $color-mono;
+}
 
 
 
@@ -47,122 +60,125 @@ body {
 
 
 /* Base & Nesting */
-.button {
+button {
   position: relative;
 }
 
-.jui-button {
-	outline: $value-none;
-	cursor: $value-pointer;
+button[class*="jui-button"] {
+  outline: $value-none;
+  cursor: $value-pointer;
 	
-	padding: $padding-base;
-	border: $border-default-transpaerent;
-	border-radius: $border-round-base;
+  padding: $padding-base;
+  border: $border-default-transpaerent;
+  border-radius: $border-round-base;
 	
-	background-color: $color-mono;
+  background-color: $color-mono;
 	
-	label {
-		color: $color-white;
+  label {
+	color: $color-white;
+	position: $pos-relative;
 		
-		font-weight: $base-font-weight;
-		font-size: $base-font-size;
+	font-weight: $base-font-weight;
+	font-size: $base-font-size;
 		
-		pointer-events: $value-none;
-		line-height: $base-line-height;
-	}
-	
-	&:not(.disabled):active {
-		box-shadow: $box-shadow-button-inset;
-	}
-	
+	pointer-events: $value-none;
+	line-height: $base-line-height;
+  }
+  
+  &:not([disabled]):active {
+	box-shadow: $box-shadow-button-inset;
+  }
+  
+  &[disabled] {
+	@include when-disabled();
+  }
 }
 
 
 
-/* Extend */
-
-.jui-button[disabled] {
-	@extend .jui-button;
-	cursor: not-allowed;
-
-	label {
-		color: $color-white;
-	}
+/* Variations */
+button.jui-button-confirm {
+  background-color: $color-confirm;
+  
+  label {
+	//color: $color-white;
+  }
 	
-}
-
-.jui-button-confirm {
-	@extend .jui-button;
-	background-color: $color-confirm;
+  &:not([disabled]):hover {
+	background-color: $color-confirm-hovered;
+  }
 	
-	label {
-		color: $color-white;
-	}
+  &:not([disabled]):active {
+	background-color: $color-confirm-pressed;
+  }
 	
-	&:hover {
-		background-color: $color-confirm-hovered;
-	}
-	
-	&:active {
-		background-color: $color-confirm-pressed;
-	}
-	
-	&:focus {
-		background-color: $color-confirm-pressed;
-	}
+  &:not([disabled]):focus {
+	background-color: $color-confirm-pressed;
+  }
 }
 
 
-.jui-button-alert {
-	@extend .jui-button;
-	background-color: $color-alert;
+button.jui-button-alert {
+  background-color: $color-alert;
 	
-	label {
-		color: $color-white;
-	}
+  label {
+	//color: $color-white;
+  }
 	
-	&:hover {
-		background-color: $color-alert-hovered;
-	}
+  &:not([disabled]):hover {
+	background-color: $color-alert-hovered;
+  }
 	
-	&:active {
-		background-color: $color-alert-pressed;
-	}
+  &:not([disabled]):active {
+	background-color: $color-alert-pressed;
+  }
 	
-	&:focus {
-		background-color: $color-alert-pressed;
-	}
+  &:not([disabled]):focus {
+	background-color: $color-alert-pressed;
+  }
 }
 
-.jui-button-cancel {
-	@extend .jui-button;
-	background-color: $color-white;
-	border-color: $color-cancel-border;
+button.jui-button-cancel {
+  background-color: $color-white;
+  border-color: $color-cancel-border;
 	
-	label {
-		color: $color-cancel;
-	}
+  label {
+	color: $color-cancel;
+  }
 	
-	&:hover {
-		background-color: $color-cancel-hovered;
-	}
+  &:hover {
+	background-color: $color-cancel-hovered;
+  }
 	
-	&:active {
-		background-color: $color-cancel-pressed;
-	}
+  &:active {
+	background-color: $color-cancel-pressed;
+  }
 	
-	&:focus {
-		background-color: $color-cancel-pressed;
-	}
+  &:focus {
+	background-color: $color-cancel-pressed;
+  }
 }
 
-.left-arrow-shaped {
-  padding-left: 7px;
-  margin-left: 14px;
+button[class*="arrow-shaped"] {
+  &.left-arrow-shaped {
+	padding-left: 7px;
+    margin-left: 14px;
+  }
+  
+  &.right-arrow-shaped {
+	padding-right: 7px;
+	margin-right: 14px;
+	
+	&:before {
+	  transform: rotate(45deg) scaleX(-1);
+	  left: auto;
+      right: -12px;
+	}
+  }
   
   &:before {
 	content: '';
-    position: absolute;
+    position: $pos-absolute;
     left: -12px;
     top: 3px;
     z-index: 0;
@@ -173,14 +189,11 @@ body {
     border-color: inherit;
     border-width: 1px 0px 0px 1px;
     background-color: inherit;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) scaleX(1);
     box-shadow: inherit;
   }
-  
-  label {
-	padding: 0;
-    
-    position: relative;
-  }
-  
+}
+
+button[class*="rounded-edge"] {
+  border-radius: 3em;
 }

@@ -4,83 +4,87 @@ body {
   font-family: Helvetica Neue, sans-serif; }
 
 /* Base & Nesting */
-.button {
+button {
   position: relative; }
 
-.jui-button, .jui-button[disabled], .jui-button-confirm, .jui-button-alert, .jui-button-cancel {
+button[class*="jui-button"] {
   outline: none;
   cursor: pointer;
   padding: 6px 12px;
   border: 1px solid transparent;
   border-radius: 0.2em;
-  background-color: #CCC; }
-  .jui-button label, .jui-button[disabled] label, .jui-button-confirm label, .jui-button-alert label, .jui-button-cancel label {
-    color: #FFF;
+  background-color: #cccccc; }
+  button[class*="jui-button"] label {
+    color: white;
+    position: relative;
     font-weight: 600;
     font-size: 15px;
     pointer-events: none;
     line-height: 1.25em; }
-  .jui-button:not(.disabled):active, .jui-button-confirm:not(.disabled):active, .jui-button-alert:not(.disabled):active, .jui-button-cancel:not(.disabled):active {
+  button[class*="jui-button"]:not([disabled]):active {
     box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.12); }
+  button[class*="jui-button"][disabled] {
+    cursor: not-allowed;
+    background-color: #cccccc; }
 
-/* Extend */
-[disabled].jui-button, [disabled].jui-button-confirm, [disabled].jui-button-alert, [disabled].jui-button-cancel {
-  cursor: not-allowed; }
-  [disabled].jui-button label, [disabled].jui-button-confirm label, [disabled].jui-button-alert label, [disabled].jui-button-cancel label {
-    color: #FFF; }
-
-.jui-button-confirm {
+/* Variations */
+button.jui-button-confirm {
   background-color: #00ACE9; }
-  .jui-button-confirm label {
-    color: #FFF; }
-  .jui-button-confirm:hover {
+  button.jui-button-confirm:not([disabled]):hover {
     background-color: #0092D8; }
-  .jui-button-confirm:active {
+  button.jui-button-confirm:not([disabled]):active {
     background-color: #0389C8; }
-  .jui-button-confirm:focus {
+  button.jui-button-confirm:not([disabled]):focus {
     background-color: #0389C8; }
 
-.jui-button-alert {
+button.jui-button-alert {
   background-color: #D94516; }
-  .jui-button-alert label {
-    color: #FFF; }
-  .jui-button-alert:hover {
+  button.jui-button-alert:not([disabled]):hover {
     background-color: #C9302C; }
-  .jui-button-alert:active {
+  button.jui-button-alert:not([disabled]):active {
     background-color: #BB2A27; }
-  .jui-button-alert:focus {
+  button.jui-button-alert:not([disabled]):focus {
     background-color: #BB2A27; }
 
-.jui-button-cancel {
-  background-color: #FFF;
+button.jui-button-cancel {
+  background-color: white;
   border-color: #C9D4DB; }
-  .jui-button-cancel label {
+  button.jui-button-cancel label {
     color: #617B8E; }
-  .jui-button-cancel:hover {
+  button.jui-button-cancel:hover {
     background-color: #F2F3F4; }
-  .jui-button-cancel:active {
+  button.jui-button-cancel:active {
     background-color: #F2F3F4; }
-  .jui-button-cancel:focus {
+  button.jui-button-cancel:focus {
     background-color: #F2F3F4; }
 
-.left-arrow-shaped {
+button[class*="arrow-shaped"].left-arrow-shaped {
   padding-left: 7px;
   margin-left: 14px; }
-  .left-arrow-shaped:before {
-    content: '';
-    position: absolute;
-    left: -12px;
-    top: 3px;
-    z-index: 0;
-    width: 22px;
-    border-style: solid;
-    height: 22px;
-    border-radius: 5px 4px 0 3px;
-    border-color: inherit;
-    border-width: 1px 0px 0px 1px;
-    background-color: inherit;
-    transform: rotate(-45deg);
-    box-shadow: inherit; }
-  .left-arrow-shaped label {
-    padding: 0;
-    position: relative; }
+
+button[class*="arrow-shaped"].right-arrow-shaped {
+  padding-right: 7px;
+  margin-right: 14px; }
+  button[class*="arrow-shaped"].right-arrow-shaped:before {
+    transform: rotate(45deg) scaleX(-1);
+    left: auto;
+    right: -12px; }
+
+button[class*="arrow-shaped"]:before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 3px;
+  z-index: 0;
+  width: 22px;
+  border-style: solid;
+  height: 22px;
+  border-radius: 5px 4px 0 3px;
+  border-color: inherit;
+  border-width: 1px 0px 0px 1px;
+  background-color: inherit;
+  transform: rotate(-45deg) scaleX(1);
+  box-shadow: inherit; }
+
+button[class*="rounded-edge"] {
+  border-radius: 3em; }
