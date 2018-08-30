@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>SCSS Test Template</title>
   
-  <link rel="stylesheet" href="../css/styles.css" />
- 
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../font/typicons.css" />
+  
   <style>
 	  i:before {
 		font-family: 'typicons';
@@ -16,9 +17,17 @@
 		font-smoothing: antialiased;
 		text-rendering: optimizeLegibility;
 	  }
-	  
+/*
+	  tr:not(:first-child):hover {
+		background-color: #F5F5F5;
+	  }
+*/
 	  td {
 		  padding: 8px 0;
+	  }
+	  th {
+		font-size: 14px;
+		color: #494949;
 	  }
 	  .class-name {
 		padding: 2px 4px;
@@ -26,32 +35,43 @@
 		background-color: #F2F2F2;
 		color: #757575;
 	  }
+	  em {
+		display: block;
+		font-style: normal;
+		color: #898989;
+		line-height: 12px;
+		font-size: 12px;
+		margin-left: -2px;
+		margin-bottom: -4px;
+	  }
   </style>
   
 </head>
 
 <body>
-  <h3>버튼 Buttons</h3>
+  <h3>Buttons (Box types)</h3>
   <table style="border: none;padding: 0;margin: 0;width: 100%;text-align: left; font-size: 13px; font-weight: 400;">
 	  <tbody>
 		  <tr style="box-shadow: 0 1px 0 0 #CBCBCB; line-height: 32px;">
-			  <th>
-				  <span>클래스명 Class Name</span>
+			  <th style="width: 250px;">
+				  <span><em>클래스명</em>Class Name</span>
 			  </th>
 			  <th>
-				  <span>미리보기 Preview</span>
+				  <span><em>미리보기</em>Preview</span>
 			  </th>
 			  <th>
 				  <!-- 외관 종류 (버튼)
 					  
-					   1. Rounded Edge : 각 모서리만 둥근 형태
-					   2. Circular Edge : 좌우측 모서리가 둥근 형태
+					   1. Rounded-edge : 각 모서리만 둥근 형태
+					   2. Circular-shaped : 좌우측 모서리가 둥근 형태
 					   3. Transparent : 배경이 투명한 형태
-					   4. Text : 텍스트만 있는 형태 -->
-				  <span>외관 Appearance</span>
+					   4. Outlined : 외곽선이 있는 형태
+					   5. Arrow-shaped : 좌/우측이 화살표 형태
+					   6. Text : 텍스트만 있는 형태 -->
+				  <span><em>외관</em>Appearance</span>
 			  </th>
 			  <th>
-				  <span>컬러 Color</span>
+				  <span><em>컬러</em>Color</span>
 			  </th>
 			  <th>
 				  <!-- 폰트의 크기 종류 (공통)
@@ -64,17 +84,17 @@
 					   6. Large : 18px
 					   7. eXtra Large : 20px
 					   8. Title : 22px -->
-				  <span>크기 Size</span>
+				  <span><em>크기</em>Size</span>
 			  </th>
 			  <th>
-				  <!-- 내부 형태 종류 (버튼)
+				  <!-- 조합 형태 종류 (버튼)
 					  
 					   1. label-only : 아이콘 없이 레이블만 있는 형태
 					   2. icon-only : 레이블 없이 아이콘만 있는 형태
 					   3. left-icon : 아이콘이 레이블 좌측에 있는 형태
 					   4. right-icon : 아이콘이 레이블 우측에 있는 형태
-					   5. has-arrow : 화살표가 같이 있는 형태 -->
-				  <span>형태 Type</span>
+					   5. has-dropdown : 드롭다운(화살표)가 같이 있는 형태 -->
+				  <span><em>조합 형태</em>Combine Type</span>
 			  </th>
 		  </tr>
 		  <tr>
@@ -84,22 +104,35 @@
 				    <label>Confirm</label>
 				  </button>
 			  </td>
-			  <td><span>Box type</span></td>
+			  <td><span>Rounded-edge</span></td>
 			  <td><span>$color-confirm</span></td>
 			  <td>$base-font-size</td>
-			  <td>$label-only</td>
+			  <td>label-only</td>
 		  </tr>
 		  <tr>
-			  <td><label class="class-name">jui-button-alert rounded-edge</label></td>
+			  <td><label class="class-name">jui-button-confirm</label></td>
 			  <td>
-				  <button class="jui-button-alert rounded-edge">
-				    <label>Terminate</label>
+				  <button class="jui-button-confirm outlined">
+				    <label>Call to Action</label><i class="typcn typcn-flash"></i>
 				  </button>
 			  </td>
-			  <td><span>Rounded-Box type</span></td>
+			  <td><span>Outlined</span></td>
+			  <td><span>$color-confirm</span></td>
+			  <td>$base-font-size</td>
+			  <td>right-icon</td>
+		  </tr>
+		  <tr>
+			  <td><label class="class-name">jui-button-alert circular-shaped</label></td>
+			  <td>
+				  <button class="jui-button-alert circular-shaped">
+				    <i class="typcn typcn-delete"></i>
+				    <label>Terminate this app</label>
+				  </button>
+			  </td>
+			  <td><span>Circular-shaped</span></td>
 			  <td>$color-alert</td>
 			  <td>$base-font-size</td>
-			  <td>$label-only</td>
+			  <td>left-icon</td>
 		  </tr>
 		  <tr>
 			  <td><label class="class-name">jui-button [disabled]</label></td>
@@ -108,34 +141,35 @@
 				    <label>Disabled</label>
 				  </button>
 			  </td>
-			  <td><span>Box type</span></td>
+			  <td><span>Rounded-edge</span></td>
 			  <td>$color-mono</td>
 			  <td>$base-font-size</td>
-			  <td>$label-only</td>
+			  <td>label-only</td>
 		  </tr>
 		  <tr>
 			  <td><label class="class-name">jui-button-cancel left-arrow-shaped</label></td>
 			  <td>
 				  <button class="jui-button-cancel left-arrow-shaped" >
-				    <label>뒤로가기</label>
+				    <label>뒤로</label>
 				  </button>
 			  </td>
-			  <td><span>Left-arrow Shaped Box type</span></td>
+			  <td><span>Arrow-shaped (Left)</span></td>
 			  <td>$color-white</td>
 			  <td>$base-font-size</td>
-			  <td>$label-only</td>
+			  <td>label-only</td>
 		  </tr>
 		  <tr>
 			  <td><label class="class-name">jui-button-cancel right-arrow-shaped</label></td>
 			  <td>
 				  <button class="jui-button-cancel right-arrow-shaped" >
-				    <label>다음</label>
+				    <i class="typcn typcn-media-fast-forward"></i>
+				    <!--<label>다음</label>-->
 				  </button>
 			  </td>
-			  <td><span>Right-arrow Shaped Box type</span></td>
+			  <td><span>Arrow-shaped (Right)</span></td>
 			  <td>$color-white</td>
 			  <td>$base-font-size</td>
-			  <td>$label-only</td>
+			  <td>icon-only</td>
 		  </tr>
 	  </tbody>
   </table>

@@ -1,54 +1,5 @@
-/* Default Variables */
-
-$light-font-weight: 500;
-$base-font-size: 15px;
-$base-font-weight: 600;
-$border-round-base: 0.2em;
-$base-line-height: 1.25em;
-
-$color-confirm: #00ACE9;
-$color-confirm-hovered: #0092D8;
-$color-confirm-pressed: #0389C8;
-
-$color-white: rgba(255, 255, 255, 1);
-
-$color-mono: rgba(204, 204, 204, 1);
-
-$color-badge: #FF5B49;
-
-$color-alert: #D94516;
-$color-alert-hovered: #C9302C;
-$color-alert-pressed: #BB2A27;
-
-$color-cancel: #617B8E;
-$color-cancel-hovered: #F2F3F4;
-$color-cancel-pressed: #F2F3F4;
-$color-cancel-border: #C9D4DB;
-
-$padding-base: 6px 12px;
-
-$border-default-transpaerent: 1px solid transparent;
-
-$box-shadow-button-inset: inset 0 1px 2px 0 rgba(0,0,0,0.12);
-
-$value-none: none;
-
-$value-pointer: pointer;
-
-$value-not-allowed: not-allowed;
-
-$pos-relative: relative;
-$pos-absolute: absolute;
-$pos-fixed: fixed;
-$pos-sticky: sticky;
-$pos-static: static;
-
-
-
-@mixin when-disabled() {
-  cursor: $value-not-allowed;
-  background-color: $color-mono;
-}
+@import 'variables';
+@import 'mixins';
 
 
 
@@ -59,9 +10,11 @@ body {
 
 
 
+
 /* Base & Nesting */
 button {
   position: relative;
+  box-sizing: border-box;
 }
 
 button[class*="jui-button"] {
@@ -75,7 +28,7 @@ button[class*="jui-button"] {
   background-color: $color-mono;
 	
   label {
-	color: $color-white;
+	color: inherit;
 	position: $pos-relative;
 		
 	font-weight: $base-font-weight;
@@ -83,6 +36,16 @@ button[class*="jui-button"] {
 		
 	pointer-events: $value-none;
 	line-height: $base-line-height;
+  }
+  
+  i {
+	color: inherit;
+	position: $pos-relative;
+	font-weight: $base-font-weight;
+	display: $display-inline-block;
+	font-size: $base-font-size*1.2;
+	line-height: $base-line-height*0.75;
+	
   }
   
   &:not([disabled]):active {
@@ -99,11 +62,8 @@ button[class*="jui-button"] {
 /* Variations */
 button.jui-button-confirm {
   background-color: $color-confirm;
-  
-  label {
-	//color: $color-white;
-  }
-	
+  color: $color-white;
+
   &:not([disabled]):hover {
 	background-color: $color-confirm-hovered;
   }
@@ -115,16 +75,32 @@ button.jui-button-confirm {
   &:not([disabled]):focus {
 	background-color: $color-confirm-pressed;
   }
+  
+  &.outlined {
+	@include is-outlined($color-confirm, $color-white);
+	
+	&:hover {
+	  border-color: $color-transparent;
+	  color: $color-white;
+	}
+	
+	&:active {
+	  border-color: $color-transparent;
+	  color: $color-white;
+	}
+	
+	&:focus {
+	  border-color: $color-transparent;
+	  color: $color-white;
+	}
+  }
 }
 
 
 button.jui-button-alert {
   background-color: $color-alert;
-	
-  label {
-	//color: $color-white;
-  }
-	
+  color: $color-white;
+
   &:not([disabled]):hover {
 	background-color: $color-alert-hovered;
   }
@@ -141,11 +117,8 @@ button.jui-button-alert {
 button.jui-button-cancel {
   background-color: $color-white;
   border-color: $color-cancel-border;
-	
-  label {
-	color: $color-cancel;
-  }
-	
+  color: $color-cancel;
+
   &:hover {
 	background-color: $color-cancel-hovered;
   }
@@ -161,18 +134,19 @@ button.jui-button-cancel {
 
 button[class*="arrow-shaped"] {
   &.left-arrow-shaped {
-	padding-left: 7px;
-    margin-left: 14px;
+	padding-left: $base-font-size*0.3;
+    margin-left: $base-font-size*0.9;
   }
   
   &.right-arrow-shaped {
-	padding-right: 7px;
-	margin-right: 14px;
+	padding-right: $base-font-size*0.3;
+	margin-right: $base-font-size*0.9;
 	
 	&:before {
 	  transform: rotate(45deg) scaleX(-1);
 	  left: auto;
       right: -12px;
+      width: 24px;
 	}
   }
   
@@ -194,6 +168,6 @@ button[class*="arrow-shaped"] {
   }
 }
 
-button[class*="rounded-edge"] {
-  border-radius: 3em;
+button[class*="circular-shaped"] {
+  border-radius: $base-line-height*2.4;
 }

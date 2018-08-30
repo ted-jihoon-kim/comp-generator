@@ -5,7 +5,8 @@ body {
 
 /* Base & Nesting */
 button {
-  position: relative; }
+  position: relative;
+  box-sizing: border-box; }
 
 button[class*="jui-button"] {
   outline: none;
@@ -15,30 +16,53 @@ button[class*="jui-button"] {
   border-radius: 0.2em;
   background-color: #cccccc; }
   button[class*="jui-button"] label {
-    color: white;
+    color: inherit;
     position: relative;
     font-weight: 600;
     font-size: 15px;
     pointer-events: none;
     line-height: 1.25em; }
+  button[class*="jui-button"] i {
+    color: inherit;
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 0.9375em; }
   button[class*="jui-button"]:not([disabled]):active {
-    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.12); }
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
   button[class*="jui-button"][disabled] {
     cursor: not-allowed;
-    background-color: #cccccc; }
+    background-color: #cccccc;
+    color: white; }
 
 /* Variations */
 button.jui-button-confirm {
-  background-color: #00ACE9; }
+  background-color: #00ACE9;
+  color: white; }
   button.jui-button-confirm:not([disabled]):hover {
     background-color: #0092D8; }
   button.jui-button-confirm:not([disabled]):active {
     background-color: #0389C8; }
   button.jui-button-confirm:not([disabled]):focus {
     background-color: #0389C8; }
+  button.jui-button-confirm.outlined {
+    border-color: #00ACE9;
+    background-color: white;
+    color: #00ACE9; }
+    button.jui-button-confirm.outlined:hover {
+      border-color: transparent;
+      color: white; }
+    button.jui-button-confirm.outlined:active {
+      border-color: transparent;
+      color: white; }
+    button.jui-button-confirm.outlined:focus {
+      border-color: transparent;
+      color: white; }
 
 button.jui-button-alert {
-  background-color: #D94516; }
+  background-color: #D94516;
+  color: white; }
   button.jui-button-alert:not([disabled]):hover {
     background-color: #C9302C; }
   button.jui-button-alert:not([disabled]):active {
@@ -48,9 +72,8 @@ button.jui-button-alert {
 
 button.jui-button-cancel {
   background-color: white;
-  border-color: #C9D4DB; }
-  button.jui-button-cancel label {
-    color: #617B8E; }
+  border-color: #C9D4DB;
+  color: #617B8E; }
   button.jui-button-cancel:hover {
     background-color: #F2F3F4; }
   button.jui-button-cancel:active {
@@ -59,16 +82,17 @@ button.jui-button-cancel {
     background-color: #F2F3F4; }
 
 button[class*="arrow-shaped"].left-arrow-shaped {
-  padding-left: 7px;
-  margin-left: 14px; }
+  padding-left: 4.5px;
+  margin-left: 13.5px; }
 
 button[class*="arrow-shaped"].right-arrow-shaped {
-  padding-right: 7px;
-  margin-right: 14px; }
+  padding-right: 4.5px;
+  margin-right: 13.5px; }
   button[class*="arrow-shaped"].right-arrow-shaped:before {
     transform: rotate(45deg) scaleX(-1);
     left: auto;
-    right: -12px; }
+    right: -12px;
+    width: 24px; }
 
 button[class*="arrow-shaped"]:before {
   content: '';
@@ -86,5 +110,5 @@ button[class*="arrow-shaped"]:before {
   transform: rotate(-45deg) scaleX(1);
   box-shadow: inherit; }
 
-button[class*="rounded-edge"] {
+button[class*="circular-shaped"] {
   border-radius: 3em; }

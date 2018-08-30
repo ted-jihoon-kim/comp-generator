@@ -1,0 +1,11 @@
+@mixin when-disabled() {
+  cursor: $value-not-allowed;
+  background-color: $color-mono;
+  color: $color-white;
+}
+
+@mixin is-outlined($color, $background) {
+  border-color: $color;
+  background-color: $background;
+  color: $color;
+}
