@@ -39,10 +39,10 @@
 		display: block;
 		font-style: normal;
 		color: #898989;
-		line-height: 12px;
+		line-height: 11px;
 		font-size: 12px;
 		margin-left: -2px;
-		margin-bottom: -4px;
+		margin-bottom: -2px;
 	  }
   </style>
   
@@ -94,7 +94,7 @@
 					   3. left-icon : 아이콘이 레이블 좌측에 있는 형태
 					   4. right-icon : 아이콘이 레이블 우측에 있는 형태
 					   5. has-dropdown : 드롭다운(화살표)가 같이 있는 형태 -->
-				  <span><em>조합 형태</em>Combine Type</span>
+				  <span><em>조합 형태</em>Combination</span>
 			  </th>
 		  </tr>
 		  <tr>
@@ -113,7 +113,8 @@
 			  <td><label class="class-name">jui-button-confirm</label></td>
 			  <td>
 				  <button class="jui-button-confirm outlined">
-				    <label>Call to Action</label><i class="typcn typcn-flash"></i>
+				    <label>1초만에 회원가입하기</label>
+				    <i class="typcn typcn-flash"></i>
 				  </button>
 			  </td>
 			  <td><span>Outlined</span></td>
@@ -171,6 +172,25 @@
 			  <td>$base-font-size</td>
 			  <td>icon-only</td>
 		  </tr>
+		  <tr>
+			  <td><label class="class-name">jui-button-cancel transparent dropdown</label></td>
+			  <td>
+				  <button class="jui-button-cancel transparent dropdown">
+				    <label>24</label>
+				    <i class="typcn typcn-arrow-sorted-down"></i>
+				  </button>
+				  <!-- <div class="jui-dropdown">
+				    <ul>
+					  <li>멤버 관리하기</li>
+					  <li>멤버 초대하기</li>
+				    </ul>
+				  </div> -->
+			  </td>
+			  <td><span>Transparent</span></td>
+			  <td>$color-white</td>
+			  <td>$base-font-size</td>
+			  <td>has-dropdown</td>
+		  </tr>
 	  </tbody>
   </table>
 
@@ -178,6 +198,17 @@
   
   <script src="../js/jquery-1.11.3.min.js"></script>
   
+  <script>
+  
+  $('.dropdown').click(function() {
+	if( $(this).hasClass('open') ){
+	  $(this).removeClass('open');
+	}
+	else {
+	   $(this).addClass('open');
+	}
+  });
+  </script>
   
 </body>
 

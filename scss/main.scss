@@ -31,7 +31,7 @@ button[class*="jui-button"] {
 	color: inherit;
 	position: $pos-relative;
 		
-	font-weight: $base-font-weight;
+	font-weight: $bold-font-weight;
 	font-size: $base-font-size;
 		
 	pointer-events: $value-none;
@@ -44,8 +44,14 @@ button[class*="jui-button"] {
 	font-weight: $base-font-weight;
 	display: $display-inline-block;
 	font-size: $base-font-size*1.2;
-	line-height: $base-line-height*0.75;
+	line-height: $base-line-height*0.8;
 	
+	&:last-child {
+	  margin-right: -($base-font-size*0.25);
+	}
+	&:first-child {
+	  margin-left: -($base-font-size*0.25);
+	}
   }
   
   &:not([disabled]):active {
@@ -130,6 +136,15 @@ button.jui-button-cancel {
   &:focus {
 	background-color: $color-cancel-pressed;
   }
+  
+  &.transparent {
+	@include is-transparent($color-cancel);
+	
+	&:hover {
+	  background-color: $color-cancel-hovered;
+    }
+  }
+
 }
 
 button[class*="arrow-shaped"] {
@@ -170,4 +185,13 @@ button[class*="arrow-shaped"] {
 
 button[class*="circular-shaped"] {
   border-radius: $base-line-height*2.4;
+  padding-left: $base-line-height*1.2;
+  padding-right: $base-line-height*1.2;
+}
+
+button[class*="dropdown"] {
+  
+  i {
+	font-size: $base-font-size*0.9;
+  }
 }

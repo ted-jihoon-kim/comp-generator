@@ -9,3 +9,9 @@
   background-color: $background;
   color: $color;
 }
+
+@mixin is-transparent($color) {
+  border-color: $color-transparent;
+  background-color: $color-transparent;
+  color: $color;
+}
