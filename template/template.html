@@ -23,7 +23,11 @@
 	  }
 */
 	  td {
-		  padding: 8px 0;
+		padding: 8px 8px 8px 0;
+	  }
+	  td select {
+		display: inline-block;
+		width: 90%;
 	  }
 	  th {
 		font-size: 14px;
@@ -36,10 +40,10 @@
 		width: 25%;
 	  }
 	  th:nth-child(3) {
-		width: 15%;
+		width: 16%;
 	  }
 	  th:nth-child(4) {
-		width: 15%;
+		width: 14%;
 	  }
 	  th:nth-child(5) {
 		width: 10%;
@@ -67,7 +71,7 @@
 </head>
 
 <body>
-  
+<!--   <div class="square"></div> -->
   <h3>Buttons (Box types)</h3>
   <table style="border: none;padding: 0;margin: 0;width: 100%;text-align: left; font-size: 13px; font-weight: 400;">
 	<tbody>
@@ -124,10 +128,41 @@
 			<label>Confirm</label>
 		  </button>
 		</td>
-		<td><span>Rounded-edge</span></td>
-		<td><span>$color-confirm</span></td>
-		<td>$base-font-size</td>
-		<td>label-only</td>
+		<td>
+		  <select id="select-appearance" style="font-size: 13px;">
+			<option value="0" label="" disabled>select appearance</option>
+			<option value="1" label="" selected>1. Rounded-edge</option>
+			<option value="2" label="" >2. Circular-shaped</option>
+			<option value="3" label="" >3. Transparent</option>
+			<option value="4" label="" >4. Outlined</option>
+			<option value="5" label="" >5. Arrow-shaped (Left)</option>
+			<option value="6" label="" >6. Arrow-shaped (Right)</option>
+		  </select>
+		</td>
+		<td>
+		  <select id="select-color" style="font-size: 13px;">
+			<option value="0" label="" disabled>select color</option>
+			<option value="1" label="" selected>color-confirm</option>
+			<option value="2" label="" >color-alert</option>
+			<option value="3" label="" >color-cancel</option>
+			<option value="4" label="" >color-mono</option>
+		  </select>
+		</td>
+		<td>
+		  <input type="number" value="13" style="width: 50%;">
+<!-- 		  $base-font-size -->
+		</td>
+		<td>
+		  <select id="select-combination" style="font-size: 13px;">
+			<option value="0" label="" disabled>select combination</option>
+			<option value="1" label="" selected>label-only</option>
+			<option value="2" label="" >left-icon</option>
+			<option value="3" label="" >right-icon</option>
+			<option value="4" label="" >icon-only</option>
+			<option value="5" label="" >label-has-dropdown</option>
+			<option value="6" label="" >icon-has-dropdown</option>
+		  </select>
+		</td>
 	  </tr>
 	  <tr>
 		<td>
@@ -136,7 +171,7 @@
 		<td>
 		  <button class="jui-button-confirm outlined">
 			<label>1초만에 회원가입하기</label>
-			<i class="typcn typcn-chevron-right"></i>
+			<i class="right-pos typcn typcn-chevron-right"></i>
 		  </button>
 		</td>
 		<td><span>Outlined</span></td>
@@ -150,7 +185,7 @@
 		</td>
 		<td>
 		  <button class="jui-button-alert circular-shaped">
-			<i class="typcn typcn-delete"></i>
+			<i class="left-pos typcn typcn-delete"></i>
 			<label>Terminate this app</label>
 		  </button>
 		</td>
@@ -209,7 +244,7 @@
 		<td>
 		  <button class="jui-button-cancel transparent dropdown">
 			<label>24</label>
-			<i class="typcn typcn-arrow-sorted-down"></i>
+			<i class="right-pos typcn typcn-arrow-sorted-down"></i>
 		  </button>
 		  <!-- <div class="jui-dropdown">
 			<ul>
