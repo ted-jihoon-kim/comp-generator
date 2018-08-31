@@ -30,10 +30,22 @@
 		color: #494949;
 	  }
 	  th:nth-child(1) {
-		width: 250px;
+		width: 25%;
 	  }
 	  th:nth-child(2) {
 		width: 25%;
+	  }
+	  th:nth-child(3) {
+		width: 15%;
+	  }
+	  th:nth-child(4) {
+		width: 15%;
+	  }
+	  th:nth-child(5) {
+		width: 10%;
+	  }
+	  th:nth-child(6) {
+		width: 10%;
 	  }
 	  .class-name {
 		padding: 2px 4px;
@@ -124,7 +136,7 @@
 		<td>
 		  <button class="jui-button-confirm outlined">
 			<label>1초만에 회원가입하기</label>
-			<i class="typcn typcn-flash"></i>
+			<i class="typcn typcn-chevron-right"></i>
 		  </button>
 		</td>
 		<td><span>Outlined</span></td>
@@ -258,17 +270,32 @@
 	  </tr>
 	  <tr>
 		<td>
-		  <label class="class-name">jui-button-text</label>
+		  <label class="class-name">jui-text-link</label>
 		</td>
 		<td>
-		  <a href="#" class="jui-button-text" >
+		  <a href="#" class="jui-text-link" >
 			<label>더 알아보기</label>
 		  </a>
 		</td>
 		<td><span>-</span></td>
-		<td>$color-white</td>
+		<td>$color-mono</td>
 		<td>$base-font-size</td>
 		<td>text-only</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">jui-text-link-confirm</label>
+		</td>
+		<td>
+		  <a href="#" class="jui-text-link-confirm" >
+			<label>Upgrade plan now!</label>
+			<i class="typcn typcn-arrow-right"></i>
+		  </a>
+		</td>
+		<td><span>-</span></td>
+		<td>$color-confirm</td>
+		<td>$base-font-size</td>
+		<td>right-icon</td>
 	  </tr>
 	</tbody>
   </table>

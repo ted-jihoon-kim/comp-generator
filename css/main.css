@@ -3,7 +3,37 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: Helvetica Neue, sans-serif; }
 
-/* Base & Nesting */
+/* Basic Anchor */
+a {
+  cursor: pointer;
+  outline: none;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2em;
+  color: #969696; }
+  a:hover {
+    color: #828282; }
+  a:active {
+    color: #828282; }
+  a:focus {
+    color: #828282; }
+  a label {
+    cursor: inherit; }
+  a i {
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle; }
+
+a.jui-text-link-confirm {
+  color: #00ACE9; }
+  a.jui-text-link-confirm:not([disabled]):hover {
+    color: #0092D8; }
+  a.jui-text-link-confirm:not([disabled]):active {
+    color: #0389C8; }
+  a.jui-text-link-confirm:not([disabled]):focus {
+    color: #0389C8; }
+
+/* Basic Button */
 button {
   position: relative;
   box-sizing: border-box; }
@@ -14,21 +44,21 @@ button[class*="jui-button"] {
   padding: 6px 12px;
   border: 1px solid transparent;
   border-radius: 0.2em;
-  background-color: #cccccc; }
+  background-color: #cccccc;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2em; }
   button[class*="jui-button"] label {
     color: inherit;
     position: relative;
-    font-weight: 700;
-    font-size: 15px;
-    pointer-events: none;
-    line-height: 1.25em; }
+    display: inline-block;
+    pointer-events: none; }
   button[class*="jui-button"] i {
     color: inherit;
     position: relative;
     font-weight: 600;
     display: inline-block;
-    font-size: 18px;
-    line-height: 1em; }
+    font-size: 18px; }
     button[class*="jui-button"] i:last-child {
       margin-right: -3.75px; }
     button[class*="jui-button"] i:first-child {
@@ -121,9 +151,9 @@ button[class*="arrow-shaped"]:before {
   box-shadow: inherit; }
 
 button[class*="circular-shaped"] {
-  border-radius: 3em;
-  padding-left: 1.5em;
-  padding-right: 1.5em; }
+  border-radius: 2.88em;
+  padding-left: 1.2em;
+  padding-right: 1.2em; }
 
 button[class*="dropdown"] i {
   font-size: 13.5px; }

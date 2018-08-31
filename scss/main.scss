@@ -10,8 +10,56 @@ body {
 
 
 
+/* Basic Anchor */
+a {
+  cursor: $value-pointer;
+  outline: $value-none;
+  
+  font-weight: $light-font-weight;
+  font-size: $small-font-size;
+  line-height: $base-line-height;
+  
+  color: $color-mono-969696;
+  
+  &:hover {
+	color: $color-mono-828282;
+  }
+  &:active {
+	color: $color-mono-828282;
+  }
+  &:focus {
+	color: $color-mono-828282;
+  }
+  
+  label {
+	cursor: $value-inherit;
+  }
+  
+  i {
+	font-size: $base-font-size*1.2;
+	display: $display-inline-block;
+	vertical-align: $value-middle;
+  }
+  
+}
 
-/* Base & Nesting */
+a.jui-text-link-confirm {
+  color: $color-confirm;
+
+  &:not([disabled]):hover {
+	color: $color-confirm-hovered;
+  }
+	
+  &:not([disabled]):active {
+	color: $color-confirm-pressed;
+  }
+	
+  &:not([disabled]):focus {
+	color: $color-confirm-pressed;
+  }
+}
+
+/* Basic Button */
 button {
   position: relative;
   box-sizing: border-box;
@@ -26,16 +74,16 @@ button[class*="jui-button"] {
   border-radius: $border-round-base;
 	
   background-color: $color-mono;
-	
+  
+  font-weight: $bold-font-weight;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  
   label {
 	color: inherit;
 	position: $pos-relative;
-		
-	font-weight: $bold-font-weight;
-	font-size: $base-font-size;
-		
+	display: $display-inline-block;
 	pointer-events: $value-none;
-	line-height: $base-line-height;
   }
   
   i {
@@ -44,7 +92,6 @@ button[class*="jui-button"] {
 	font-weight: $base-font-weight;
 	display: $display-inline-block;
 	font-size: $base-font-size*1.2;
-	line-height: $base-line-height*0.8;
 	
 	&:last-child {
 	  margin-right: -($base-font-size*0.25);
@@ -185,8 +232,8 @@ button[class*="arrow-shaped"] {
 
 button[class*="circular-shaped"] {
   border-radius: $base-line-height*2.4;
-  padding-left: $base-line-height*1.2;
-  padding-right: $base-line-height*1.2;
+  padding-left: $base-line-height;
+  padding-right: $base-line-height;
 }
 
 button[class*="dropdown"] {

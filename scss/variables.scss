@@ -1,11 +1,14 @@
 /* Default Variables */
 
+
+$small-font-size: 13px;
+
 $light-font-weight: 500;
 $base-font-size: 15px;
 $base-font-weight: 600;
 $bold-font-weight: 700;
 $border-round-base: 0.2em;
-$base-line-height: 1.25em;
+$base-line-height: 1.2em;
 
 $color-confirm: #00ACE9;
 $color-confirm-hovered: #0092D8;
@@ -14,7 +17,8 @@ $color-confirm-pressed: #0389C8;
 $color-white: rgba(255, 255, 255, 1);
 
 $color-mono: rgba(204, 204, 204, 1);
-
+$color-mono-969696: #969696;
+$color-mono-828282: #828282;
 $color-badge: #FF5B49;
 
 $color-alert: #D94516;
@@ -35,8 +39,9 @@ $border-default-transparent: 1px solid transparent;
 $box-shadow-button-inset: inset 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 
 $value-none: none;
-
+$value-inherit: inherit;
 $value-pointer: pointer;
+$value-middle: middle;
 
 $value-not-allowed: not-allowed;
 
@@ -49,4 +54,5 @@ $pos-static: static;
 $display-block: block;
 $display-inline-block: inline-block;
 $display-inline: inline;
+
 
