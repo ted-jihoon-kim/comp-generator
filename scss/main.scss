@@ -10,12 +10,6 @@ body {
 	margin: 0;
 }
 
-.square {
-	@include size(150px, 20px);
-	background-color: $color-cancel;
-}
-
-
 /* Basic Anchor Tag */
 a {
   cursor: $value-pointer;
@@ -212,7 +206,6 @@ button.jui-button-cancel {
 	  background-color: $color-cancel-hovered;
     }
   }
-
 }
 
 button[class*="arrow-shaped"] {
@@ -259,7 +252,133 @@ button[class*="circular-shaped"] {
 
 button[class*="dropdown"] {
   
+  
   i {
 	font-size: $base-font-size*0.9;
   }
 }
+
+
+/* profile container */
+.user-profile-container {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #FFF;
+  border: 1px solid #e1e1e1;
+  position: relative;
+  
+  &.size-xs {
+	@include sizing($size-xs-value);
+  }
+  
+  &.size-s {
+	@include sizing($size-s-value);
+  }
+  
+  &.size-m {
+	@include sizing($size-m-value);
+  }
+  
+  &.size-l {
+	@include sizing($size-l-value);
+  }
+  
+  &.size-xl {
+	@include sizing($size-xl-value);
+  }
+  
+  &.size-106 {
+	@include sizing($size-106-value);
+  }
+  
+  &.is-away { /* 부재 중 상태 일 때 */
+    background-color: #000;
+    border-width: 0; /* 윈도우 환경에서 border 부분이 깨지는 이슈로 인해 border 제거 */
+    
+	.overlay-user-profile {
+	  opacity: 1;
+	}
+	
+	.img-user-profile {
+	  opacity: 0.325;
+	}
+  }
+  
+  &.is-groupchat {/* 그룹 챗 일 때 */
+	  
+	&[class*='-members']:after,
+	&[class*='-members']:before {
+	  content: '';
+      position: absolute;
+	}
+	
+	&.has-2-members:after {
+      width: 50%;
+      height: 100%;
+      border-right: 1px solid #e1e1e1;
+    }
+    
+    &.has-3-members:after {
+      width: 100%;
+      height: 50%;
+      border-bottom: 1px solid #e1e1e1;
+    }
+    
+    &.has-4-members:after {
+      width: 100%;
+      height: 50%;
+      border-bottom: 1px solid #e1e1e1;
+    }
+    
+    &.has-3-members:before {
+      top: 50%;
+      width: 50%;
+      height: 50%;
+      border-right: 1px solid #e1e1e1;
+      z-index: 1;
+    }
+    
+    &.has-4-members:before {
+      top: 0%;
+      width: 50%;
+      height: 100%;
+      border-right: 1px solid #e1e1e1;
+      z-index: 1;
+    }
+  }
+
+}
+
+
+.img-user-profile {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.overlay-user-profile { /* 부재중 상태 표시 레이어 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  
+  .icon-svg.ico-away {
+    background: url('../assets/images/icon-away-state.svg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  
+    -webkit-transform: rotate(45deg) translate(0, -1px) scale(0.925);
+    transform: rotate(45deg) translate(0, -1px) scale(0.925);
+  }
+}
+

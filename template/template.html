@@ -16,12 +16,22 @@
 		-webkit-font-smoothing: antialiased;
 		font-smoothing: antialiased;
 		text-rendering: optimizeLegibility;
+	  } 
+	  table {
+		border: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		text-align: left;
+		font-size: 13px;
+		font-weight: 400;
+		margin-bottom: 5em;
 	  }
-/*
-	  tr:not(:first-child):hover {
-		background-color: #F5F5F5;
+	  
+	  tr:first-child {
+		box-shadow: 0 1px 0 0 #CBCBCB;
+		line-height: 32px;
 	  }
-*/
 	  td {
 		padding: 8px 8px 8px 0;
 	  }
@@ -66,20 +76,115 @@
 		margin-left: -2px;
 		margin-bottom: -2px;
 	  }
+	  h1 {
+		color: rgba(169, 184, 191, 1);
+	  }
   </style>
   
 </head>
 
 <body>
 <!--   <div class="square"></div> -->
-  <h3>Buttons (Box types)</h3>
-  <table style="border: none;padding: 0;margin: 0;width: 100%;text-align: left; font-size: 13px; font-weight: 400;">
+  <h1>Foundations</h1>
+  <h3>Colors</h3>
+  <table >
 	<tbody>
-	  <tr style="box-shadow: 0 1px 0 0 #CBCBCB; line-height: 32px;">
-		<th style="">
+	  <tr>
+		<th>
 		  <span><em>클래스명</em>Class Name</span>
 		</th>
-		<th style="">
+		<th>
+		  <span><em>미리보기</em>Preview</span>
+		</th>
+	  </tr>
+	</tbody>
+  </table>
+  
+  
+  <h3>Profiles</h3>
+  <table>
+	<tbody>
+	  <tr>
+		<th>
+		  <span><em>클래스명</em>Class Name</span>
+		</th>
+		<th>
+		  <span><em>미리보기</em>Preview</span>
+		</th>
+		<th>
+		  <!-- 외관 종류
+					  
+			  1. Default : 등록은 되었으나, 프로필 사진을 정하지 않은 상태
+			  2. Dummy : 초대중인 멤버 (초대 수락하지 않은 상태)
+			  3. Character : 잔디에서 제공하는 캐릭터를 설정한 상태
+			  4. Customized : 개별 프로필 사진을 업로드한 상태
+			  5. Bot : 잔디 커넥트 설정 시 해당 서비스 프로필 기본 상태 -->
+		  <span><em>외관</em>Appearance</span>
+		</th>
+		<th>
+		  <!-- 상태 종류
+					  
+			  1. online : 접속중인 상태
+			  2. offline : 접속하지 않은 상태
+			  3. away : 부재중 설정한 상태
+			  4. disabled : 차단 또는 탈퇴한 상태 -->
+		  <span><em>상태</em>Status</span>
+		</th>
+		<th>
+		  <!-- 프로필의 크기
+					  
+			  1. eXtra Small : 23*23px
+			  2. Small : 26*26px
+			  3. Medium : 28*28px
+			  4. Large : 32*32px
+			  5. eXtra Large : 36*36px
+			  6. 106 size : 106*106px -->
+		  <span><em>크기</em>Size</span>
+		</th>
+		<th>
+		  <!-- 조합 형태
+					  
+			  1. group profile (2) : 3인이 참여중인 그룹 채팅 프로필
+			  2. group profile (3) : 4인이 참여중인 그룹 채팅 프로필
+			  3. group profile (4) : 5인이상 참여중인 그룹 채팅 프로필
+			  4. editable : 수정 가능한 프로필
+			  5. editable-bottom : 수정 가능한 프로필 (하단에 수정 버튼 제공) -->
+		  <span><em>조합 형태</em>Combination</span>
+		</th>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">user-profile-container</label>
+		  <label class="class-name">is-groupchat</label>
+		  <label class="class-name">has-2-members</label>
+		  <label class="class-name">size-xs</label></td>
+		<td>
+		  <div class="user-profile-container is-groupchat has-2-members size-xs">
+			<!-- 사용자 프로필 이미지 -->
+			<img class="img-user-profile" src="https://jandi-box.com/assets/profile_default_240_20170728.png?size=80">
+			
+			<img class="img-user-profile" src="https://jandi-box.com/assets/profile_default_240_20170728.png?size=80">
+			
+			<!-- 부재중 상태 표시 레이어 -->
+			<div class="overlay-user-profile">
+			  <i class="icon-svg ico-away"></i>
+			</div>
+		  </div>
+		</td>
+	  </tr>
+	</tbody>
+  </table>
+  
+  
+  <h1>Components</h1>
+  <h3>Buttons (Box types)</h3>
+  <table>
+	<tbody>
+	  <tr>
+		<th>
+		  <span><em>클래스명</em>Class Name</span>
+		</th>
+		<th>
 		  <span><em>미리보기</em>Preview</span>
 		</th>
 		<th>
@@ -262,13 +367,13 @@
   </table>
   
   <h3>Buttons (Text types)</h3>
-  <table style="border: none;padding: 0;margin: 0;width: 100%;text-align: left; font-size: 13px; font-weight: 400;">
+  <table>
 	<tbody>
-	  <tr style="box-shadow: 0 1px 0 0 #CBCBCB; line-height: 32px;">
-		<th style="">
+	  <tr >
+		<th>
 		  <span><em>클래스명</em>Class Name</span>
 		</th>
-		<th style="">
+		<th>
 		  <span><em>미리보기</em>Preview</span>
 		</th>
 		<th>

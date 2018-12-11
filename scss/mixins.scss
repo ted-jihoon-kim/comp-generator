@@ -45,8 +45,8 @@
   font-weight: $base-font-weight;
 }
 
-/* text mixin */
-@mixin size($width, $height: $width) {
+
+@mixin sizing($width, $height: $width) {
   width: $width;
   height: $height;
 }
