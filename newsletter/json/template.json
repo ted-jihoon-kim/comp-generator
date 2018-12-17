@@ -1,0 +1,84 @@
+{
+  "section": [
+    {
+      "id": 0,
+      "order": 0,
+      "title": "잔디 일을 바꾸다",
+      "layout": "col-1-grid"
+    },
+    {
+      "id": 1,
+      "order": 1,
+      "title": "스마트워크를 말하다",
+      "layout": "col-2-grid"
+    },
+    {
+      "id": 2,
+      "order": 2,
+      "title": "잔디 활용 팁",
+      "layout": "list"
+    },
+    {
+      "id": 3,
+      "order": 3,
+      "title": "이벤트 소식",
+      "layout": "col-1-grid"
+    }
+  ],
+  "contents": [
+    {
+      "id": 11,
+      "section": 0,
+      "thumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/1.+gurogu.jpg",
+      "title": "[비영리] 구로구소기업소상공인회의 간편 전자 결재 시스템, 어떻게 만들었을까요?",
+      "link": "http://blog.jandi.com/ko/2018/11/14/customerstories-gurokbiz/",
+      "description": "잔디를 도입한 후 모든 회원들에게 투명하게 업무와 재정 흐름을 공개할 수 있게 된 구로구소기업소상공인회. 조직 안정화와 스마트워크를 구축하게 된 계기와 그 구체적인 변화는 무엇일까요?",
+      "author" : "JANDI"
+    },
+    {
+      "id": 12,
+      "section": 1,
+      "thumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/2.+2peoplepg.jpg",
+      "title": "2명이서 20만 유저 관리하기\n#1 온라인편",
+      "link": "http://blog.jandi.com/ko/2018/11/27/working_cx/",
+      "description": "고객경험(Customer Experience)의 의미를 알고 계신가요? CX의 의미 그리고 잔디 CX팀이 어떤 툴(Tool)을 사용하고 어떻게 일을 하는지 소개해 드립니다. #온라인편",
+      "author" : "JANDI"
+    },
+    {
+      "id": 13,
+      "section": 1,
+      "thumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/3.+nps1.png",
+      "title": "서비스 성과 지표로 고민중이세요?\n① NPS 개념알기",
+      "link": "http://blog.jandi.com/ko/2018/11/07/what_is_nps/",
+      "description": "잔디 CX 팀은 Customer Experience 라는 팀 이름에 걸맞게 '사용자들이 잔디를 추천하는 지수'인 'NPS (Net Promoter Score)'를 저희 팀 만의 서비스 성과 지표로...",
+      "author" : "JANDI"
+    },
+    {
+      "id": 14,
+      "section": 2,
+      "thumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/4.+alert.png",
+      "title": "원격 매장/매니저 출퇴근 알람 잔디로 받기\n (코무: 코딩 무관함)",
+      "link": "http://blog.jandi.com/ko/2018/10/15/location_check_with_jandi/",
+      "description": "다양한 지역의 빨래방을 방문해야하는 매니저님이 무인 빨래방 관리를 위해 특정 매장에 방문한 경우, 이를 잔디 알람으로 받아 볼 수 있을까요?...",
+      "author" : "워시엔조이 - 봉재원"
+    },
+    {
+      "id": 15,
+      "section": 2,
+      "thumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/5.+npo.jpg",
+      "title": "비영리조직의 스마트워크",
+      "link": "http://blog.jandi.com/ko/2018/11/06/smartwork_for_npo/",
+      "description": "공익적 활동을 하는 다양한 비영리 단체 그리고 사회적 기업들을 많이 만납니다. 그들이 일하는 방식들을 많이 접하면서, 왜 비영리조직이야 말로 효율적인 업무방식...",
+      "author" : "前 테크숩 사무국장 - 정지훈"
+    },
+    {
+      "id": 16,
+      "section": 3,
+      "thumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/6.seminar.jpg",
+      "title": "",
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLSfS2qo34RXA6IEZOzcvaP3CC37eGZNOaBO2Kqq2TwKz0ee51g/viewform",
+      "description": "",
+      "author" : ""
+    }
+  ]
+}
