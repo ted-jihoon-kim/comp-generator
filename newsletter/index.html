@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-STORE">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Newsletter Composer (Beta)</title>
   
   
@@ -22,6 +22,7 @@
 	  body {
 		   font-family: "Helvetica Neue", Arial, sans-serif;
 		   -webkit-font-smoothing: antialiased;
+		   /* white-space: pre-wrap; */
 	  }
   </style>
   
@@ -38,19 +39,23 @@
   
 </head>
 
-<body>
+<body style="margin: 0; width: 100%;">
 
   <table align="center" style="border: 0px solid #ffffff;" cellpadding="0" cellspacing="0" width="600" >
     
     <tr>
         
-      <td bgcolor="#ffffff" style="padding: 48px 30px 0px 30px;">
+      <td bgcolor="#ffffff" style="padding: 48px 0 0;">
 		
 		<table border="0" cellpadding="0" cellspacing="0" width="600">	
 		  <tr>
 			<th colspan="1" align="left" style="padding:0px 0 8px 0px;">
 			  <a href="https://www.jandi.com/landing/" target="_blank">
-				<img   src="https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/jandi+logo.png" alt="JANDI Newsletter" align="left" height="30"/>
+			  	<!-- 개발중에는 로컬 이미지 사용
+				<img   
+				src="https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/jandi+logo.png" alt="JANDI Newsletter" align="left" height="30"/>
+				-->
+				<img src="/newsletter/temp/jandi+logo.png" alt="JANDI Newsletter" align="left" height="30"/>
 			  </a>
 			</th>
 					
@@ -78,7 +83,7 @@
     <tr>
       
       <td section-id="0" section-order="0" section-layout="col-1-grid"
-	      bgcolor="#ffffff" style="padding: 48px 30px 20px 30px;">
+	      bgcolor="#ffffff" style="padding: 48px 0 20px;">
             
         <table border="0" cellpadding="0" cellspacing="0" width="600">
           <tr>
@@ -94,6 +99,7 @@
         <table border="0" cellpadding="0" cellspacing="0" width="600">
           <tr>
             <td style="padding: 20px 0 0 0; background-color:#ffffff;">
+              
               <table content-id="11" width="600" 
 	                 border="0" cellpadding="0" cellspacing="0" >
 	            <tr>
@@ -119,6 +125,10 @@
 				  </td>
 				</tr>
 			  </table>
+			  
+			  
+			  
+			  
             </td>
           </tr>
         </table>
@@ -129,7 +139,7 @@
     <tr>
       
       <td section-id="1" section-order="1" section-layout="col-2-grid"
-	      bgcolor="#ffffff" style="padding: 20px 30px 0;">
+	      bgcolor="#ffffff" style="padding: 20px 0 0;">
             
         <table border="0" cellpadding="0" cellspacing="0" width="600">
           <tr>
@@ -144,7 +154,7 @@
             
         <table border="0" cellpadding="0" cellspacing="0" width="600">
           <tr>
-            <td width="295" style="padding: 20px 0 0 0; background-color:#ffffff;">
+            <td width="295" style="padding: 20px 5px 0 0; background-color:#ffffff;">
               <table content-id="12" width="295"
 	                 border="0" cellpadding="0" cellspacing="0">
 	            <tr>
@@ -171,8 +181,8 @@
 	            </tr>
               </table>
             </td>
-            <td width="10"></td>
-            <td width="295" style="padding: 20px 0 0 0; background-color:#ffffff;">
+            
+            <td width="295" style="padding: 20px 0 0 5px; background-color:#ffffff;">
               <table content-id="13" width="295"
 	                 border="0" cellpadding="0" cellspacing="0" >
 	            <tr>
@@ -211,7 +221,7 @@
     <tr>
       
       <td section-id="2" section-order="1" section-layout="list"
-	      bgcolor="#ffffff" style="padding: 20px 30px 0;">
+	      bgcolor="#ffffff" style="padding: 20px 0 0;">
             
         <table border="0" cellpadding="0" cellspacing="0" width="600">
           <tr>
@@ -312,7 +322,7 @@
     <tr>
       
       <td section-id="3" section-order="1" section-layout="col-1-grid"
-	      bgcolor="#ffffff" style="padding: 48px 30px 0;">
+	      bgcolor="#ffffff" style="padding: 48px 0 0;">
             
         <table border="0" cellpadding="0" cellspacing="0" width="600">
           <tr>
