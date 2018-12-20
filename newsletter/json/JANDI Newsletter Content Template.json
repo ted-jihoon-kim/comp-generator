@@ -36,6 +36,15 @@
       "contentAuthor": "JANDI"
     },
     {
+      "targetSectionID": 0,
+      "contentID": 17,
+      "contentThumbnail": "/newsletter/temp/181109_워시엔조이.jpg",
+      "contentTitle": "[유통] 셀프빨래방 업계 1위 워시엔조이의 잠재고객을 놓치지 않는 비법은?",
+      "contentLink": "http://blog.jandi.com/ko/2018/11/08/customercase-washenjoy/",
+      "contentDescription": "경쟁이 갈수록 심해지는 셀프빨래방 업계에서 워시엔조이는 어떻게 1위를 지킬 수 있을까요? 단 하나의 고객도 놓치지 않는 워시엔조이의 정확하고 빠른 고객 대응 시스템이 잔디를 통해 가능해졌다고 합니다. 스피드가 생명인 워시엔조이의 협업 문화에 대해서 알아볼까요?",
+      "contentAuthor": "JANDI"
+    },
+    {
       "targetSectionID": 1,
       "contentID": 12,
       "contentThumbnail": "/newsletter/temp/2.twopeople.jpg",
@@ -51,6 +60,15 @@
       "contentTitle": "서비스 성과 지표로 고민중이세요?\n① NPS 개념알기",
       "contentLink": "http://blog.jandi.com/ko/2018/11/07/what_is_nps/",
       "contentDescription": "잔디 CX 팀은 Customer Experience 라는 팀 이름에 걸맞게 '사용자들이 잔디를 추천하는 지수'인 'NPS (Net Promoter Score)'를 저희 팀 만의 서비스 성과 지표로...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 19,
+      "contentThumbnail": "/newsletter/temp/2_electron.jpg",
+      "contentTitle": "전자결재가 기업의 생산성을 낮추는 이유",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/31/electronicpayment/",
+      "contentDescription": "많은 담당자가 관여해서 느리게 처리되는 과거의 형식을 그룹웨어 또는 사내 시스템에 그대로 옮긴 ‘전자결재’는 최근의 업무 환경에 어울리지 않습니다. 효율적이고 내용 검색이 용이한 원래의 목적에 부합하는 빠른 결재 방법은...",
       "contentAuthor": "JANDI"
     },
     {
@@ -70,6 +88,24 @@
       "contentLink": "http://blog.jandi.com/ko/2018/11/06/smartwork_for_npo/",
       "contentDescription": "공익적 활동을 하는 다양한 비영리 단체 그리고 사회적 기업들을 많이 만납니다. 그들이 일하는 방식들을 많이 접하면서, 왜 비영리조직이야 말로 효율적인 업무방식...",
       "contentAuthor": "前 테크숩 사무국장 - 정지훈"
+    },
+    {
+      "targetSectionID": 2,
+      "contentID": 18,
+      "contentThumbnail": "/newsletter/temp/4_connect+story.png",
+      "contentTitle": "잔디 커넥트 이야기 : 웹훅 살짝 들춰보기",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/19/jandi_connect_story_webhook/",
+      "contentDescription": "구체적인 서비스를 언급한 활용 사례 보다는 다양한 사례를 만들기 위해 바탕으로 사용되는 잔디 커넥트 항목 중 웹훅(Webhook)의 용어와 원리에 대한...",
+      "contentAuthor": "와디즈 - 홍무열"
+    },
+    {
+      "targetSectionID": 2,
+      "contentID": 20,
+      "contentThumbnail": "/newsletter/temp/5_sns+noti.png",
+      "contentTitle": "SNS 소식 잔디로 받아보기",
+      "contentLink": "http://blog.jandi.com/ko/2018/09/20/jandi_sns_integration/",
+      "contentDescription": "어느 날, 저희 팀에 고객 문의가 들어왔습니다. “페이스북 페이지도 잔디 토픽에 연동해서 볼 수 있나요?” ...",
+      "contentAuthor": "JANDI"
     },
     {
       "targetSectionID": 3,
