@@ -72,6 +72,24 @@
       "contentAuthor": "JANDI"
     },
     {
+      "targetSectionID": 1,
+      "contentID": 21,
+      "contentThumbnail": "/newsletter/temp/5_sns+noti.png",
+      "contentTitle": "SNS 소식 잔디로 받아보기",
+      "contentLink": "http://blog.jandi.com/ko/2018/09/20/jandi_sns_integration/",
+      "contentDescription": "어느 날, 저희 팀에 고객 문의가 들어왔습니다. “페이스북 페이지도 잔디 토픽에 연동해서 볼 수 있나요?” ...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 22,
+      "contentThumbnail": "/newsletter/temp/5_sns+noti.png",
+      "contentTitle": "SNS 소식 잔디로 받아보기",
+      "contentLink": "http://blog.jandi.com/ko/2018/09/20/jandi_sns_integration/",
+      "contentDescription": "어느 날, 저희 팀에 고객 문의가 들어왔습니다. “페이스북 페이지도 잔디 토픽에 연동해서 볼 수 있나요?” ...",
+      "contentAuthor": "JANDI"
+    },
+    {
       "targetSectionID": 2,
       "contentID": 14,
       "contentThumbnail": "/newsletter/temp/4.alert.png",

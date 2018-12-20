@@ -193,7 +193,7 @@ getJSON(filepath, generateTemplate);
  * contentCount(섹션 객체외에 컨텐트 객체를 몇개나 가지고 있는지)는 함수 내에서 처리
  * 
  */
-
+ 
 
 
 function generateSection(contentsObject) {
@@ -227,7 +227,6 @@ function generateLayout(contentsObject) {
     
     var contentLength = contentsObject[i].length -1;
     //console.log('contentLength', contentLength, contentsObject[i][0].sectionLayout);
-
     
     if(contentsObject[i][0].sectionLayout=="col-1-grid" || contentsObject[i][0].sectionLayout=="list") {
       $('.section-template[section-id="'+i+'"]').find('.layout-template').replaceWith(col1LayoutTemplate);
@@ -245,12 +244,20 @@ function generateLayout(contentsObject) {
       }
       
     } 
-    else {
+    else if( contentsObject[i][0].sectionLayout == "col-2-grid") {
 	  
 	  $('.section-template[section-id="'+i+'"]').find('.layout-template').replaceWith(col2LayoutTemplate);
+	  var targetID = contentsObject[i][0].sectionID;
 	  
-	  if (contentLength > 1 && contentsObject[i][0].sectionLayout=="col-2-grid") {
+	  if (contentLength > 1 ) {
 	    
+	    for( var cloneCount = 1; cloneCount < contentLength/2; cloneCount++ ) {
+		  
+	      console.log(i, targetID, contentLength, contentLength/2 , cloneCount);
+	      $('.section-template[section-id="'+targetID+'"]').find('.repeatable-row:nth-child('+cloneCount+')').clone()
+	      .insertAfter('.section-template[section-id="'+targetID+'"] .repeatable-row:nth-child('+cloneCount+')');
+        }
+        
 	  }
 	  
     }
@@ -276,25 +283,36 @@ function generateContent(contentObject, targetNum) {
   for(var i = 0;i < contentLength;i++) {
     var childOrder = i+1; //0, 1, 2, 3 ,...
     var contentWidth; //600 or 295
-    var finderPrefix; //list layout인 경우 repeatable-row > repeatable-col 형태로 보정
+    var contentNode; //list layout인 경우 repeatable-row > repeatable-col 형태로 보정
     
     //console.log(targetObject[0].sectionLayout);
     
     if ( targetObject[0].sectionLayout == "list") {
       $targetContent.replaceWith(listContentTemplate);
       contentWidth = 600;
-      finderPrefix = ".repeatable-row:nth-child("+childOrder+") .repeatable-col:nth-child(1)";
+      contentNode = ".repeatable-row:nth-child("+childOrder+") .repeatable-col:nth-child(1)";
       
     }
     else if (targetObject[0].sectionLayout == "col-1-grid") {
 	  $targetContent.replaceWith(gridContentTemplate);
 	  contentWidth = 600;
-	  finderPrefix = ".repeatable-row:nth-child("+childOrder+") .repeatable-col:nth-child(1)";
+	  contentNode = ".repeatable-row:nth-child("+childOrder+") .repeatable-col:nth-child(1)";
     }
     else if (targetObject[0].sectionLayout == "col-2-grid") {
 	  $targetContent.replaceWith(gridContentTemplate);
 	  contentWidth = 295;
-	  finderPrefix = ".repeatable-col:nth-child("+childOrder+")";
+	  
+	  /* 1,2 인 경우 row1에, 3,4인 경우 row2에 5,6인 경우 row3을 선택할 수 있게 추가해야 함.
+	  var sectionIndex = 2*i;
+	  
+	  if (childOrder = sectionIndex) {
+		sectionIndex;
+	  }
+	  */
+	  
+	  //contentNode = ".repeatable-row:nth-child("+i+") .repeatable-col:nth-child("+childOrder+")";
+	  contentNode = ".repeatable-row:nth-child(1) .repeatable-col:nth-child("+childOrder+")";
+	  
     }
     
     // content-title 이 ""인 경우 두번째 줄 지움
@@ -304,22 +322,22 @@ function generateContent(contentObject, targetNum) {
     
     //console.log(finderPrefix);
     
-    $($targetParentContent.selector).find(finderPrefix)
+    $($targetParentContent.selector).find(contentNode)
     .find(".content-template").attr('content-id', targetObject[childOrder].contentID).attr('width', contentWidth);
     
-    $($targetParentContent.selector).find(finderPrefix)
+    $($targetParentContent.selector).find(contentNode)
     .find(".content-link").attr('href', targetObject[childOrder].contentLink);
     
-    $($targetParentContent.selector).find(finderPrefix)
+    $($targetParentContent.selector).find(contentNode)
     .find(".content-thumbnail").attr('src', targetObject[childOrder].contentThumbnail);
     
-    $($targetParentContent.selector).find(finderPrefix)
+    $($targetParentContent.selector).find(contentNode)
     .find(".content-title").html(targetObject[childOrder].contentTitle.replace(/\n/g, "<br />"));
     
-    $($targetParentContent.selector).find(finderPrefix)
+    $($targetParentContent.selector).find(contentNode)
     .find(".content-description").html(targetObject[childOrder].contentDescription);
     
-    $($targetParentContent.selector).find(finderPrefix)
+    $($targetParentContent.selector).find(contentNode)
     .find(".content-author").html(targetObject[childOrder].contentAuthor);
 
 
