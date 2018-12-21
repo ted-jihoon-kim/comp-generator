@@ -68,7 +68,7 @@
       "contentThumbnail": "/newsletter/temp/2_electron.jpg",
       "contentTitle": "전자결재가 기업의 생산성을 낮추는 이유",
       "contentLink": "http://blog.jandi.com/ko/2018/10/31/electronicpayment/",
-      "contentDescription": "많은 담당자가 관여해서 느리게 처리되는 과거의 형식을 그룹웨어 또는 사내 시스템에 그대로 옮긴 ‘전자결재’는 최근의 업무 환경에 어울리지 않습니다. 효율적이고 내용 검색이 용이한 원래의 목적에 부합하는 빠른 결재 방법은...",
+      "contentDescription": "과거의 형식을 그룹웨어 또는 사내 시스템에 그대로 옮긴 ‘전자결재’는 최근의 업무 환경에 어울리지 않습니다...",
       "contentAuthor": "JANDI"
     },
     {
@@ -83,10 +83,28 @@
     {
       "targetSectionID": 1,
       "contentID": 22,
-      "contentThumbnail": "/newsletter/temp/5_sns+noti.png",
-      "contentTitle": "SNS 소식 잔디로 받아보기",
-      "contentLink": "http://blog.jandi.com/ko/2018/09/20/jandi_sns_integration/",
-      "contentDescription": "어느 날, 저희 팀에 고객 문의가 들어왔습니다. “페이스북 페이지도 잔디 토픽에 연동해서 볼 수 있나요?” ...",
+      "contentThumbnail": "/newsletter/temp/3_email.jpg",
+      "contentTitle": "이메일이 기업의 생산성을 낮추는 이유",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/29/goodbye_email/",
+      "contentDescription": "이메일은 10년이 넘도록 업무 협업을 위한 도구로서 자리매김해 왔습니다. 사내에서 메일을 주 커뮤니케이션 용도로 사용할 때...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 23,
+      "contentThumbnail": "/newsletter/temp/3_email.jpg",
+      "contentTitle": "이메일이 기업의 생산성을 낮추는 이유",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/29/goodbye_email/",
+      "contentDescription": "이메일은 10년이 넘도록 업무 협업을 위한 도구로서 자리매김해 왔습니다. 사내에서 메일을 주 커뮤니케이션 용도로 사용할 때...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 24,
+      "contentThumbnail": "/newsletter/temp/3_email.jpg",
+      "contentTitle": "이메일이 기업의 생산성을 낮추는 이유",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/29/goodbye_email/",
+      "contentDescription": "이메일은 10년이 넘도록 업무 협업을 위한 도구로서 자리매김해 왔습니다. 사내에서 메일을 주 커뮤니케이션 용도로 사용할 때...",
       "contentAuthor": "JANDI"
     },
     {

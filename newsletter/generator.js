@@ -11,7 +11,7 @@ var sectionObj = {}; //섹션 객체
 var contentObj = {}; //컨텐트 객체
 var sectionLength; //섹션 객체의 길이
 
-var filepath = "http://localhost:8080/newsletter/json/JANDI Newsletter Content Template.json";
+var filepath = "./json/JANDI Newsletter Content Template.json";
 
 
 // content-title 이 ""인 경우 두번째 줄을 생성하지 않음.
@@ -27,8 +27,8 @@ var gridContentTemplate = '\
 	</tr>\
 	<tr>\
 		<td style="padding: 1em 0 0px 0; background-color:#ffffff;">\
-			<a class="content-link" href="" target="_blank" style="text-decoration:none;font-size: 1.17em;font-weight: bold;">\
-				<span class="content-title" style=" color:#00aaea"></span>\
+			<a class="content-link" href="" target="_blank" style="text-decoration:none;">\
+				<span class="content-title" style=" color:#00aaea;font-weight: bold;"></span>\
 			</a>\
 			<p class="content-description" style="font-size:13px;color:#777777"></p>\
 			<p class="content-author" style="color: #aaaaaa; margin-bottom: 0;"></p>\
@@ -100,10 +100,10 @@ var col1LayoutTemplate = '\
 var col2LayoutTemplate = '\
 <table class="layout-template" border="0" cellpadding="0" cellspacing="0" width="600">\
     <tr class="repeatable-row">\
-        <td class="repeatable-col" width="300" style="padding: 20px 5px 0 0; background-color:#ffffff;">\
+        <td class="repeatable-col" width="300" valign="top" style="padding: 20px 5px 0 0; background-color:#ffffff;">\
             <table class="content-template"></table>\
         </td>\
-        <td class="repeatable-col" width="300" style="padding: 20px 0 0 5px; background-color:#ffffff;">\
+        <td class="repeatable-col" width="300" valign="top" style="padding: 20px 0 0 5px; background-color:#ffffff;">\
             <table class="content-template"></table>\
         </td>\
     </tr>\
@@ -136,21 +136,12 @@ function getJSON(filepath, callback){
 	  contentsObject[i] = $.makeArray(sectionObj[i]);
 	}
 	
-	for (var i = 0; i < contentObj.length; i++) { //length is 6
+	for (var i = 0; i < contentObj.length; i++) {
 	  
-	  if(contentObj[i].targetSectionID == 0) {
-	    contentsObject[0].push(contentObj[i]);
-	  }
-	  else if(contentObj[i].targetSectionID == 1) {
-	    contentsObject[1].push(contentObj[i]);
-	  }
-	  else if(contentObj[i].targetSectionID == 2) {
-	    contentsObject[2].push(contentObj[i]);
-	  }
-	  else if(contentObj[i].targetSectionID == 3) {
-	    contentsObject[3].push(contentObj[i]);
-	  }
+	  var targetSectionID = contentObj[i].targetSectionID;
 	  
+	  contentsObject[targetSectionID].push(contentObj[i]);
+	   
 	}
 
     callback(contentsObject);
@@ -160,7 +151,7 @@ function getJSON(filepath, callback){
 };
 
 
-function generateTemplate(contentsObject){
+function generateTemplate(contentsObject) {
   
   console.log(contentsObject);
   
@@ -253,7 +244,7 @@ function generateLayout(contentsObject) {
 	    
 	    for( var cloneCount = 1; cloneCount < contentLength/2; cloneCount++ ) {
 		  
-	      console.log(i, targetID, contentLength, contentLength/2 , cloneCount);
+	      //console.log(i, targetID, contentLength, contentLength/2 , cloneCount);
 	      $('.section-template[section-id="'+targetID+'"]').find('.repeatable-row:nth-child('+cloneCount+')').clone()
 	      .insertAfter('.section-template[section-id="'+targetID+'"] .repeatable-row:nth-child('+cloneCount+')');
         }
@@ -284,6 +275,7 @@ function generateContent(contentObject, targetNum) {
     var childOrder = i+1; //0, 1, 2, 3 ,...
     var contentWidth; //600 or 295
     var contentNode; //list layout인 경우 repeatable-row > repeatable-col 형태로 보정
+    var titleFontSize;
     
     //console.log(targetObject[0].sectionLayout);
     
@@ -297,31 +289,37 @@ function generateContent(contentObject, targetNum) {
 	  $targetContent.replaceWith(gridContentTemplate);
 	  contentWidth = 600;
 	  contentNode = ".repeatable-row:nth-child("+childOrder+") .repeatable-col:nth-child(1)";
+	  titleFontSize = "1.17em";
     }
     else if (targetObject[0].sectionLayout == "col-2-grid") {
 	  $targetContent.replaceWith(gridContentTemplate);
 	  contentWidth = 295;
+	  titleFontSize = "16px";
 	  
-	  /* 1,2 인 경우 row1에, 3,4인 경우 row2에 5,6인 경우 row3을 선택할 수 있게 추가해야 함.
-	  var sectionIndex = 2*i;
-	  
-	  if (childOrder = sectionIndex) {
-		sectionIndex;
+	  /* 1,2 인 경우 row1에, 3,4인 경우 row2에 5,6인 경우 row3을 선택할 수 있게함. */
+	  if (childOrder < 3 ) {
+		var sectionIndex = 1;
+		var contentIndex = childOrder;
 	  }
-	  */
+	  else if (childOrder => 3) {
+		sectionIndex = Math.ceil(childOrder/2);
+		contentIndex = childOrder- sectionIndex; //3-2 = 1; 5-3 = 2;
+	  }
 	  
-	  //contentNode = ".repeatable-row:nth-child("+i+") .repeatable-col:nth-child("+childOrder+")";
-	  contentNode = ".repeatable-row:nth-child(1) .repeatable-col:nth-child("+childOrder+")";
+	  contentNode = ".repeatable-row:nth-child("+sectionIndex+") .repeatable-col:nth-child("+contentIndex+")";
+	  
+	  // 1-1-1, 1-2-2, 2-1-3, 2-2-4, 3-1-5, 3-2-6, ...
+	  console.log("sectionIndex contentIndex childOrder", sectionIndex, contentIndex, childOrder);
 	  
     }
+    
     
     // content-title 이 ""인 경우 두번째 줄 지움
     if( targetObject[childOrder].contentTitle == "" ) {
 	  $($targetContent.selector).find('tr:nth-child(2)').remove();
     }
-    
-    //console.log(finderPrefix);
-    
+   
+        
     $($targetParentContent.selector).find(contentNode)
     .find(".content-template").attr('content-id', targetObject[childOrder].contentID).attr('width', contentWidth);
     
@@ -332,7 +330,7 @@ function generateContent(contentObject, targetNum) {
     .find(".content-thumbnail").attr('src', targetObject[childOrder].contentThumbnail);
     
     $($targetParentContent.selector).find(contentNode)
-    .find(".content-title").html(targetObject[childOrder].contentTitle.replace(/\n/g, "<br />"));
+    .find(".content-title").html(targetObject[childOrder].contentTitle.replace(/\n/g, "<br />")).css('font-size', titleFontSize);
     
     $($targetParentContent.selector).find(contentNode)
     .find(".content-description").html(targetObject[childOrder].contentDescription);
@@ -340,15 +338,8 @@ function generateContent(contentObject, targetNum) {
     $($targetParentContent.selector).find(contentNode)
     .find(".content-author").html(targetObject[childOrder].contentAuthor);
 
-
   }
   
 }
 
   
-  
-
-   
-   
-   
-        
