@@ -1,9 +1,24 @@
-
 /* 
-	JANDI newsletter composer
-
+	JANDI newsletter generator
+	last-update : 2018/12/21
+	
 */
 
+var tempLogoURL = "./temp/jandi+logo.png";
+var liveLogoURL = "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/jandi+logo.png";
+var currentMonth;
+var currentYear;
+
+moment.locale('ko');
+currentMonth = moment().format('MMMM'); //moment().format('LT');
+currentYear = moment().format('YYYY');
+console.log(currentMonth, currentYear);
+  
+// 계산된 시간을 각각의 요소에 대입
+$(".monthInfo").text(currentMonth);
+$(".yearInfo").text(currentYear).appendTo(".monthInfo");
+
+$("html img.logo").attr('src', liveLogoURL);
 
 var contentsObject = new Object(); // 섹션과 컨텐트 정보를 섹션별로 묶어둘 객체
 
@@ -21,7 +36,7 @@ var gridContentTemplate = '\
 	<tr>\
 		<td>\
 			<a class="content-link" href="" target="_blank">\
-				<img class="content-thumbnail" src="" width="100%">\
+				<img class="content-thumbnail" src="" width="100%" >\
 			</a>\
 		</td>\
 	</tr>\
@@ -70,7 +85,7 @@ var listContentTemplate = '\
 
 var sectionTemplate = '\
 <tr class="section-template" section-id="" section-order="" section-layout="">\
-	<td bgcolor="#ffffff" style="padding: 48px 0 0;">\
+	<td bgcolor="#ffffff" style="padding: 24px 0;">\
     	<table border="0" cellpadding="0" cellspacing="0" width="600">\
     		<tr>\
             	<th bgcolor="#ebebeb" style="padding: 6px 12px 5px; text-align: left;">\
@@ -124,6 +139,8 @@ var listLayoutTemplate = '\
 */
 
 
+
+
 function getJSON(filepath, callback){
   
   $.getJSON(filepath, function(parsedData) {
@@ -155,8 +172,10 @@ function generateTemplate(contentsObject) {
   
   console.log(contentsObject);
   
+  /* 
   $('body').append('<p class="raw-txt"></p>')
   .find('.raw-txt').text(JSON.stringify(contentsObject, null, "\t")).attr('style','white-space:pre-wrap');
+  */
   
   generateSection(contentsObject);
   
@@ -170,7 +189,11 @@ function generateTemplate(contentsObject) {
 }
 
 
+
 getJSON(filepath, generateTemplate);
+
+
+
 
 
 
@@ -296,20 +319,21 @@ function generateContent(contentObject, targetNum) {
 	  contentWidth = 295;
 	  titleFontSize = "16px";
 	  
+	  var sectionIndex = Math.ceil(childOrder/2);
+	  var contentIndex;
+	  
 	  /* 1,2 인 경우 row1에, 3,4인 경우 row2에 5,6인 경우 row3을 선택할 수 있게함. */
-	  if (childOrder < 3 ) {
-		var sectionIndex = 1;
-		var contentIndex = childOrder;
+	  if ( (childOrder/2) - sectionIndex < 0 ) {
+		contentIndex = 1;
 	  }
-	  else if (childOrder => 3) {
-		sectionIndex = Math.ceil(childOrder/2);
-		contentIndex = childOrder- sectionIndex; //3-2 = 1; 5-3 = 2;
-	  }
+	  else {
+		contentIndex = 2;
+	  }  
 	  
 	  contentNode = ".repeatable-row:nth-child("+sectionIndex+") .repeatable-col:nth-child("+contentIndex+")";
 	  
 	  // 1-1-1, 1-2-2, 2-1-3, 2-2-4, 3-1-5, 3-2-6, ...
-	  console.log("sectionIndex contentIndex childOrder", sectionIndex, contentIndex, childOrder);
+	  //console.log("sectionIndex contentIndex childOrder", sectionIndex, contentIndex, childOrder);
 	  
     }
     
@@ -319,7 +343,9 @@ function generateContent(contentObject, targetNum) {
 	  $($targetContent.selector).find('tr:nth-child(2)').remove();
     }
    
-        
+    // to-do : content가 홀수일때 col-2-grid의 경우 마지막 table 제거 필요
+    
+    
     $($targetParentContent.selector).find(contentNode)
     .find(".content-template").attr('content-id', targetObject[childOrder].contentID).attr('width', contentWidth);
     

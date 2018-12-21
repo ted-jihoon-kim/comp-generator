@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Newsletter Composer (Beta)</title>
   
-  
-<!--   <link rel="stylesheet" href="../font/typicons.css" /> -->
-
+  <!-- <link rel="stylesheet" href="../font/typicons.css" /> -->
  
   <style>
 	  i:before {
@@ -19,14 +17,7 @@
 		font-smoothing: antialiased;
 		text-rendering: optimizeLegibility;
 	  }
-	  body {
-		   font-family: "Helvetica Neue", Arial, sans-serif;
-		   -webkit-font-smoothing: antialiased;
-		   /* white-space: pre-wrap; */
-	  }
   </style>
-  
-  <!-- <link rel="stylesheet" href="/css/composer.css"> -->
   
   <!-- import exteranl library -->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -34,28 +25,24 @@
   <script src="http://danml.com/js/download.js"></script>
   <script src="./lib/moment-with-locales.js"></script>
   <script src="./lib/moment.js"></script>
-  
 
   
 </head>
 
 <body style="margin: 0; width: 100%;">
 
-  <table align="center" style="border: 0px solid #ffffff;" cellpadding="0" cellspacing="0" width="600" >
+  <table style="border: 0px solid #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif;-webkit-font-smoothing: antialiased;" 
+	     align="center" cellpadding="0" cellspacing="0" width="600" >
     
     <!-- header section -->
     <tr>
-      <td bgcolor="#ffffff" style="padding: 48px 0 0;">
+      <td bgcolor="#ffffff" style="padding: 48px 0 24px;">
 		
 		<table border="0" cellpadding="0" cellspacing="0" width="600">	
 		  <tr>
 			<th colspan="1" align="left" style="padding:0px 0 8px 0px;">
 			  <a href="https://www.jandi.com/landing/" target="_blank">
-			  	<!-- 개발중에는 로컬 이미지 사용
-				<img   
-				src="https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/jandi+logo.png" alt="JANDI Newsletter" align="left" height="30"/>
-				-->
-				<img src="/newsletter/temp/jandi+logo.png" alt="JANDI Newsletter" align="left" height="30"/>
+				<img class="logo" src="" alt="JANDI Newsletter" align="left" height="30"/>
 			  </a>
 			</th>
 					
@@ -80,26 +67,35 @@
     <!-- end of header section -->
     
     
-    
     <!-- section template -->
     <tr class="section-template">
     </tr>
-
+    <!-- end of section template -->
     
     
+    <!-- footer section -->
+    <tr>
+        <td bgcolor="#eeeeee" style="padding: 40px 0">
+            <table class="unsubscribe" border="0" width="600" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td align="center">
+                            <p style="font-size:10px;line-height:15px;color:#a7a7a7;; max-width: 540px">Copyright © Toss Lab, Inc., All rights reserved.<br>더 이상 잔디에서 보내는 메일을 받기를 원하지 않으시면 <a href="{{ unsubscribe_url }}" style="color: #a7a7a7">여기</a>를 클릭해주세요.</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- end of footer section -->
+        
   </table>
 
+  
+    <button type="button" id="downloadTemplate" 
+  		  style="width: 600px; cursor: pointer; margin: 32px auto; display: block; font-size: 16px; height: 30px;">현재 템플릿 다운로드</button>
 
   
-  <script src="./init.js"></script>
   <script src="./generator.js"></script>
-  
-  
-  <script>
-	
-  </script>
-  
-
+  <script src="./downloader.js"></script>
   
 </body>
 
