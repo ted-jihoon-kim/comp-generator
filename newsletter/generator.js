@@ -31,99 +31,102 @@ var filepath = "./json/JANDI Newsletter Content Template.json";
 
 // content-title 이 ""인 경우 두번째 줄을 생성하지 않음.
 
-var gridContentTemplate = '\
-<table class="content-template" content-id="" width="" border="0" cellpadding="0" cellspacing="0">\
-	<tr>\
-		<td>\
-			<a class="content-link" href="" target="_blank">\
-				<img class="content-thumbnail" src="" width="100%" >\
-			</a>\
-		</td>\
-	</tr>\
-	<tr>\
-		<td style="padding: 1em 0 0px 0; background-color:#ffffff;">\
-			<a class="content-link" href="" target="_blank" style="text-decoration:none;">\
-				<span class="content-title" style=" color:#00aaea;font-weight: bold;"></span>\
-			</a>\
-			<p class="content-description" style="font-size:13px;color:#777777"></p>\
-			<p class="content-author" style="color: #aaaaaa; margin-bottom: 0;"></p>\
-		</td>\
-	</tr>\
-</table>\
-';
 
 
-var listContentTemplate = '\
-<table class="content-template" content-id="" width="" border="0" cellpadding="0" cellspacing="0" >\
-	<tr>\
-		<td width="240" valign="top" rowspan="4">\
-	        <a class="content-link" href="" target="_blank">\
-				<img class="content-thumbnail" src="" width="100%">\
-	        </a>\
-		</td>\
-	</tr>\
-	<tr>\
-		<td style="padding: 0 0 0 1em;" valign="top">\
-			<a class="content-link" href="" target="_blank" style="text-decoration:none;">\
-				<span class="content-title" style=" color:#00aaea;font-size: 16px;font-weight: bold;"></span>\
-			</a>\
-		</td>\
-	</tr>\
-	<tr>\
-		<td style="padding: 0 0 0 1em;" valign="top">\
-			<p class="content-description" style="font-size:13px;color:#777777; margin-top: 0.5em; margin-bottom: 0;"></p>\
-		</td>\
-	</tr>\
-	<tr>\
-		<td  style="padding: 0 0 0 1em;" valign="bottom">\
-			<p class="content-author" style="color: #aaaaaa; ; margin: 0;"></p>\
-		</td>\
-	</tr>\
-</table>\
-';
+
+var gridContentTemplate = $.ajax({
+      type:"GET",
+      url: './template/grid_content.html',
+        success:function(html) {
+          var tempString = JSON.stringify(html);
+          gridContentTemplate = tempString.replace(/\\"/g, '"') // \" -> " 로 교체
+                 					      .replace(/\\n/g, "\n") //줄바꿈 적용
+                 					      .replace(/\\t/g, "	") //탭 적용
+                 					      .replace(/\"</g, "<") //앞뒤 따옴표 제거
+                 					      .replace(/\>"/g, ">");
+                 							 
+          //console.log(gridContentTemplate); //plain text
+
+        }
+        
+      });
 
 
-var sectionTemplate = '\
-<tr class="section-template" section-id="" section-order="" section-layout="">\
-	<td bgcolor="#ffffff" style="padding: 24px 0;">\
-    	<table border="0" cellpadding="0" cellspacing="0" width="600">\
-    		<tr>\
-            	<th bgcolor="#ebebeb" style="padding: 6px 12px 5px; text-align: left;">\
-                	<strong class="section-title" style="font-size: 20px;color: #000;"></strong>\
-				</th>\
-				<th width="20" bgcolor="#e2e2e2" >\
-				</th>\
-			</tr>\
-		</table>\
-		<table class="layout-template"></table>\
-	</td>\
-</tr>\
-';
+var listContentTemplate = $.ajax({
+      type:"GET",
+      url: './template/list_content.html',
+        success:function(html) {
+          var tempString = JSON.stringify(html);
+          listContentTemplate = tempString.replace(/\\"/g, '"') // \" -> " 로 교체
+                 					      .replace(/\\n/g, "\n") //줄바꿈 적용
+                 					      .replace(/\\t/g, "	") //탭 적용
+                 					      .replace(/\"</g, "<") //앞뒤 따옴표 제거
+                 					      .replace(/\>"/g, ">");
+                 							 
+          console.log(listContentTemplate); //plain text
+
+        }
+        
+      });
 
 
-var col1LayoutTemplate = '\
-<table class="layout-template" border="0" cellpadding="0" cellspacing="0" width="600">\
-    <tr class="repeatable-row">\
-        <td class="repeatable-col" width="600" style="padding: 20px 0 0 0; background-color:#ffffff;">\
-            <table class="content-template"></table>\
-        </td>\
-    </tr>\
-</table>\
-';
+var sectionTemplate = $.ajax({
+      type:"GET",
+      url: './template/section.html',
+        success:function(html) {
+          var tempString = JSON.stringify(html);
+          sectionTemplate = tempString.replace(/\\"/g, '"') // \" -> " 로 교체
+                 					      .replace(/\\n/g, "\n") //줄바꿈 적용
+                 					      .replace(/\\t/g, "	") //탭 적용
+                 					      .replace(/\"</g, "<") //앞뒤 따옴표 제거
+                 					      .replace(/\>"/g, ">");
+                 							 
+          //console.log(sectionTemplate); //plain text
+
+        }
+        
+      });
 
 
-var col2LayoutTemplate = '\
-<table class="layout-template" border="0" cellpadding="0" cellspacing="0" width="600">\
-    <tr class="repeatable-row">\
-        <td class="repeatable-col" width="300" valign="top" style="padding: 20px 5px 0 0; background-color:#ffffff;">\
-            <table class="content-template"></table>\
-        </td>\
-        <td class="repeatable-col" width="300" valign="top" style="padding: 20px 0 0 5px; background-color:#ffffff;">\
-            <table class="content-template"></table>\
-        </td>\
-    </tr>\
-</table>\
-';
+
+var col1LayoutTemplate = $.ajax({
+      type:"GET",
+      url: './template/col_1_layout.html',
+        success:function(html) {
+          var tempString = JSON.stringify(html);
+          col1LayoutTemplate = tempString.replace(/\\"/g, '"') // \" -> " 로 교체
+                 					      .replace(/\\n/g, "\n") //줄바꿈 적용
+                 					      .replace(/\\t/g, "	") //탭 적용
+                 					      .replace(/\"</g, "<") //앞뒤 따옴표 제거
+                 					      .replace(/\>"/g, ">");
+                 							 
+          //console.log(col1LayoutTemplate); //plain text
+
+        }
+        
+      });
+      
+var col2LayoutTemplate = $.ajax({
+      type:"GET",
+      url: './template/col_2_layout.html',
+        success:function(html) {
+          var tempString = JSON.stringify(html);
+          col2LayoutTemplate = tempString.replace(/\\"/g, '"') // \" -> " 로 교체
+                 					      .replace(/\\n/g, "\n") //줄바꿈 적용
+                 					      .replace(/\\t/g, "	") //탭 적용
+                 					      .replace(/\"</g, "<") //앞뒤 따옴표 제거
+                 					      .replace(/\>"/g, ">");
+                 							 
+          //console.log(col2LayoutTemplate); //plain text
+
+        }
+        
+      });
+
+
+
+
+/* 외부 HTML을 불러오는 것으로 변경 */
 
 
 /* listLayout template 은 col-1-grid와 동일         <td class="col-divider" width="10"></td>\
