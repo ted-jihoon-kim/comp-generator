@@ -4,7 +4,7 @@
 	
 */
 
-var tempLogoURL = "./temp/jandi+logo.png";
+var tempLogoURL = "./img_local/jandi+logo.png";
 var liveLogoURL = "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/jandi+logo.png";
 var currentMonth;
 var currentYear;
