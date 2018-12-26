@@ -1,6 +1,6 @@
 /* 
-	JANDI newsletter generator
-	last-update : 2018/12/21
+	JANDI Newsletter Generator
+	last-update : 2018/12/26
 	
 */
 
@@ -33,13 +33,14 @@ var filepath = "";
 
 
 
-let jsonURL = prompt('불러올 JSON 파일의 URL 주소를 입력하세요');
+let jsonURL = prompt('템플릿을 생성할 JSON 파일의 URL 주소를 입력하세요');
 filepath = jsonURL;
 
 
 if(filepath == "" || filepath == null) {
   alert("URL주소를 확인해주세요");
   let jsonURL = prompt('불러올 JSON 파일의 URL 주소를 입력하세요');
+  filepath = jsonURL;
 }
 
 console.log("입력한 URL 주소 : ", filepath);
@@ -176,9 +177,17 @@ function getJSON(filepath, callback){
 	}
 
     callback(contentsObject);
-    
+    $('.download-button-layer').css('display','block');
+    $('body').css('opacity',1);
   })
-  .fail(function() { console.log("error") });
+  .fail(function() {
+	console.log("error");
+	//&#9874;
+	
+	$('body').html('<div style="position: absolute; width: 100%; top: 50%; transform: translateY(-50%);"><i style="font-size: 42px;font-style: normal;">☹</i><br><span>JSON 파일 불러오기를 실패했습니다. 새로고침 후 다시 시도해 주세요.</span></div>').css('text-align','center').css('opacity',1);
+	$('.download-button-layer').css('display','none');
+	$('table').css('display','none');
+  });
 };
 
 

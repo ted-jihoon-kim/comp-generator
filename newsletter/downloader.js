@@ -1,6 +1,6 @@
 /* 
-	Template Downloader 
-	last-update : 2018/12/21
+	JANDI Newsletter Template Downloader 
+	last-update : 2018/12/26
 
 */
 
