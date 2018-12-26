@@ -4,15 +4,15 @@
 	
 */
 
-var tempLogoURL = "./img_local/jandi+logo.png";
-var liveLogoURL = "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/jandi+logo.png";
+var localLogoURL = "./img_local/jandi+logo.png"; // local 테스트용
+var liveLogoURL = "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/jandi+logo.png"; //ftp 주소
 var currentMonth;
 var currentYear;
 
 moment.locale('ko');
 currentMonth = moment().format('MMMM'); //moment().format('LT');
 currentYear = moment().format('YYYY');
-console.log(currentMonth, currentYear);
+//console.log(currentMonth, currentYear);
   
 // 계산된 시간을 각각의 요소에 대입
 $(".monthInfo").text(currentMonth);
@@ -26,12 +26,23 @@ var sectionObj = {}; //섹션 객체
 var contentObj = {}; //컨텐트 객체
 var sectionLength; //섹션 객체의 길이
 
-var filepath = "./json/JANDI Newsletter Content Template.json";
+//var filepath = "./json/JANDI Newsletter Content Template.json";
+//var filepath = "./json/JANDI Newsletter Content Template(dummy).json";
+var filepath = "";
 
 
-// content-title 이 ""인 경우 두번째 줄을 생성하지 않음.
 
 
+let jsonURL = prompt('불러올 JSON 파일의 URL 주소를 입력하세요');
+filepath = jsonURL;
+
+
+if(filepath == "" || filepath == null) {
+  alert("URL주소를 확인해주세요");
+  let jsonURL = prompt('불러올 JSON 파일의 URL 주소를 입력하세요');
+}
+
+console.log("입력한 URL 주소 : ", filepath);
 
 
 var gridContentTemplate = $.ajax({
@@ -63,7 +74,7 @@ var listContentTemplate = $.ajax({
                  					      .replace(/\"</g, "<") //앞뒤 따옴표 제거
                  					      .replace(/\>"/g, ">");
                  							 
-          console.log(listContentTemplate); //plain text
+          //console.log(listContentTemplate); //plain text
 
         }
         

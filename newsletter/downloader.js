@@ -30,7 +30,7 @@ $('#downloadTemplate').click(function() {
 	//external library (http://danml.com/download.html)
 	//download(data, strFileName, strMimeType);
 	
-	console.log(convertedString)
+	//console.log(convertedString)
 	download(convertedString, titleTemplate+'.html', "text/html");
 	
 	
