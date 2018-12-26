@@ -184,7 +184,7 @@ function getJSON(filepath, callback){
 	console.log("error");
 	//&#9874;
 	
-	$('body').html('<div style="position: absolute; width: 100%; top: 50%; transform: translateY(-50%);"><i style="font-size: 42px;font-style: normal;">☹</i><br><span>JSON 파일 불러오기를 실패했습니다. 새로고침 후 다시 시도해 주세요.</span></div>').css('text-align','center').css('opacity',1);
+	$('body').html('<div style="position: absolute; width: 100%; top: 50%; transform: translateY(-50%);"><i style="font-size: 64px;font-style: normal;">☹</i><br><span>JSON 파일 불러오기를 실패했습니다. 새로고침 후 다시 시도해 주세요.</span></div>').css('text-align','center').css('opacity',1);
 	$('.download-button-layer').css('display','none');
 	$('table').css('display','none');
   });
