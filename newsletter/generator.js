@@ -52,10 +52,11 @@ var gridContentTemplate = $.ajax({
         success:function(html) {
           var tempString = JSON.stringify(html);
           gridContentTemplate = tempString.replace(/\\"/g, '"') // \" -> " 로 교체
+                 					      .replace(/^\"/g, "") //맨 앞 따옴표 제거
+                 					      .replace(/\"$/g, "") //맨 뒤 따옴표 제거
                  					      .replace(/\\n/g, "\n") //줄바꿈 적용
                  					      .replace(/\\t/g, "	") //탭 적용
-                 					      .replace(/\"</g, "<") //앞뒤 따옴표 제거
-                 					      .replace(/\>"/g, ">");
+                 					      ;
                  							 
           //console.log(gridContentTemplate); //plain text
 
@@ -70,10 +71,11 @@ var listContentTemplate = $.ajax({
         success:function(html) {
           var tempString = JSON.stringify(html);
           listContentTemplate = tempString.replace(/\\"/g, '"') // \" -> " 로 교체
+                 					      .replace(/^\"/g, "") //맨 앞 따옴표 제거
+                 					      .replace(/\"$/g, "") //맨 뒤 따옴표 제거
                  					      .replace(/\\n/g, "\n") //줄바꿈 적용
                  					      .replace(/\\t/g, "	") //탭 적용
-                 					      .replace(/\"</g, "<") //앞뒤 따옴표 제거
-                 					      .replace(/\>"/g, ">");
+                 					      ;
                  							 
           //console.log(listContentTemplate); //plain text
 
@@ -88,10 +90,11 @@ var sectionTemplate = $.ajax({
         success:function(html) {
           var tempString = JSON.stringify(html);
           sectionTemplate = tempString.replace(/\\"/g, '"') // \" -> " 로 교체
+                 					      .replace(/^\"/g, "") //맨 앞 따옴표 제거
+                 					      .replace(/\"$/g, "") //맨 뒤 따옴표 제거
                  					      .replace(/\\n/g, "\n") //줄바꿈 적용
                  					      .replace(/\\t/g, "	") //탭 적용
-                 					      .replace(/\"</g, "<") //앞뒤 따옴표 제거
-                 					      .replace(/\>"/g, ">");
+                 					      ;
                  							 
           //console.log(sectionTemplate); //plain text
 
@@ -107,10 +110,11 @@ var col1LayoutTemplate = $.ajax({
         success:function(html) {
           var tempString = JSON.stringify(html);
           col1LayoutTemplate = tempString.replace(/\\"/g, '"') // \" -> " 로 교체
+          								  .replace(/^\"/g, "") //맨 앞 따옴표 제거
+                 					      .replace(/\"$/g, "") //맨 뒤 따옴표 제거
                  					      .replace(/\\n/g, "\n") //줄바꿈 적용
                  					      .replace(/\\t/g, "	") //탭 적용
-                 					      .replace(/\"</g, "<") //앞뒤 따옴표 제거
-                 					      .replace(/\>"/g, ">");
+                 					      ;
                  							 
           //console.log(col1LayoutTemplate); //plain text
 
@@ -124,10 +128,11 @@ var col2LayoutTemplate = $.ajax({
         success:function(html) {
           var tempString = JSON.stringify(html);
           col2LayoutTemplate = tempString.replace(/\\"/g, '"') // \" -> " 로 교체
+                 					      .replace(/^\"/g, "") //맨 앞 따옴표 제거
+                 					      .replace(/\"$/g, "") //맨 뒤 따옴표 제거
                  					      .replace(/\\n/g, "\n") //줄바꿈 적용
                  					      .replace(/\\t/g, "	") //탭 적용
-                 					      .replace(/\"</g, "<") //앞뒤 따옴표 제거
-                 					      .replace(/\>"/g, ">");
+                 					      ;
                  							 
           //console.log(col2LayoutTemplate); //plain text
 
