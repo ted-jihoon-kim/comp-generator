@@ -240,25 +240,31 @@ getJSON(filepath, generateTemplate);
 
 function generateSection(contentsObject) {
   
-  //nth-child의 경우 모든 tr을 카운트하므로 header section tr을 포함. 따라서 2부터 카운트
+  //nth-child의 경우 모든 tr을 카운트하므로 target section tr을 포함. 따라서 1부터 카운트
   for(var i = 0;i < sectionLength;i++) {
 	
-	var childrenCount = i+2;
-	//console.log(i, childrenCount);
+	var childrenCount = i+1;
+	var anchorCount = i+2;
+	//console.log(i, contentsObject[i].length);
 	
-	if (childrenCount < 5) {
-      $('.section-template:nth-child('+childrenCount+')')
-      .replaceWith(sectionTemplate).clone()
-      .insertAfter('.section-template:nth-child('+childrenCount+')').replaceWith(sectionTemplate);
+	/* 섹션에 콘텐츠가 없는 경우 섹션을 생성하지 않음 */
+	if (contentsObject[i].length != 1) {
+ 
+      $('#header .base-section-template').clone()
+      .insertAfter('#contents .section-template:nth-child('+childrenCount+')').replaceWith(sectionTemplate);
+    
+      $('#contents .section-template:nth-child('+anchorCount+')')
+      .attr('section-id', contentsObject[i][0].sectionID)
+      .attr('section-order', contentsObject[i][0].sectionOrder)
+      .attr('section-layout', contentsObject[i][0].sectionLayout)
+      .find('.section-title').text(contentsObject[i][0].sectionTitle);
+      
     }
-    
-    $('.section-template:nth-child('+childrenCount+')')
-    .attr('section-id', contentsObject[i][0].sectionID)
-    .attr('section-order', contentsObject[i][0].sectionOrder)
-    .attr('section-layout', contentsObject[i][0].sectionLayout)
-    .find('.section-title').text(contentsObject[i][0].sectionTitle);
-    
   }
+  
+  //section 생성 후, base와 target section은 제거
+  $('#contents .section-template:nth-child(1)').remove();
+  $('#header .base-section-template').remove();
   
 }
 
