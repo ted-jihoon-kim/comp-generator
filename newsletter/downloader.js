@@ -4,7 +4,7 @@
 
 */
 
-var htmlPreText = "<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'>";
+var htmlPreText = "<!DOCTYPE HTML>";
 var titleTemplate = "JANDI Newsletter ";
 var convertedString;
 
@@ -18,13 +18,16 @@ $('#downloadTemplate').click(function() {
 	
 	convertedString = $('html').html();
 	
-	convertedString = convertedString.replace(/<script.*<\/script>/g, '') //스크립트 영역 제거
-					  .replace(/<!--.*-->/g, '') //주석 제거
-					  .replace(/<div.*<\/div>/g, '') //하단 버튼 영역 제거
+	convertedString = convertedString.replace(/<script.*<\/script>/g, '') //스크립트 태그 사이의 문자 제거
+					  .replace(/<!--.*-->/g, '') //주석 사이의 문자 제거
+					  .replace(/<div.*<\/div>/g, '') //하단 버튼 영역 문자 제거
 					  .replace(/<\/body>/, '</body>\n</html>') //html 닫는 태그 추가
-					  
-					  .replace(/<head>/, htmlPreText +"\n<html>\n<head>").replace(/\n/g, "\n"); //doctype, head 태그 추가
-					  
+					  .replace(/\n{2,9}/g, '\n') //개행이 2회 이상 9회 미만 반복된 영역 제거
+					  .replace(/\r{2,9}/g, '\n') 
+					  .replace(/<\/tr>\n{2,9}<tr/g, '\n') // </tr> - <tr 사이의 개행 제거
+					  .replace(/<\/title>\n*<\/head>/m, '\n') // </title> - <head> 사이의 개행 제거
+					  .replace(/<\/table>\n*<\/body>/m, '\n') // </table> - <body> 사이의 개행 제거
+					  .replace(/<head>/, htmlPreText +"\n<html>\n<head>"); //doctype, head 태그 추가
 					 
 	
 	//external library (http://danml.com/download.html)
