@@ -331,6 +331,7 @@ function generateContent(contentObject, targetNum) {
   for(var i = 0;i < contentLength;i++) {
     var childOrder = i+1; //0, 1, 2, 3 ,...
     var contentWidth; //600 or 295
+    var thumbnailWidth; //thumbnail with for list layout
     var contentNode; //list layout인 경우 repeatable-row > repeatable-col 형태로 보정
     var titleFontSize;
     
@@ -338,19 +339,21 @@ function generateContent(contentObject, targetNum) {
     
     if ( targetObject[0].sectionLayout == "list") {
       $targetContent.replaceWith(listContentTemplate);
-      contentWidth = 600;
+      contentWidth = 580;
+      thumbnailWidth = 240;
       contentNode = ".repeatable-row:nth-child("+childOrder+") .repeatable-col:nth-child(1)";
-      
     }
     else if (targetObject[0].sectionLayout == "col-1-grid") {
 	  $targetContent.replaceWith(gridContentTemplate);
-	  contentWidth = 600;
+	  contentWidth = 580;
+	  thumbnailWidth = 580;
 	  contentNode = ".repeatable-row:nth-child("+childOrder+") .repeatable-col:nth-child(1)";
 	  titleFontSize = "1.17em";
     }
     else if (targetObject[0].sectionLayout == "col-2-grid") {
 	  $targetContent.replaceWith(gridContentTemplate);
-	  contentWidth = 295;
+	  contentWidth = 285;
+	  thumbnailWidth = 285;
 	  titleFontSize = "16px";
 	  
 	  var sectionIndex = Math.ceil(childOrder/2);
@@ -381,8 +384,9 @@ function generateContent(contentObject, targetNum) {
     
     
     $($targetParentContent.selector).find(contentNode)
-    .find(".content-template").attr('content-id', targetObject[childOrder].contentID).attr('width', contentWidth);
-    
+    .find(".content-template").attr('content-id', targetObject[childOrder].contentID).attr('width', contentWidth)
+    .find(".content-thumbnail").attr('width', thumbnailWidth);
+       
     $($targetParentContent.selector).find(contentNode)
     .find(".content-link").attr('href', targetObject[childOrder].contentLink);
     
