@@ -102,7 +102,7 @@ button.jui-button-confirm {
     background-color: #005BF2; }
   button.jui-button-confirm.outlined {
     border-color: #3A89FF;
-    background-color: #FFFFFF;
+    background-color: transparent;
     color: #3A89FF; }
     button.jui-button-confirm.outlined:hover {
       border-color: transparent;

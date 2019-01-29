@@ -152,7 +152,7 @@ button.jui-button-confirm {
   }
   
   &.outlined {
-	@include is-outlined($color-confirm, $color-white);
+	@include is-outlined($color-confirm, $color-transparent);
 	
 	&:hover {
 	  border-color: $color-transparent;
