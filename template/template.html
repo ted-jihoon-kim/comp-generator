@@ -66,6 +66,13 @@
 		border-radius: 2px;
 		background-color: #F2F2F2;
 		color: #757575;
+		line-height: 24px;
+	  }
+	  .color-chip {
+		border-radius: 2px;
+		background-color: #F2F2F2;
+		width: 48px;
+		height: 48px;
 	  }
 	  em {
 		display: block;
@@ -90,12 +97,28 @@
   <table >
 	<tbody>
 	  <tr>
-		<th>
+		<th >
 		  <span><em>클래스명</em>Class Name</span>
 		</th>
-		<th>
+		<th style="width: 50%;">
 		  <span><em>미리보기</em>Preview</span>
 		</th>
+		<th style="width: 25%;">
+		  <span><em>컬러 명</em>Color Name</span>
+		</th>
+	  </tr>
+	  <tr>
+		
+		<td>
+		  <label class="class-name">color-chip</label>
+		  <label class="class-name">color-confirm</label>
+		</td>
+		<td>
+		  <div class="color-chip color-confirm"></div>
+		</td>
+		<td>
+		  <span>컨펌</span>
+		</td>
 	  </tr>
 	</tbody>
   </table>
@@ -157,13 +180,13 @@
 		  <label class="class-name">user-profile-container</label>
 		  <label class="class-name">is-groupchat</label>
 		  <label class="class-name">has-2-members</label>
-		  <label class="class-name">size-xs</label></td>
+		  <label class="class-name">size-106</label></td>
 		<td>
-		  <div class="user-profile-container is-groupchat has-2-members size-xs">
+		  <div class="user-profile-container is-groupchat has-2-members size-106">
 			<!-- 사용자 프로필 이미지 -->
-			<img class="img-user-profile" src="https://jandi-box.com/assets/profile_default_240_20170728.png?size=80">
+			<img class="img-user-profile" src="/assets/images/profile_default_240.png">
 			
-			<img class="img-user-profile" src="https://jandi-box.com/assets/profile_default_240_20170728.png?size=80">
+			<img class="img-user-profile" src="/assets/images/profile_default_240.png">
 			
 			<!-- 부재중 상태 표시 레이어 -->
 			<div class="overlay-user-profile">
