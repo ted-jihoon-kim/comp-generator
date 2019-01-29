@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>SCSS Test Template</title>
-  
+  <link rel="stylesheet" href="../css/theme.dark.css" />
+  <link rel="stylesheet" href="../css/component.css" />
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../font/typicons.css" />
   
@@ -84,26 +85,37 @@
 		margin-bottom: -2px;
 	  }
 	  h1 {
-		color: rgba(169, 184, 191, 1);
+		color: #6C757C;
+		opacity: 0.35;
 	  }
   </style>
   
 </head>
 
-<body>
-<!--   <div class="square"></div> -->
+<body id="jndApp">
+  <nav style="height: 120px; border-bottom: 1px solid #eee;">
+	<h2>컴포넌트 템플릿 데모 페이지</h2>
+	<br>
+	<span class="fn-12 switch-button-label">다크</span>
+	<div class="switch-button size-small" ng-class="{'switch-on': isActive}" style="">
+	  <div class="switch-background"></div>
+	  <div class="switch-handler"></div>
+	</div>
+	
+  </nav>
+
   <h1>Foundations</h1>
-  <h3>Colors</h3>
+  <h3>Color</h3>
   <table >
 	<tbody>
 	  <tr>
 		<th >
 		  <span><em>클래스명</em>Class Name</span>
 		</th>
-		<th style="width: 50%;">
+		<th style="width: 25%;">
 		  <span><em>미리보기</em>Preview</span>
 		</th>
-		<th style="width: 25%;">
+		<th style="width: 50%;">
 		  <span><em>컬러 명</em>Color Name</span>
 		</th>
 	  </tr>
@@ -124,7 +136,7 @@
   </table>
   
   
-  <h3>Profiles</h3>
+  <h3>Profile</h3>
   <table>
 	<tbody>
 	  <tr>
@@ -198,6 +210,33 @@
 	</tbody>
   </table>
   
+  <h3>Fonts</h3>
+  <table >
+	<tbody>
+	  <tr>
+		<th>
+		  <span><em>클래스명</em>Class Name</span>
+		</th>
+		<th style="width: 25%;">
+		  <span><em>미리보기</em>Preview</span>
+		</th>
+		<th style="width: 50%;">
+		  <span><em>크기</em>Font size</span>
+		</th>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-22</label>
+		</td>
+		<td>
+		  <span class="fn-22" style="font-size: 22px;">국내 대표 업무용 메신저 잔디<br>Work Better Together</span>
+		</td>
+		<td>
+		  <span>22px</span>
+		</td>
+	  </tr>
+	</tbody>
+  </table>
   
   <h1>Components</h1>
   <h3>Buttons (Box types)</h3>
@@ -479,6 +518,17 @@
 	}
 	else {
 	   $(this).addClass('open');
+	}
+  });
+  
+  $('.switch-button').click(function() {
+	if( $(this).hasClass('switch-on') ){
+	  $(this).removeClass('switch-on');
+	  $('#jndApp').removeClass('theme-dark');
+	}
+	else {
+	  $(this).addClass('switch-on');
+	  $('#jndApp').addClass('theme-dark');
 	}
   });
   </script>

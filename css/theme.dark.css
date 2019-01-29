@@ -1,0 +1,426 @@
+@charset "UTF-8";
+/* import variables (all.scss 파일 위치 기준 경로) */
+/* Default Variables */
+/* Dark Theme */
+/* Dark Theme - COMMON */
+#jndApp.theme-dark {
+  /* demo page */
+  /* Scrollbar */
+  /* Base Color */
+  background-color: #41484D;
+  /* Modal Backdrop (점프 모달 제외) */
+  /* SNB, INPUT, CHAT */
+  /* TOAST - Success Message */
+  /* COMMON - Banner, bars, ... */
+  /* BODY */
+  /* Common - Name */
+  /* 사용자 프로필 컨테이너 (default) */
+  /* 차단된 멤버 프로필 컨테이너 */
+  /* JANDI Profile */
+  /* Mentions */
+  /* 모든 링크 컬러에 적용되나 아래 케이스를 제외 */
+  /* 좋아요 버튼 */
+  /* Component - Message Confirm Member List */
+  /* COMMON - period */
+  /* COMMON - Input & Form Control */
+  /* Profile Popover (TBD)
+  .profile-container {
+	background-color: $color-dark-blue-light;
+  }
+  */
+  /* Drag & Drop Container (Default) */
+  /* 외부 공유 링크 버튼 (chat & tool 공통) */
+  /* 메시지 입력 카운트 */
+  /* codeblock */
+  /* Add Stamp Sticker Color Filter */
+  /* 스탬프 탭 이미지 컬러 처리 추가 */ }
+  #jndApp.theme-dark table,
+  #jndApp.theme-dark span,
+  #jndApp.theme-dark h1,
+  #jndApp.theme-dark h2,
+  #jndApp.theme-dark h3 {
+    color: #FFFFFF; }
+  #jndApp.theme-dark em {
+    color: rgba(255, 255, 255, 0.45); }
+  #jndApp.theme-dark tr:first-child {
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.12); }
+  #jndApp.theme-dark nav {
+    border-color: rgba(255, 255, 255, 0.12) !important; }
+  #jndApp.theme-dark .class-name {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.95); }
+  #jndApp.theme-dark *::-webkit-scrollbar {
+    background-color: transparent;
+    width: 13px; }
+    #jndApp.theme-dark *::-webkit-scrollbar:hover {
+      background-color: rgba(0, 0, 0, 0.12); }
+  #jndApp.theme-dark .modal-backdrop:not(.quick-launcher-backdrop) {
+    background-color: rgba(0, 0, 0, 0.75); }
+  #jndApp.theme-dark .snb-bar,
+  #jndApp.theme-dark .chat-write,
+  #jndApp.theme-dark .msgs-stage:not(.is-board),
+  #jndApp.theme-dark .msgs-stage-loading {
+    box-shadow: none;
+    color: #FFFFFF;
+    border-color: rgba(41, 48, 54, 0.75);
+    background-color: #41484D; }
+    #jndApp.theme-dark .snb-bar .topic-profile-container .icon-lock,
+    #jndApp.theme-dark .snb-bar .snb-title-name,
+    #jndApp.theme-dark .snb-bar .prefix,
+    #jndApp.theme-dark .snb-bar .snb-subtitle,
+    #jndApp.theme-dark .chat-write .topic-profile-container .icon-lock,
+    #jndApp.theme-dark .chat-write .snb-title-name,
+    #jndApp.theme-dark .chat-write .prefix,
+    #jndApp.theme-dark .chat-write .snb-subtitle,
+    #jndApp.theme-dark .msgs-stage:not(.is-board) .topic-profile-container .icon-lock,
+    #jndApp.theme-dark .msgs-stage:not(.is-board) .snb-title-name,
+    #jndApp.theme-dark .msgs-stage:not(.is-board) .prefix,
+    #jndApp.theme-dark .msgs-stage:not(.is-board) .snb-subtitle,
+    #jndApp.theme-dark .msgs-stage-loading .topic-profile-container .icon-lock,
+    #jndApp.theme-dark .msgs-stage-loading .snb-title-name,
+    #jndApp.theme-dark .msgs-stage-loading .prefix,
+    #jndApp.theme-dark .msgs-stage-loading .snb-subtitle {
+      color: #FFFFFF; }
+      #jndApp.theme-dark .snb-bar .topic-profile-container .icon-lock.icon-info-fill,
+      #jndApp.theme-dark .snb-bar .snb-title-name.icon-info-fill,
+      #jndApp.theme-dark .snb-bar .prefix.icon-info-fill,
+      #jndApp.theme-dark .snb-bar .snb-subtitle.icon-info-fill,
+      #jndApp.theme-dark .chat-write .topic-profile-container .icon-lock.icon-info-fill,
+      #jndApp.theme-dark .chat-write .snb-title-name.icon-info-fill,
+      #jndApp.theme-dark .chat-write .prefix.icon-info-fill,
+      #jndApp.theme-dark .chat-write .snb-subtitle.icon-info-fill,
+      #jndApp.theme-dark .msgs-stage:not(.is-board) .topic-profile-container .icon-lock.icon-info-fill,
+      #jndApp.theme-dark .msgs-stage:not(.is-board) .snb-title-name.icon-info-fill,
+      #jndApp.theme-dark .msgs-stage:not(.is-board) .prefix.icon-info-fill,
+      #jndApp.theme-dark .msgs-stage:not(.is-board) .snb-subtitle.icon-info-fill,
+      #jndApp.theme-dark .msgs-stage-loading .topic-profile-container .icon-lock.icon-info-fill,
+      #jndApp.theme-dark .msgs-stage-loading .snb-title-name.icon-info-fill,
+      #jndApp.theme-dark .msgs-stage-loading .prefix.icon-info-fill,
+      #jndApp.theme-dark .msgs-stage-loading .snb-subtitle.icon-info-fill {
+        color: rgba(255, 255, 255, 0.75); }
+        #jndApp.theme-dark .snb-bar .topic-profile-container .icon-lock.icon-info-fill:hover,
+        #jndApp.theme-dark .snb-bar .snb-title-name.icon-info-fill:hover,
+        #jndApp.theme-dark .snb-bar .prefix.icon-info-fill:hover,
+        #jndApp.theme-dark .snb-bar .snb-subtitle.icon-info-fill:hover,
+        #jndApp.theme-dark .chat-write .topic-profile-container .icon-lock.icon-info-fill:hover,
+        #jndApp.theme-dark .chat-write .snb-title-name.icon-info-fill:hover,
+        #jndApp.theme-dark .chat-write .prefix.icon-info-fill:hover,
+        #jndApp.theme-dark .chat-write .snb-subtitle.icon-info-fill:hover,
+        #jndApp.theme-dark .msgs-stage:not(.is-board) .topic-profile-container .icon-lock.icon-info-fill:hover,
+        #jndApp.theme-dark .msgs-stage:not(.is-board) .snb-title-name.icon-info-fill:hover,
+        #jndApp.theme-dark .msgs-stage:not(.is-board) .prefix.icon-info-fill:hover,
+        #jndApp.theme-dark .msgs-stage:not(.is-board) .snb-subtitle.icon-info-fill:hover,
+        #jndApp.theme-dark .msgs-stage-loading .topic-profile-container .icon-lock.icon-info-fill:hover,
+        #jndApp.theme-dark .msgs-stage-loading .snb-title-name.icon-info-fill:hover,
+        #jndApp.theme-dark .msgs-stage-loading .prefix.icon-info-fill:hover,
+        #jndApp.theme-dark .msgs-stage-loading .snb-subtitle.icon-info-fill:hover {
+          color: #FFFFFF; }
+  #jndApp.theme-dark #toast-container .toast.c-toast-success {
+    background-color: rgba(19, 112, 242, 0.95); }
+  #jndApp.theme-dark .desktop-notification-setting-banner,
+  #jndApp.theme-dark .tutorial-popover-progress-bar .progress-bar,
+  #jndApp.theme-dark .jandi-file-upload-progress-bar .progress-bar {
+    background-color: #3A89FF; }
+  #jndApp.theme-dark .header,
+  #jndApp.theme-dark .gnb-toolbar,
+  #jndApp.theme-dark .lpanel,
+  #jndApp.theme-dark .cpanel,
+  #jndApp.theme-dark .snb,
+  #jndApp.theme-dark .msgs-stage,
+  #jndApp.theme-dark .footer {
+    background-color: #41484D;
+    border-color: rgba(41, 48, 54, 0.75); }
+    #jndApp.theme-dark .header .deactivated-footer,
+    #jndApp.theme-dark .gnb-toolbar .deactivated-footer,
+    #jndApp.theme-dark .lpanel .deactivated-footer,
+    #jndApp.theme-dark .cpanel .deactivated-footer,
+    #jndApp.theme-dark .snb .deactivated-footer,
+    #jndApp.theme-dark .msgs-stage .deactivated-footer,
+    #jndApp.theme-dark .footer .deactivated-footer {
+      color: #FFFFFF; }
+      #jndApp.theme-dark .header .deactivated-footer .txt1,
+      #jndApp.theme-dark .gnb-toolbar .deactivated-footer .txt1,
+      #jndApp.theme-dark .lpanel .deactivated-footer .txt1,
+      #jndApp.theme-dark .cpanel .deactivated-footer .txt1,
+      #jndApp.theme-dark .snb .deactivated-footer .txt1,
+      #jndApp.theme-dark .msgs-stage .deactivated-footer .txt1,
+      #jndApp.theme-dark .footer .deactivated-footer .txt1 {
+        color: inherit; }
+      #jndApp.theme-dark .header .deactivated-footer .txt2,
+      #jndApp.theme-dark .gnb-toolbar .deactivated-footer .txt2,
+      #jndApp.theme-dark .lpanel .deactivated-footer .txt2,
+      #jndApp.theme-dark .cpanel .deactivated-footer .txt2,
+      #jndApp.theme-dark .snb .deactivated-footer .txt2,
+      #jndApp.theme-dark .msgs-stage .deactivated-footer .txt2,
+      #jndApp.theme-dark .footer .deactivated-footer .txt2 {
+        color: rgba(255, 255, 255, 0.75); }
+  #jndApp.theme-dark:not(.blurred) .fn-user-name {
+    color: #FFFFFF !important; }
+  #jndApp.theme-dark .topic-profile-container .icon-lock {
+    color: inherit; }
+  #jndApp.theme-dark .user-profile-container {
+    /* 부재중 프로필 예외 처리 */ }
+    #jndApp.theme-dark .user-profile-container:not(.is-away) {
+      /* border-width: 0; */
+      background-color: rgba(41, 48, 54, 0.75);
+      border-color: #50565b;
+      /* 통합 검색 결과 리스트 프로필 처리 */ }
+      #jndApp.theme-dark .user-profile-container:not(.is-away).gsr-thumb {
+        background-color: #FFFFFF;
+        border-width: 0; }
+  #jndApp.theme-dark .of-deactivated .user-profile-container {
+    background-color: #293036 !important; }
+  #jndApp.theme-dark .user-profile-container .img-user-profile[src*="bot-"] {
+    background-color: #FFFFFF; }
+  #jndApp.theme-dark .lpanel .lnb-item-box.on:before {
+    left: 23px;
+    top: 3px; }
+  #jndApp.theme-dark .mention,
+  #jndApp.theme-dark .mention-preview {
+    color: #3A89FF;
+    background-color: transparent; }
+    #jndApp.theme-dark .mention:hover, #jndApp.theme-dark .mentiona:hover,
+    #jndApp.theme-dark .mention-preview:hover,
+    #jndApp.theme-dark .mention-previewa:hover {
+      color: #1370F2; }
+    #jndApp.theme-dark .mention.me, #jndApp.theme-dark .mention.editor-item,
+    #jndApp.theme-dark .mention-preview.me,
+    #jndApp.theme-dark .mention-preview.editor-item {
+      background-color: #256dd7;
+      color: #FFFFFF; }
+      #jndApp.theme-dark .mention.me:hover, #jndApp.theme-dark .mention.editor-item:hover,
+      #jndApp.theme-dark .mention-preview.me:hover,
+      #jndApp.theme-dark .mention-preview.editor-item:hover {
+        background-color: #005BF2;
+        color: #FFFFFF; }
+  #jndApp.theme-dark a:not([tabindex]):not([download-tracker]):not([ng-click]):not(.file-action):not(.gnb-nav-btn):not(.star-file):not(.tab-head-text):not(.mention):not([class*="option"]):not([class*="link"]):not([class*="_"]):not(.btn):not(.path-name) {
+    color: #438fff;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.65); }
+  #jndApp.theme-dark .modal a.fn-u,
+  #jndApp.theme-dark .item-sub-title a.fn-u,
+  #jndApp.theme-dark .btn-link,
+  #jndApp.theme-dark .btn-hu-txt,
+  #jndApp.theme-dark .connect-union-plug-tool-container.on .connect-union-plug-tool-text {
+    color: #3A89FF;
+    cursor: pointer; }
+    #jndApp.theme-dark .modal a.fn-u.disabled, #jndApp.theme-dark .modal a.fn-u[disabled],
+    #jndApp.theme-dark .item-sub-title a.fn-u.disabled,
+    #jndApp.theme-dark .item-sub-title a.fn-u[disabled],
+    #jndApp.theme-dark .btn-link.disabled,
+    #jndApp.theme-dark .btn-link[disabled],
+    #jndApp.theme-dark .btn-hu-txt.disabled,
+    #jndApp.theme-dark .btn-hu-txt[disabled],
+    #jndApp.theme-dark .connect-union-plug-tool-container.on .connect-union-plug-tool-text.disabled,
+    #jndApp.theme-dark .connect-union-plug-tool-container.on .connect-union-plug-tool-text[disabled] {
+      color: rgba(255, 255, 255, 0.35); }
+  #jndApp.theme-dark .confirmable-action {
+    color: rgba(255, 255, 255, 0.75); }
+    #jndApp.theme-dark .confirmable-action.is-liked {
+      color: #3A89FF; }
+    #jndApp.theme-dark .confirmable-action:not(.is-liked) > *:not(.msg-like-button-divider):hover, #jndApp.theme-dark .confirmable-action:not(.is-liked):not(.has-like-count):hover {
+      color: #FFFFFF; }
+  #jndApp.theme-dark .message-confirm .close-panel {
+    color: rgba(255, 255, 255, 0.75); }
+    #jndApp.theme-dark .message-confirm .close-panel:hover {
+      color: #FFFFFF; }
+  #jndApp.theme-dark .message-confirm .custom-opt-view.is-unread {
+    background-color: #41484D; }
+    #jndApp.theme-dark .message-confirm .custom-opt-view.is-unread .custom-opt-item.member-item:not(:last-of-type) {
+      border-color: transparent; }
+  #jndApp.theme-dark .message-confirm .no-result-container {
+    color: inherit; }
+  #jndApp.theme-dark .period-list {
+    border-color: rgba(255, 255, 255, 0.12); }
+    #jndApp.theme-dark .period-list .date-option {
+      color: inherit;
+      border-color: rgba(255, 255, 255, 0.12); }
+    #jndApp.theme-dark .period-list .date-line:hover,
+    #jndApp.theme-dark .period-list .no-limit:hover {
+      background-color: #41484D; }
+  #jndApp.theme-dark .form-control,
+  #jndApp.theme-dark .jnd-input,
+  #jndApp.theme-dark .topic-folder-title > input,
+  #jndApp.theme-dark .connect-url-input,
+  #jndApp.theme-dark .setting-input {
+    background-color: #333A3F !important;
+    color: #FFFFFF;
+    border-color: transparent;
+    /* static label이 존재하는 input 케이스 추가 */ }
+    #jndApp.theme-dark .form-control:focus,
+    #jndApp.theme-dark .jnd-input:focus,
+    #jndApp.theme-dark .topic-folder-title > input:focus,
+    #jndApp.theme-dark .connect-url-input:focus,
+    #jndApp.theme-dark .setting-input:focus {
+      border-color: rgba(255, 255, 255, 0.35); }
+    #jndApp.theme-dark .form-control[readonly], #jndApp.theme-dark .form-control[readonly]:hover, #jndApp.theme-dark .form-control[readonly]:active, #jndApp.theme-dark .form-control[readonly]:focus,
+    #jndApp.theme-dark .jnd-input[readonly],
+    #jndApp.theme-dark .jnd-input[readonly]:hover,
+    #jndApp.theme-dark .jnd-input[readonly]:active,
+    #jndApp.theme-dark .jnd-input[readonly]:focus,
+    #jndApp.theme-dark .topic-folder-title > input[readonly],
+    #jndApp.theme-dark .topic-folder-title > input[readonly]:hover,
+    #jndApp.theme-dark .topic-folder-title > input[readonly]:active,
+    #jndApp.theme-dark .topic-folder-title > input[readonly]:focus,
+    #jndApp.theme-dark .connect-url-input[readonly],
+    #jndApp.theme-dark .connect-url-input[readonly]:hover,
+    #jndApp.theme-dark .connect-url-input[readonly]:active,
+    #jndApp.theme-dark .connect-url-input[readonly]:focus,
+    #jndApp.theme-dark .setting-input[readonly],
+    #jndApp.theme-dark .setting-input[readonly]:hover,
+    #jndApp.theme-dark .setting-input[readonly]:active,
+    #jndApp.theme-dark .setting-input[readonly]:focus {
+      background-color: rgba(41, 48, 54, 0.15) !important;
+      border-color: rgba(41, 48, 54, 0.35);
+      color: rgba(255, 255, 255, 0.45); }
+    #jndApp.theme-dark .form-control.is-error:not([type="password"]),
+    #jndApp.theme-dark .jnd-input.is-error:not([type="password"]),
+    #jndApp.theme-dark .topic-folder-title > input.is-error:not([type="password"]),
+    #jndApp.theme-dark .connect-url-input.is-error:not([type="password"]),
+    #jndApp.theme-dark .setting-input.is-error:not([type="password"]) {
+      border-color: #FF5B49;
+      color: #FF5B49; }
+    #jndApp.theme-dark .form-control.has-label-r + label,
+    #jndApp.theme-dark .jnd-input.has-label-r + label,
+    #jndApp.theme-dark .topic-folder-title > input.has-label-r + label,
+    #jndApp.theme-dark .connect-url-input.has-label-r + label,
+    #jndApp.theme-dark .setting-input.has-label-r + label {
+      color: rgba(255, 255, 255, 0.75);
+      z-index: 1;
+      border-color: rgba(255, 255, 255, 0.15); }
+    #jndApp.theme-dark .form-control.has-label-r:focus + label:before,
+    #jndApp.theme-dark .jnd-input.has-label-r:focus + label:before,
+    #jndApp.theme-dark .topic-folder-title > input.has-label-r:focus + label:before,
+    #jndApp.theme-dark .connect-url-input.has-label-r:focus + label:before,
+    #jndApp.theme-dark .setting-input.has-label-r:focus + label:before {
+      background-color: transparent; }
+    #jndApp.theme-dark .form-control ~ .info-blue-box,
+    #jndApp.theme-dark .jnd-input ~ .info-blue-box,
+    #jndApp.theme-dark .topic-folder-title > input ~ .info-blue-box,
+    #jndApp.theme-dark .connect-url-input ~ .info-blue-box,
+    #jndApp.theme-dark .setting-input ~ .info-blue-box {
+      color: rgba(255, 255, 255, 0.75);
+      background-color: transparent;
+      border-color: transparent; }
+  #jndApp.theme-dark .dnd-over-container {
+    background-color: rgba(65, 72, 77, 0.9); }
+    #jndApp.theme-dark .dnd-over-container .esm-container .esm-desc,
+    #jndApp.theme-dark .dnd-over-container .esm-container .esm-heading {
+      color: #FFFFFF; }
+  #jndApp.theme-dark .external-share-btn,
+  #jndApp.theme-dark .external-share-title .title-icon {
+    background-color: #3A89FF;
+    color: #FFFFFF;
+    border-color: transparent; }
+    #jndApp.theme-dark .external-share-btn:not(span):hover,
+    #jndApp.theme-dark .external-share-title .title-icon:not(span):hover {
+      background-color: #1370F2; }
+  #jndApp.theme-dark .text-count-box {
+    color: rgba(255, 255, 255, 0.75); }
+    #jndApp.theme-dark .text-count-box .current-value {
+      color: #FFFFFF; }
+    #jndApp.theme-dark .text-count-box .alert-message {
+      color: #FF5B49; }
+  #jndApp.theme-dark .prettyprint {
+    background-color: rgba(41, 48, 54, 0.9);
+    color: rgba(255, 255, 255, 0.75);
+    border-color: rgba(41, 48, 54, 0.45);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+    margin-left: 1px;
+    margin-right: 1px;
+    /* plain text */
+    /* punctuation, lisp open bracket, lisp close bracket */
+    /* string content */
+    /* a comment */
+    /* a type name */
+    /* a keyword */
+    /* a declaration; a variable name */
+    /* a literal value */
+    /* a function name */
+    /* a markup tag name */
+    /* a markup attribute name */
+    /* a markup attribute value */ }
+    #jndApp.theme-dark .prettyprint:before {
+      background-color: transparent;
+      color: inherit;
+      border-color: rgba(255, 255, 255, 0.08);
+      font-family: sans-serif; }
+    #jndApp.theme-dark .prettyprint .mention.me {
+      color: #FFFFFF;
+      background-color: transparent; }
+      #jndApp.theme-dark .prettyprint .mention.me * {
+        color: inherit; }
+    #jndApp.theme-dark .prettyprint .pln {
+      color: #FFFFFF; }
+    #jndApp.theme-dark .prettyprint .pun,
+    #jndApp.theme-dark .prettyprint .opn,
+    #jndApp.theme-dark .prettyprint .clo {
+      color: rgba(255, 255, 255, 0.75); }
+    #jndApp.theme-dark .prettyprint .str {
+      color: #F9BC02; }
+    #jndApp.theme-dark .prettyprint .com {
+      color: #6C757C; }
+    #jndApp.theme-dark .prettyprint .typ {
+      color: #3A89FF; }
+    #jndApp.theme-dark .prettyprint .kwd {
+      color: #3A89FF; }
+    #jndApp.theme-dark .prettyprint .dec,
+    #jndApp.theme-dark .prettyprint .var {
+      color: #0DC9E5; }
+    #jndApp.theme-dark .prettyprint .lit {
+      color: #FF5B49; }
+    #jndApp.theme-dark .prettyprint .fun {
+      color: #1CBE8E; }
+    #jndApp.theme-dark .prettyprint .tag {
+      color: #1CBE8E; }
+    #jndApp.theme-dark .prettyprint .atn {
+      color: #FF5B49; }
+    #jndApp.theme-dark .prettyprint .atv {
+      color: #3A89FF; }
+  #jndApp.theme-dark .self .prettyprint {
+    background-color: #293036; }
+  #jndApp.theme-dark .zoom-msg-container,
+  #jndApp.theme-dark .blurred-msg-container {
+    background-color: rgba(36, 41, 45, 0.9); }
+  #jndApp.theme-dark .sticker {
+    /* 
+	 *  1. 반전 & 밝기 조정 (4종, 국문 3종)
+	 *  KO(120) : 결재완료(8), 넵(11), 확인부탁드립니다(13)
+	 *  EN(116) : FYI(8), YES!(11), Take a better Look(13), Working on it(20)
+	 *  JA(117) : 결재완료(8), 넵(11), 확인부탁드립니다(13), 수정했습니다(20)
+	 *  SC(118) : 결재완료(8), 넵(11), 확인부탁드립니다(13), 수정했습니다(20)
+	 *  TC(119) : 결재완료(8), 넵(11), 확인부탁드립니다(13), 수정했습니다(20)
+	 */
+    /* 
+	 *  2. 반전 & HUE 조정 (4종, 국문 5종)
+	 *  KO(120) : 끝(12), 보냈습니다(14), 커피한잔?(19), 힘내!(21), 취향 저격(24)
+	 *  EN(116) : Done(12), Sent(14), Coffee?(19), Keep it up!(21)
+	 *  JA(117) : 끝(12), 보냈습니다(14), 커피?(19), 힘내!(21)
+	 *  SC(118) : 끝(12), 보냈습니다(14), 커피?(19), 힘내!(21)
+	 *  TC(119) : 끝(12), 보냈습니다(14), 커피?(19), 힘내!(21)
+	 */
+    /* 
+	 *  3. 밝기 조정 (2종)
+	 *  KO(120) : 퇴근이다(22), 미팅합시다(23)
+	 *  EN(116) : ASAP(22), Meeting Time!(23) 
+	 *  JA(117) : 퇴근이다(22), 미팅합시다(23)
+	 *  SC(118) : (22), (23)
+	 *  TC(119) : (22), (23)
+	 */
+    /* 
+	 *  4. 반전 & 컬러 조정 (1종, 국문 2종)
+	 *  KO(120) : 반려(6), 담배타임(20)
+	 *  EN(116) : Declined(6) 
+	 *  JA(117) : (6)
+	 *  SC(118) : (6)
+	 *  TC(119) : (6)
+	 */ }
+    #jndApp.theme-dark .sticker[style*="/116/8"], #jndApp.theme-dark .sticker[style*="/116/11"], #jndApp.theme-dark .sticker[style*="/116/13"], #jndApp.theme-dark .sticker[style*="/116/20"], #jndApp.theme-dark .sticker[style*="/117/8"], #jndApp.theme-dark .sticker[style*="/117/11"], #jndApp.theme-dark .sticker[style*="/117/13"], #jndApp.theme-dark .sticker[style*="/117/20"], #jndApp.theme-dark .sticker[style*="/118/8"], #jndApp.theme-dark .sticker[style*="/118/11"], #jndApp.theme-dark .sticker[style*="/118/13"], #jndApp.theme-dark .sticker[style*="/118/20"], #jndApp.theme-dark .sticker[style*="/119/8"], #jndApp.theme-dark .sticker[style*="/119/11"], #jndApp.theme-dark .sticker[style*="/119/13"], #jndApp.theme-dark .sticker[style*="/119/20"], #jndApp.theme-dark .sticker[style*="/120/8"], #jndApp.theme-dark .sticker[style*="/120/11"], #jndApp.theme-dark .sticker[style*="/120/13"] {
+      filter: invert(1) brightness(2); }
+    #jndApp.theme-dark .sticker[style*="/116/12"], #jndApp.theme-dark .sticker[style*="/116/14"], #jndApp.theme-dark .sticker[style*="/116/19"], #jndApp.theme-dark .sticker[style*="/116/21"], #jndApp.theme-dark .sticker[style*="/117/12"], #jndApp.theme-dark .sticker[style*="/117/14"], #jndApp.theme-dark .sticker[style*="/117/19"], #jndApp.theme-dark .sticker[style*="/117/21"], #jndApp.theme-dark .sticker[style*="/118/12"], #jndApp.theme-dark .sticker[style*="/118/14"], #jndApp.theme-dark .sticker[style*="/118/19"], #jndApp.theme-dark .sticker[style*="/118/21"], #jndApp.theme-dark .sticker[style*="/119/12"], #jndApp.theme-dark .sticker[style*="/119/14"], #jndApp.theme-dark .sticker[style*="/119/19"], #jndApp.theme-dark .sticker[style*="/119/21"], #jndApp.theme-dark .sticker[style*="/120/12"], #jndApp.theme-dark .sticker[style*="/120/14"], #jndApp.theme-dark .sticker[style*="/120/19"], #jndApp.theme-dark .sticker[style*="/120/21"], #jndApp.theme-dark .sticker[style*="/120/24"], #jndApp.theme-dark .sticker[style*="/107/2"] {
+      filter: invert(1) hue-rotate(70deg); }
+    #jndApp.theme-dark .sticker[style*="/116/22"], #jndApp.theme-dark .sticker[style*="/116/23"], #jndApp.theme-dark .sticker[style*="/117/22"], #jndApp.theme-dark .sticker[style*="/117/23"], #jndApp.theme-dark .sticker[style*="/118/22"], #jndApp.theme-dark .sticker[style*="/118/23"], #jndApp.theme-dark .sticker[style*="/119/22"], #jndApp.theme-dark .sticker[style*="/119/23"], #jndApp.theme-dark .sticker[style*="/120/22"], #jndApp.theme-dark .sticker[style*="/120/23"] {
+      filter: saturate(0.75) brightness(3); }
+    #jndApp.theme-dark .sticker[style*="/116/6"], #jndApp.theme-dark .sticker[style*="/117/6"], #jndApp.theme-dark .sticker[style*="/118/6"], #jndApp.theme-dark .sticker[style*="/119/6"], #jndApp.theme-dark .sticker[style*="/120/6"], #jndApp.theme-dark .sticker[style*="/120/20"], #jndApp.theme-dark .sticker[style*="/107/5"], #jndApp.theme-dark .sticker[style*="/107/7"] {
+      filter: invert(1) hue-rotate(220deg) brightness(1.5); }
+  #jndApp.theme-dark .sticker_panel_tab_item[style*="/116/on"], #jndApp.theme-dark .sticker_panel_tab_item[style*="/117/on"], #jndApp.theme-dark .sticker_panel_tab_item[style*="/118/on"], #jndApp.theme-dark .sticker_panel_tab_item[style*="/119/on"], #jndApp.theme-dark .sticker_panel_tab_item[style*="/120/on"] {
+    filter: invert(1); }

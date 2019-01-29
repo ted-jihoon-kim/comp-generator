@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Default Variables */
+/* Dark Theme */
 body {
   -webkit-font-smoothing: antialiased;
   font-family: Helvetica Neue, sans-serif;
@@ -7,7 +8,7 @@ body {
   margin: 0; }
 
 .color-chip.color-confirm {
-  background-color: #00ACE9; }
+  background-color: #3A89FF; }
 
 /* Basic Anchor Tag */
 a {
@@ -41,13 +42,13 @@ a {
       float: right; }
 
 a.jui-text-link-confirm {
-  color: #00ACE9; }
+  color: #3A89FF; }
   a.jui-text-link-confirm:not([disabled]):hover {
-    color: #0092D8; }
+    color: #1370F2; }
   a.jui-text-link-confirm:not([disabled]):active {
-    color: #0389C8; }
+    color: #005BF2; }
   a.jui-text-link-confirm:not([disabled]):focus {
-    color: #0389C8; }
+    color: #005BF2; }
 
 /* Basic Button Tag */
 button {
@@ -87,35 +88,35 @@ button[class*="jui-button"] {
   button[class*="jui-button"][disabled] {
     cursor: not-allowed;
     background-color: #cccccc;
-    color: white; }
+    color: #FFFFFF; }
 
 /* Variations */
 button.jui-button-confirm {
-  background-color: #00ACE9;
-  color: white; }
+  background-color: #3A89FF;
+  color: #FFFFFF; }
   button.jui-button-confirm:not([disabled]):hover {
-    background-color: #0092D8; }
+    background-color: #1370F2; }
   button.jui-button-confirm:not([disabled]):active {
-    background-color: #0389C8; }
+    background-color: #005BF2; }
   button.jui-button-confirm:not([disabled]):focus {
-    background-color: #0389C8; }
+    background-color: #005BF2; }
   button.jui-button-confirm.outlined {
-    border-color: #00ACE9;
-    background-color: white;
-    color: #00ACE9; }
+    border-color: #3A89FF;
+    background-color: #FFFFFF;
+    color: #3A89FF; }
     button.jui-button-confirm.outlined:hover {
       border-color: transparent;
-      color: white; }
+      color: #FFFFFF; }
     button.jui-button-confirm.outlined:active {
       border-color: transparent;
-      color: white; }
+      color: #FFFFFF; }
     button.jui-button-confirm.outlined:focus {
       border-color: transparent;
-      color: white; }
+      color: #FFFFFF; }
 
 button.jui-button-alert {
-  background-color: #D94516;
-  color: white; }
+  background-color: #F82323;
+  color: #FFFFFF; }
   button.jui-button-alert:not([disabled]):hover {
     background-color: #C9302C; }
   button.jui-button-alert:not([disabled]):active {
@@ -124,7 +125,7 @@ button.jui-button-alert {
     background-color: #BB2A27; }
 
 button.jui-button-cancel {
-  background-color: white;
+  background-color: #FFFFFF;
   border-color: #C9D4DB;
   color: #617B8E; }
   button.jui-button-cancel:hover {

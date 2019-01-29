@@ -63,15 +63,15 @@ a.jui-text-link-confirm {
   color: $color-confirm;
 
   &:not([disabled]):hover {
-	color: $color-confirm-hovered;
+	color: $color-confirm-hover;
   }
 	
   &:not([disabled]):active {
-	color: $color-confirm-pressed;
+	color: $color-confirm-active;
   }
 	
   &:not([disabled]):focus {
-	color: $color-confirm-pressed;
+	color: $color-confirm-active;
   }
 }
 
@@ -140,15 +140,15 @@ button.jui-button-confirm {
   color: $color-white;
 
   &:not([disabled]):hover {
-	background-color: $color-confirm-hovered;
+	background-color: $color-confirm-hover;
   }
 	
   &:not([disabled]):active {
-	background-color: $color-confirm-pressed;
+	background-color: $color-confirm-active;
   }
 	
   &:not([disabled]):focus {
-	background-color: $color-confirm-pressed;
+	background-color: $color-confirm-active;
   }
   
   &.outlined {
