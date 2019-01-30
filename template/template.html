@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>SCSS Test Template</title>
   <link rel="stylesheet" href="../css/theme.dark.css" />
+  <link rel="stylesheet" href="../css/snb.group.profile.css" />
   <link rel="stylesheet" href="../css/component.css" />
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../font/typicons.css" />
@@ -88,6 +89,9 @@
 		color: #6C757C;
 		opacity: 0.35;
 	  }
+	  #jndApp {
+		transition: all ease-out 120ms;
+	  }
   </style>
   
 </head>
@@ -96,7 +100,7 @@
   <nav style="height: 120px; border-bottom: 1px solid #eee;">
 	<h2>컴포넌트 템플릿 데모 페이지</h2>
 	<br>
-	<span class="fn-12 switch-button-label">다크</span>
+	<span class="fn-12 switch-button-label" style="font-weight: 700;vertical-align: bottom;">다크 테마</span>
 	<div class="switch-button size-small" ng-class="{'switch-on': isActive}" style="">
 	  <div class="switch-background"></div>
 	  <div class="switch-handler"></div>
@@ -120,7 +124,6 @@
 		</th>
 	  </tr>
 	  <tr>
-		
 		<td>
 		  <label class="class-name">color-chip</label>
 		  <label class="class-name">color-confirm</label>
@@ -129,7 +132,31 @@
 		  <div class="color-chip color-confirm"></div>
 		</td>
 		<td>
-		  <span>컨펌</span>
+		  <span>Confirm</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">color-chip</label>
+		  <label class="class-name">color-notification</label>
+		</td>
+		<td>
+		  <div class="color-chip color-notification"></div>
+		</td>
+		<td>
+		  <span>Notification</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">color-chip</label>
+		  <label class="class-name">color-yellow</label>
+		</td>
+		<td>
+		  <div class="color-chip color-yellow"></div>
+		</td>
+		<td>
+		  <span>Yellow</span>
 		</td>
 	  </tr>
 	</tbody>
@@ -179,25 +206,22 @@
 		<th>
 		  <!-- 조합 형태
 					  
-			  1. group profile (2) : 3인이 참여중인 그룹 채팅 프로필
-			  2. group profile (3) : 4인이 참여중인 그룹 채팅 프로필
-			  3. group profile (4) : 5인이상 참여중인 그룹 채팅 프로필
+			  1. group profile (3) : 3인이 참여중인 그룹 채팅 프로필
+			  2. group profile (4) : 4인이 참여중인 그룹 채팅 프로필
+			  3. group profile (5) : 5인이상 참여중인 그룹 채팅 프로필
 			  4. editable : 수정 가능한 프로필
-			  5. editable-bottom : 수정 가능한 프로필 (하단에 수정 버튼 제공) -->
+			  5. editable-bottom : 수정 가능한 프로필 (하단에 수정 버튼 제공)
+			  6. preivew : 프리뷰 가능한 프로필 -->
 		  <span><em>조합 형태</em>Combination</span>
 		</th>
 	  </tr>
 	  <tr>
 		<td>
 		  <label class="class-name">user-profile-container</label>
-		  <label class="class-name">is-groupchat</label>
-		  <label class="class-name">has-2-members</label>
 		  <label class="class-name">size-106</label></td>
 		<td>
-		  <div class="user-profile-container is-groupchat has-2-members size-106">
+		  <div class="user-profile-container size-106">
 			<!-- 사용자 프로필 이미지 -->
-			<img class="img-user-profile" src="/assets/images/profile_default_240.png">
-			
 			<img class="img-user-profile" src="/assets/images/profile_default_240.png">
 			
 			<!-- 부재중 상태 표시 레이어 -->
@@ -205,6 +229,108 @@
 			  <i class="icon-svg ico-away"></i>
 			</div>
 		  </div>
+		</td>
+		<td>
+		  <span>Default</span>
+		</td>
+		<td>
+		  <span>offline</span>
+		</td>
+		<td>
+		  <span>106 px</span>
+		</td>
+		<td>
+		  <span>Default (non-editable)</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">user-profile-container</label>
+		  <label class="class-name">is-groupchat</label>
+		  <label class="class-name">has-3-members</label>
+		  <label class="class-name">size-xl</label></td>
+		<td>
+		  <div class="user-profile-container is-groupchat has-3-members size-xl">
+			<div class="img-user-profile">
+			  <img class="img-user-profile" src="/assets/images/character_03.png">
+			</div>
+			<div class="img-user-profile">
+			  <img class="img-user-profile" src="/assets/images/character_06.png">
+			</div>
+			<!-- 부재중 상태 표시 레이어 
+			<div class="overlay-user-profile">
+			  <i class="icon-svg ico-away"></i>
+			</div> -->
+		  </div>
+		</td>
+		<td>
+		  <span>Character</span>
+		</td>
+		<td>
+		  <span>-</span>
+		</td>
+		<td>
+		  <span>eXtra Large</span>
+		</td>
+		<td>
+		  <span>group profile (3)</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">user-profile-container</label>
+		  <label class="class-name">is-away</label>
+		  <label class="class-name">size-m</label></td>
+		<td>
+		  <div class="user-profile-container is-away size-m">
+			<!-- <div class="img-user-profile"> -->
+			  <img class="img-user-profile" src="/assets/images/custom_profile.png">
+			<!-- </div> -->
+			<!-- 부재중 상태 표시 레이어 -->
+			<div class="overlay-user-profile">
+			  <i class="icon-svg ico-away"></i>
+			</div>
+		  </div>
+		</td>
+		<td>
+		  <span>Customize</span>
+		</td>
+		<td>
+		  <span>away</span>
+		</td>
+		<td>
+		  <span>Medium</span>
+		</td>
+		<td>
+		  <span>Default (non-editable)</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">user-profile-container</label>
+		  <label class="class-name">size-s</label></td>
+		<td>
+		  <div class="user-profile-container size-s">
+			<!-- <div class="img-user-profile"> -->
+			  <img class="img-user-profile" src="/assets/images/bot-google-calendar.png">
+			<!-- </div> -->
+			<!-- 부재중 상태 표시 레이어
+			<div class="overlay-user-profile">
+			  <i class="icon-svg ico-away"></i>
+			</div> -->
+		  </div>
+		</td>
+		<td>
+		  <span>Bot</span>
+		</td>
+		<td>
+		  <span>-</span>
+		</td>
+		<td>
+		  <span>small</span>
+		</td>
+		<td>
+		  <span>Default (non-editable)</span>
 		</td>
 	  </tr>
 	</tbody>
@@ -220,7 +346,10 @@
 		<th style="width: 25%;">
 		  <span><em>미리보기</em>Preview</span>
 		</th>
-		<th style="width: 50%;">
+		<th style="width: 30%;">
+		  <span><em>사용처</em>Usage</span>
+		</th>
+		<th style="width: 20%;">
 		  <span><em>크기</em>Font size</span>
 		</th>
 	  </tr>
@@ -232,7 +361,136 @@
 		  <span class="fn-22" style="font-size: 22px;">국내 대표 업무용 메신저 잔디<br>Work Better Together</span>
 		</td>
 		<td>
+		  <span>관리자 메뉴 - 타이틀</span>
+		</td>
+		<td>
 		  <span>22px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-20</label>
+		</td>
+		<td>
+		  <span class="fn-20" style="font-size: 20px;">국내 대표 업무용 메신저 잔디<br>Work Better Together</span>
+		</td>
+		<td>
+		  <span>풀스크린 모달 - 타이틀</span>
+		</td>
+		<td>
+		  <span>20px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-18</label>
+		</td>
+		<td>
+		  <span class="fn-18" style="font-size: 18px;">국내 대표 업무용 메신저 잔디<br>Work Better Together</span>
+		</td>
+		<td>
+		  <span>점프 모달 - 검색어 입력창<br>잔디 커넥트 - 헤더 타이틀</span>
+		</td>
+		<td>
+		  <span>18px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-16</label>
+		</td>
+		<td>
+		  <span class="fn-16" style="font-size: 16px;">국내 대표 업무용 메신저 잔디<br>Work Better Together</span>
+		</td>
+		<td>
+		  <span>관리자 메뉴 - 헤더 타이틀<br>LNB - 팀 이름<br>팀 목록 - 팀 이름<br>모달 - 헤더 타이틀</span>
+		</td>
+		<td>
+		  <span>16px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-15</label>
+		</td>
+		<td>
+		  <span class="fn-15" style="font-size: 15px;">국내 대표 업무용 메신저 잔디<br>Work Better Together</span>
+		</td>
+		<td>
+		  <span>우측 패널 - 헤더 타이틀<br>탭 네비게이션 - 메뉴<br>파일 리스트 - 파일 명<br>챗 뷰 - 시스템 메시지 (날짜)<br>ESM - 타이틀</span>
+		</td>
+		<td>
+		  <span>15px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-14</label>
+		</td>
+		<td>
+		  <span class="fn-14" style="font-size: 14px;">국내 대표 업무용 메신저 잔디<br>Work Better Together</span>
+		</td>
+		<td>
+		  <span>SNB - 타이틀<br>드롭다운 메뉴<br>토픽 & 채팅 리스트 - 이름<br>챗 뷰 - 시스템 메시지 (일반)<br>코멘트 - 본문</span>
+		</td>
+		<td>
+		  <span>14px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-13</label>
+		</td>
+		<td>
+		  <span class="fn-13" style="font-size: 13px;">국내 대표 업무용 메신저 잔디<br>Work Better Together</span>
+		</td>
+		<td>
+		  <span>커스텀 셀렉트 박스 버튼 - 레이블<br>코멘트 - 작성자 이름<br>필터 드롭다운 - 레이블<br>필터 토글 버튼 - 레이블</span>
+		</td>
+		<td>
+		  <span>13px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-12</label>
+		</td>
+		<td>
+		  <span class="fn-12" style="font-size: 12px;">국내 대표 업무용 메신저 잔디<br>Work Better Together</span>
+		</td>
+		<td>
+		  <span>캡슐 레이블 텍스트<br>투표 & 할 일 카드 - 설명<br>할 일 상세 - 시스템 메시지<br>할 일 카드 목록 - 기한</span>
+		</td>
+		<td>
+		  <span>12px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-11</label>
+		</td>
+		<td>
+		  <span class="fn-11" style="font-size: 11px;">국내 대표 업무용 메신저 잔디<br>Work Better Together</span>
+		</td>
+		<td>
+		  <span>입력 글자 수 정보 텍스트<br>좋아요 메뉴 레이블<br>읽음 메뉴 레이블<br>멘션 & 조직도 멤버 목록 - 부서명</span>
+		</td>
+		<td>
+		  <span>11px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-10</label>
+		</td>
+		<td>
+		  <span class="fn-10" style="font-size: 10px;">국내 대표 업무용 메신저 잔디<br>Work Better Together</span>
+		</td>
+		<td>
+		  <span>메시지 & 코멘트 - 타임 스탬프</span>
+		</td>
+		<td>
+		  <span>10px</span>
 		</td>
 	  </tr>
 	</tbody>

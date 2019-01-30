@@ -15,6 +15,12 @@ body {
   &.color-confirm {
 	background-color: $color-confirm;
   }
+  &.color-notification {
+	background-color: $color-notification;
+  }
+  &.color-yellow {
+	background-color: $color-yellow;
+  }
 }
 
 /* Basic Anchor Tag */
@@ -323,6 +329,7 @@ button[class*="dropdown"] {
 	  content: '';
       position: absolute;
 	}
+/*
 	
 	&.has-2-members:after {
       width: 50%;
@@ -357,6 +364,7 @@ button[class*="dropdown"] {
       border-right: 1px solid #e1e1e1;
       z-index: 1;
     }
+*/
   }
 
 }
@@ -366,6 +374,11 @@ button[class*="dropdown"] {
   width: 100%;
   height: 100%;
   margin: 0;
+  
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
 }
 
 .overlay-user-profile { /* 부재중 상태 표시 레이어 */

@@ -10,6 +10,12 @@ body {
 .color-chip.color-confirm {
   background-color: #3A89FF; }
 
+.color-chip.color-notification {
+  background-color: #FF5B49; }
+
+.color-chip.color-yellow {
+  background-color: #F9BC02; }
+
 /* Basic Anchor Tag */
 a {
   cursor: pointer;
@@ -217,39 +223,55 @@ button[class*="dropdown"] i {
     .user-profile-container.is-away .img-user-profile {
       opacity: 0.325; }
   .user-profile-container.is-groupchat {
-    /* 그룹 챗 일 때 */ }
-    .user-profile-container.is-groupchat[class*='-members']:after, .user-profile-container.is-groupchat[class*='-members']:before {
-      content: '';
-      position: absolute; }
-    .user-profile-container.is-groupchat.has-2-members:after {
+    /* 그룹 챗 일 때 */
+    /*
+	
+	&.has-2-members:after {
       width: 50%;
       height: 100%;
-      border-right: 1px solid #e1e1e1; }
-    .user-profile-container.is-groupchat.has-3-members:after {
+      border-right: 1px solid #e1e1e1;
+    }
+    
+    &.has-3-members:after {
       width: 100%;
       height: 50%;
-      border-bottom: 1px solid #e1e1e1; }
-    .user-profile-container.is-groupchat.has-4-members:after {
+      border-bottom: 1px solid #e1e1e1;
+    }
+    
+    &.has-4-members:after {
       width: 100%;
       height: 50%;
-      border-bottom: 1px solid #e1e1e1; }
-    .user-profile-container.is-groupchat.has-3-members:before {
+      border-bottom: 1px solid #e1e1e1;
+    }
+    
+    &.has-3-members:before {
       top: 50%;
       width: 50%;
       height: 50%;
       border-right: 1px solid #e1e1e1;
-      z-index: 1; }
-    .user-profile-container.is-groupchat.has-4-members:before {
+      z-index: 1;
+    }
+    
+    &.has-4-members:before {
       top: 0%;
       width: 50%;
       height: 100%;
       border-right: 1px solid #e1e1e1;
-      z-index: 1; }
+      z-index: 1;
+    }
+*/ }
+    .user-profile-container.is-groupchat[class*='-members']:after, .user-profile-container.is-groupchat[class*='-members']:before {
+      content: '';
+      position: absolute; }
 
 .img-user-profile {
   width: 100%;
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0; }
 
 .overlay-user-profile {
   /* 부재중 상태 표시 레이어 */
