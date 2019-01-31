@@ -358,7 +358,7 @@
 		  <label class="class-name">fn-22</label>
 		</td>
 		<td>
-		  <span class="fn-22" style="font-size: 22px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b></span>
+		  <span class="fn-22" style="font-size: 22px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b><br>@01397426/-=*{~!}</span>
 		</td>
 		<td>
 		  <span>관리자 메뉴 - 타이틀</span>
@@ -671,12 +671,17 @@
 			<label>24</label>
 			<i class="right-pos typcn typcn-arrow-sorted-down"></i>
 		  </button>
-		  <!-- <div class="jui-dropdown">
-			<ul>
+		  
+		  <div class="jui-dropdown dropdown-menu">
+			<ul class="group fn-14" style="font-size: 14px;">
 			  <li>멤버 관리하기</li>
 			  <li>멤버 초대하기</li>
 			</ul>
-		  </div> -->
+			<ul class="group fn-14" style="font-size: 14px;">
+			  <li>탈퇴하기</li>
+			</ul>
+		  </div>
+		  
 		</td>
 		<td><span>Transparent</span></td>
 		<td>$color-white</td>
@@ -739,7 +744,7 @@
 		</td>
 		<td><span>-</span></td>
 		<td>$color-mono</td>
-		<td>$base-font-size</td>
+		<td>$small-font-size :13px</td>
 		<td>text-only</td>
 	  </tr>
 	  <tr>
@@ -754,7 +759,7 @@
 		</td>
 		<td><span>-</span></td>
 		<td>$color-confirm</td>
-		<td>$base-font-size</td>
+		<td>$small-font-size :13px</td>
 		<td>right-icon</td>
 	  </tr>
 	</tbody>
@@ -777,6 +782,10 @@
 	else {
 	   $(this).addClass('open');
 	}
+  });
+  
+  $('.dropdown-menu').click(function() {
+	$('.dropdown').removeClass('open');
   });
   
   $('.switch-button').click(function() {
