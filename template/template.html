@@ -669,17 +669,70 @@
 		<td>
 		  <button class="jui-button-cancel transparent dropdown">
 			<label>24</label>
-			<i class="right-pos typcn typcn-arrow-sorted-down"></i>
+			<i class="right-pos typcn typcn-arrow-sorted-down icon-arrow"></i>
 		  </button>
 		  
 		  <div class="jui-dropdown dropdown-menu">
-			<ul class="group fn-14" style="font-size: 14px;">
-			  <li>멤버 관리하기</li>
-			  <li>멤버 초대하기</li>
-			</ul>
-			<ul class="group fn-14" style="font-size: 14px;">
-			  <li>탈퇴하기</li>
-			</ul>
+			
+			<!-- has group title -->
+			<div class="group">
+			  <h5 class="group-title fn-12" style="font-size: 12px;">옵션 그룹명</h5>
+			  <ul class="fn-14" style="font-size: 14px;">
+			    <li>멤버 관리하기</li>
+			    <li>멤버 영구 차단하기</li>
+			  </ul>
+			</div>
+			
+			
+			<!-- has left-icon group -->
+			<div class="group">
+			  <ul class="fn-14" style="font-size: 14px;">
+			    <li class="flex"><i class="icon left-pos typcn typcn-filter"></i>멤버 필터 설정</li>
+			    <li class="flex"><i class="icon left-pos typcn typcn-times"></i>멤버 삭제</li>
+			  </ul>
+			</div>
+			
+			
+			<!-- has sub-menu group -->
+			<div class="group">
+			  <ul class="fn-14" style="font-size: 14px;">
+			    <li class="flex has-subgroup"><i class="icon submenu right-pos typcn typcn-media-play"></i>선택한 멤버 이동 ...
+			      <div class="jui-dropdown dropdown-menu">
+			        <!-- has left-icon group -->
+			        <div class="group">
+				      <ul class="fn-14" style="font-size: 14px;">
+					    <li class="flex"><i class="icon left-pos typcn typcn-clipboard"></i>관리 부서 Management Dep.</li>
+					    <li class="flex"><i class="icon left-pos typcn typcn-clipboard"></i>개발 부서</li>
+					  </ul>
+					</div>
+			      </div>
+			    </li>
+			    <li class="flex has-subgroup"><i class="icon submenu right-pos typcn typcn-media-play"></i>선택한 멤버 아카이브 ...
+			      <div class="jui-dropdown dropdown-menu left-pos">
+			        <!-- has left-icon group -->
+			        <div class="group">
+				      <ul class="fn-14" style="font-size: 14px;">
+					    <li class="flex"><i class="icon left-pos typcn typcn-book"></i>영구 보관</li>
+					    <li class="flex"><i class="icon left-pos typcn typcn-book"></i>임시 보관 (30일)</li>
+					  </ul>
+					</div>
+			      </div>
+			    </li>
+			  </ul>
+			</div>
+			
+			
+			<!-- has selectable indicator -->
+			<div class="group opt-selectable">
+			  <h5 class="group-title fn-12" style="font-size: 12px;">선택 가능 옵션</h5>
+			  <ul class="fn-14" style="font-size: 14px;">
+			    <li class="selected"><i class="icon left-pos typcn typcn-tick"></i><span>부서 정보 변경 시 일괄 적용</span></li>
+			    <li><i class="icon left-pos typcn typcn-tick"></i><span>직책 정보 변경 시 개별 멤버에게만 적용</span></li>
+			    <li><i class="icon left-pos typcn typcn-tick"></i><span>반영하지 않음</span></li>
+			  </ul>
+			</div>
+			
+			
 		  </div>
 		  
 		</td>
@@ -783,6 +836,17 @@
 	   $(this).addClass('open');
 	}
   });
+  
+  $('.dropdown-menu .opt-selectable li').click(function() {
+	if( $(this).hasClass('selected') ){
+	  //$(this).removeClass('open');
+	}
+	else {
+	  $(this).parent().find('li').removeClass('selected');
+	  $(this).addClass('selected');
+	}
+  });
+  
   
   $('.dropdown-menu').click(function() {
 	$('.dropdown').removeClass('open');
