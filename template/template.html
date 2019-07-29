@@ -75,7 +75,14 @@
 		background-color: #F2F2F2;
 		width: 48px;
 		height: 48px;
+		display: inline-block;
+		float: left;
 	  }
+	  
+	  .color-chip ~ .color-chip {
+	    margin-left: 5px;
+	  }
+	  
 	  em {
 		display: block;
 		font-style: normal;
@@ -122,6 +129,13 @@
 		<th style="width: 50%;">
 		  <span><em>컬러 명</em>Color Name</span>
 		</th>
+	  </tr>
+	  <tr>
+		<td></td>
+		<td>
+		  <div class="color-chip color-base _baseColor" style="background-color: #3A89FF;"></div>
+		</td>
+		<td></td>
 	  </tr>
 	  <tr>
 		<td>
@@ -822,7 +836,7 @@
 
 
 
-  
+  <script src="./colorGenTest.js"></script>
   
   <script src="../js/jquery-1.11.3.min.js"></script>
   
@@ -862,6 +876,47 @@
 	  $('#jndApp').addClass('theme-dark');
 	}
   });
+  
+  var colorCount = 1;
+  
+  
+  $('._baseColor').click(function() {
+	
+	var baseColorObj = $(this); //.removeClass('_baseColor')
+	var targetObj = baseColorObj.clone().appendTo(baseColorObj.parent()).addClass('_target');
+	
+	if ( colorCount === 1){
+	  // create base-hover 
+	  minusRGB(targetObj, targetObj[0].style.backgroundColor, 39, 25, 13);
+    }
+    else if (colorCount === 2) {
+	  // create active-hover 
+	  minusRGB(targetObj, targetObj[0].style.backgroundColor, 58, 46, 13);
+    }
+    
+    colorCount = colorCount + 1;
+    	
+  });
+  
+  
+  function minusRGB(target, basecolor, red, green, blue) {
+	
+	var initColor = basecolor.replace(/(^rgb\()/g, "").replace(/(\)$)/g, ""); // e.g. rgb(0, 196, 115) -> 0, 196, 115
+	var redColor = parseInt(initColor.split(',')[0]) - red;
+	var greenColor = parseInt(initColor.split(',')[1]) - green;
+	var blueColor = parseInt(initColor.split(',')[2]) - blue;
+
+	console.log(redColor, greenColor, blueColor);
+	
+	var result = "rgb(" + redColor + ", " + greenColor + ", " + blueColor + ")";
+	
+	target[0].style.backgroundColor = result;
+	
+	target.attr('title', result);
+	
+  }
+  
+  
   </script>
   
 </body>

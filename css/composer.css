@@ -1,0 +1,87 @@
+/* Default Variables */
+/* Dark Theme */
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: Helvetica Neue, sans-serif;
+  padding: 15px;
+  margin: 0; }
+
+/* Basic Anchor Tag */
+a {
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2em;
+  color: #969696; }
+  a:after {
+    content: '';
+    display: block;
+    clear: both;
+    float: none; }
+  a:hover {
+    color: #828282; }
+  a:active {
+    color: #828282; }
+  a:focus {
+    color: #828282; }
+  a label {
+    cursor: inherit; }
+  a i {
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle; }
+    a i:first-child {
+      float: left; }
+    a i:last-child {
+      float: right; }
+
+a.jui-text-link-confirm {
+  color: #3A89FF; }
+  a.jui-text-link-confirm:not([disabled]):hover {
+    color: #0092D8; }
+  a.jui-text-link-confirm:not([disabled]):active {
+    color: #0389C8; }
+  a.jui-text-link-confirm:not([disabled]):focus {
+    color: #0389C8; }
+
+/* Basic Button Tag */
+button {
+  position: relative;
+  box-sizing: border-box; }
+
+button[class*="jui-button"] {
+  outline: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 0.2em;
+  background-color: #cccccc;
+  font-size: 15px;
+  line-height: 1.2em;
+  font-weight: 600;
+  font-weight: 700; }
+  button[class*="jui-button"] label {
+    position: relative;
+    display: inline-block;
+    pointer-events: none; }
+  button[class*="jui-button"] i {
+    position: relative;
+    font-size: 18px;
+    height: 18px;
+    transform: translateY(-1px); }
+    button[class*="jui-button"] i.right-pos {
+      margin-right: -4.5px;
+      margin-left: 3px;
+      float: right; }
+    button[class*="jui-button"] i.left-pos {
+      margin-left: -4.5px;
+      margin-right: 3px;
+      float: left; }
+  button[class*="jui-button"]:not([disabled]):active {
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+  button[class*="jui-button"][disabled] {
+    cursor: not-allowed;
+    background-color: #cccccc;
+    color: #FFFFFF; }
