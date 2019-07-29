@@ -1,0 +1,57 @@
+
+@mixin when-disabled() {
+  cursor: $value-not-allowed;
+  background-color: $color-mono;
+  color: $color-white;
+}
+
+@mixin is-outlined($color, $background) {
+  border-color: $color;
+  background-color: $background;
+  color: $color;
+}
+
+@mixin is-transparent($color) {
+  border-color: $color-transparent;
+  background-color: $color-transparent;
+  color: $color;
+}
+
+
+@mixin clearfix {
+  &:after {
+	content: '';
+	display: block;
+	clear: both;
+	float: none;
+  }
+}
+
+@mixin float-left {
+  float: left;
+}
+
+@mixin float-right {
+  float: right;
+}
+
+@mixin typicon-pos-fix {
+  transform: translateY(-1px); //typicon 아이콘 형태에 따른 위치 보정
+}
+
+@mixin base-font-style() {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+}
+
+
+@mixin sizing($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+
+
+

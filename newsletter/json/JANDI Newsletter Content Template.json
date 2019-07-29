@@ -1,0 +1,84 @@
+{
+  "section": [
+    {
+      "sectionID": 0,
+      "sectIonOrder": 0,
+      "sectionTitle": "잔디 일을 바꾸다",
+      "sectionLayout": "col-1-grid"
+    },
+    {
+      "sectionID": 1,
+      "sectIonOrder": 1,
+      "sectionTitle": "스마트워크를 말하다",
+      "sectionLayout": "col-2-grid"
+    },
+    {
+      "sectionID": 2,
+      "sectIonOrder": 2,
+      "sectionTitle": "잔디 활용 팁",
+      "sectionLayout": "list"
+    },
+    {
+      "sectionID": 3,
+      "sectIonOrder": 3,
+      "sectionTitle": "이벤트 소식",
+      "sectionLayout": "col-1-grid"
+    }
+  ],
+  "contents": [
+    {
+      "targetSectionID": 0,
+      "contentID": 11,
+      "contentThumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/1.+gurogu.jpg",
+      "contentTitle": "[비영리] 구로구소기업소상공인회의 간편 전자 결재 시스템, 어떻게 만들었을까요?",
+      "contentLink": "http://blog.jandi.com/ko/2018/11/14/customerstories-gurokbiz/",
+      "contentDescription": "잔디를 도입한 후 모든 회원들에게 투명하게 업무와 재정 흐름을 공개할 수 있게 된 구로구소기업소상공인회. 조직 안정화와 스마트워크를 구축하게 된 계기와 그 구체적인 변화는 무엇일까요?",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 12,
+      "contentThumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/2.+2peoplepg.jpg",
+      "contentTitle": "2명이서 20만 유저 관리하기\n#1 온라인편",
+      "contentLink": "http://blog.jandi.com/ko/2018/11/27/working_cx/",
+      "contentDescription": "고객경험(Customer Experience)의 의미를 알고 계신가요? CX의 의미 그리고 잔디 CX팀이 어떤 툴(Tool)을 사용하고 어떻게 일을 하는지 소개해 드립니다. #온라인편",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 13,
+      "contentThumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/3.+nps1.png",
+      "contentTitle": "서비스 성과 지표로 고민중이세요?\n① NPS 개념알기",
+      "contentLink": "http://blog.jandi.com/ko/2018/11/07/what_is_nps/",
+      "contentDescription": "잔디 CX 팀은 Customer Experience 라는 팀 이름에 걸맞게 '사용자들이 잔디를 추천하는 지수'인 'NPS (Net Promoter Score)'를 저희 팀 만의 서비스 성과 지표로...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 2,
+      "contentID": 14,
+      "contentThumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/4.+alert.png",
+      "contentTitle": "원격 매장/매니저 출퇴근 알람 잔디로 받기\n(코무: 코딩 무관함)",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/15/location_check_with_jandi/",
+      "contentDescription": "다양한 지역의 빨래방을 방문해야하는 매니저님이 무인 빨래방 관리를 위해 특정 매장에 방문한 경우, 이를 잔디 알람으로 받아 볼 수 있을까요?...",
+      "contentAuthor": "워시엔조이 - 봉재원"
+    },
+    {
+      "targetSectionID": 2,
+      "contentID": 15,
+      "contentThumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/5.+npo.jpg",
+      "contentTitle": "비영리조직의 스마트워크",
+      "contentLink": "http://blog.jandi.com/ko/2018/11/06/smartwork_for_npo/",
+      "contentDescription": "공익적 활동을 하는 다양한 비영리 단체 그리고 사회적 기업들을 많이 만납니다. 그들이 일하는 방식들을 많이 접하면서, 왜 비영리조직이야 말로 효율적인 업무방식...",
+      "contentAuthor": "前 테크숩 사무국장 - 정지훈"
+    },
+    {
+      "targetSectionID": 3,
+      "contentID": 16,
+      "contentThumbnail": "https://s3-ap-northeast-1.amazonaws.com/jandi-ftp/marketing/eDM/Brown+Newsletter+test/2018.11+News+letters/181211_Vol.2/6.seminar.jpg",
+      "contentTitle": "",
+      "contentLink": "https://docs.google.com/forms/d/e/1FAIpQLSfS2qo34RXA6IEZOzcvaP3CC37eGZNOaBO2Kqq2TwKz0ee51g/viewform",
+      "contentDescription": "",
+      "contentAuthor": ""
+    }
+  ]
+}

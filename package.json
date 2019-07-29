@@ -1,0 +1,25 @@
+{
+  "name": "sass-gen",
+  "version": "1.0.0",
+  "description": "본 리포지토리는 재사용되는 컴포넌트들을 클래스 조합으로 생성해주는 컴포넌트 생성기에 대한 코드를 담고 있습니다.",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css",
+    "localhost": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ted-jihoon-kim/jnd-comp-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ted-jihoon-kim/jnd-comp-generator/issues"
+  },
+  "homepage": "https://github.com/ted-jihoon-kim/jnd-comp-generator#readme"
+}

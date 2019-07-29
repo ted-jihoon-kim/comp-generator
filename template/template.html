@@ -1,0 +1,924 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>SCSS Test Template</title>
+  <link rel="stylesheet" href="../css/theme.dark.css" />
+  <link rel="stylesheet" href="../css/snb.group.profile.css" />
+  <link rel="stylesheet" href="../css/component.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../font/typicons.css" />
+  
+  <style>
+	  i:before {
+		font-family: 'typicons';
+		speak: none;
+		display: inline-block;
+		-webkit-font-smoothing: antialiased;
+		font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	  } 
+	  table {
+		border: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		text-align: left;
+		font-size: 13px;
+		font-weight: 400;
+		margin-bottom: 5em;
+	  }
+	  
+	  tr:first-child {
+		box-shadow: 0 1px 0 0 #CBCBCB;
+		line-height: 32px;
+	  }
+	  td {
+		padding: 8px 8px 8px 0;
+	  }
+	  td select {
+		display: inline-block;
+		width: 90%;
+	  }
+	  th {
+		font-size: 14px;
+		color: #494949;
+	  }
+	  th:nth-child(1) {
+		width: 25%;
+	  }
+	  th:nth-child(2) {
+		width: 25%;
+	  }
+	  th:nth-child(3) {
+		width: 16%;
+	  }
+	  th:nth-child(4) {
+		width: 14%;
+	  }
+	  th:nth-child(5) {
+		width: 10%;
+	  }
+	  th:nth-child(6) {
+		width: 10%;
+	  }
+	  .class-name {
+		padding: 2px 4px;
+		border-radius: 2px;
+		background-color: #F2F2F2;
+		color: #757575;
+		line-height: 24px;
+	  }
+	  .color-chip {
+		border-radius: 2px;
+		background-color: #F2F2F2;
+		width: 48px;
+		height: 48px;
+		display: inline-block;
+		float: left;
+	  }
+	  
+	  .color-chip ~ .color-chip {
+	    margin-left: 5px;
+	  }
+	  
+	  em {
+		display: block;
+		font-style: normal;
+		color: #898989;
+		line-height: 11px;
+		font-size: 12px;
+		margin-left: -2px;
+		margin-bottom: -2px;
+	  }
+	  h1 {
+		color: #6C757C;
+		opacity: 0.35;
+	  }
+	  #jndApp {
+		transition: all ease-out 120ms;
+	  }
+  </style>
+  
+</head>
+
+<body id="jndApp">
+  <nav style="height: 120px; border-bottom: 1px solid #eee;">
+	<h2>컴포넌트 템플릿 데모 페이지</h2>
+	<br>
+	<span class="fn-12 switch-button-label" style="font-weight: 700;vertical-align: bottom;">다크 테마</span>
+	<div class="switch-button size-small" ng-class="{'switch-on': isActive}" style="">
+	  <div class="switch-background"></div>
+	  <div class="switch-handler"></div>
+	</div>
+	
+  </nav>
+
+  <h1>Foundations</h1>
+  <h3>Color</h3>
+  <table >
+	<tbody>
+	  <tr>
+		<th >
+		  <span><em>클래스명</em>Class Name</span>
+		</th>
+		<th style="width: 25%;">
+		  <span><em>미리보기</em>Preview</span>
+		</th>
+		<th style="width: 50%;">
+		  <span><em>컬러 명</em>Color Name</span>
+		</th>
+	  </tr>
+	  <tr>
+		<td></td>
+		<td>
+		  <div class="color-chip color-base _baseColor" style="background-color: #3A89FF;"></div>
+		</td>
+		<td></td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">color-chip</label>
+		  <label class="class-name">color-confirm</label>
+		</td>
+		<td>
+		  <div class="color-chip color-confirm"></div>
+		</td>
+		<td>
+		  <span>Confirm</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">color-chip</label>
+		  <label class="class-name">color-notification</label>
+		</td>
+		<td>
+		  <div class="color-chip color-notification"></div>
+		</td>
+		<td>
+		  <span>Notification</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">color-chip</label>
+		  <label class="class-name">color-yellow</label>
+		</td>
+		<td>
+		  <div class="color-chip color-yellow"></div>
+		</td>
+		<td>
+		  <span>Yellow</span>
+		</td>
+	  </tr>
+	</tbody>
+  </table>
+  
+  
+  <h3>Profile</h3>
+  <table>
+	<tbody>
+	  <tr>
+		<th>
+		  <span><em>클래스명</em>Class Name</span>
+		</th>
+		<th>
+		  <span><em>미리보기</em>Preview</span>
+		</th>
+		<th>
+		  <!-- 외관 종류
+					  
+			  1. Default : 등록은 되었으나, 프로필 사진을 정하지 않은 상태
+			  2. Dummy : 초대중인 멤버 (초대 수락하지 않은 상태)
+			  3. Character : 잔디에서 제공하는 캐릭터를 설정한 상태
+			  4. Customized : 개별 프로필 사진을 업로드한 상태
+			  5. Bot : 잔디 커넥트 설정 시 해당 서비스 프로필 기본 상태 -->
+		  <span><em>외관</em>Appearance</span>
+		</th>
+		<th>
+		  <!-- 상태 종류
+					  
+			  1. online : 접속중인 상태
+			  2. offline : 접속하지 않은 상태
+			  3. away : 부재중 설정한 상태
+			  4. disabled : 차단 또는 탈퇴한 상태 -->
+		  <span><em>상태</em>Status</span>
+		</th>
+		<th>
+		  <!-- 프로필의 크기
+					  
+			  1. eXtra Small : 23*23px
+			  2. Small : 26*26px
+			  3. Medium : 28*28px
+			  4. Large : 32*32px
+			  5. eXtra Large : 36*36px
+			  6. 106 size : 106*106px -->
+		  <span><em>크기</em>Size</span>
+		</th>
+		<th>
+		  <!-- 조합 형태
+					  
+			  1. group profile (3) : 3인이 참여중인 그룹 채팅 프로필
+			  2. group profile (4) : 4인이 참여중인 그룹 채팅 프로필
+			  3. group profile (5) : 5인이상 참여중인 그룹 채팅 프로필
+			  4. editable : 수정 가능한 프로필
+			  5. editable-bottom : 수정 가능한 프로필 (하단에 수정 버튼 제공)
+			  6. preivew : 프리뷰 가능한 프로필 -->
+		  <span><em>조합 형태</em>Combination</span>
+		</th>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">user-profile-container</label>
+		  <label class="class-name">size-106</label></td>
+		<td>
+		  <div class="user-profile-container size-106">
+			<!-- 사용자 프로필 이미지 -->
+			<img class="img-user-profile" src="../assets/images/profile_default_240.png">
+			
+			<!-- 부재중 상태 표시 레이어 -->
+			<div class="overlay-user-profile">
+			  <i class="icon-svg ico-away"></i>
+			</div>
+		  </div>
+		</td>
+		<td>
+		  <span>Default</span>
+		</td>
+		<td>
+		  <span>offline</span>
+		</td>
+		<td>
+		  <span>106 px</span>
+		</td>
+		<td>
+		  <span>Default (non-editable)</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">user-profile-container</label>
+		  <label class="class-name">is-groupchat</label>
+		  <label class="class-name">has-3-members</label>
+		  <label class="class-name">size-xl</label></td>
+		<td>
+		  <div class="user-profile-container is-groupchat has-3-members size-xl">
+			<div class="img-user-profile">
+			  <img class="img-user-profile" src="../assets/images/character_03.png">
+			</div>
+			<div class="img-user-profile">
+			  <img class="img-user-profile" src="../assets/images/character_06.png">
+			</div>
+			<!-- 부재중 상태 표시 레이어 
+			<div class="overlay-user-profile">
+			  <i class="icon-svg ico-away"></i>
+			</div> -->
+		  </div>
+		</td>
+		<td>
+		  <span>Character</span>
+		</td>
+		<td>
+		  <span>-</span>
+		</td>
+		<td>
+		  <span>eXtra Large</span>
+		</td>
+		<td>
+		  <span>group profile (3)</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">user-profile-container</label>
+		  <label class="class-name">is-away</label>
+		  <label class="class-name">size-m</label></td>
+		<td>
+		  <div class="user-profile-container is-away size-m">
+			<!-- <div class="img-user-profile"> -->
+			  <img class="img-user-profile" src="../assets/images/custom_profile.png">
+			<!-- </div> -->
+			<!-- 부재중 상태 표시 레이어 -->
+			<div class="overlay-user-profile">
+			  <i class="icon-svg ico-away"></i>
+			</div>
+		  </div>
+		</td>
+		<td>
+		  <span>Customize</span>
+		</td>
+		<td>
+		  <span>away</span>
+		</td>
+		<td>
+		  <span>Medium</span>
+		</td>
+		<td>
+		  <span>Default (non-editable)</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">user-profile-container</label>
+		  <label class="class-name">size-s</label></td>
+		<td>
+		  <div class="user-profile-container size-s">
+			<!-- <div class="img-user-profile"> -->
+			  <img class="img-user-profile" src="../assets/images/bot-google-calendar.png">
+			<!-- </div> -->
+			<!-- 부재중 상태 표시 레이어
+			<div class="overlay-user-profile">
+			  <i class="icon-svg ico-away"></i>
+			</div> -->
+		  </div>
+		</td>
+		<td>
+		  <span>Bot</span>
+		</td>
+		<td>
+		  <span>-</span>
+		</td>
+		<td>
+		  <span>small</span>
+		</td>
+		<td>
+		  <span>Default (non-editable)</span>
+		</td>
+	  </tr>
+	</tbody>
+  </table>
+  
+  <h3>Fonts</h3>
+  <table >
+	<tbody>
+	  <tr>
+		<th>
+		  <span><em>클래스명</em>Class Name</span>
+		</th>
+		<th style="width: 25%;">
+		  <span><em>미리보기</em>Preview</span>
+		</th>
+		<th style="width: 30%;">
+		  <span><em>사용처</em>Usage</span>
+		</th>
+		<th style="width: 20%;">
+		  <span><em>크기</em>Font size</span>
+		</th>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-22</label>
+		</td>
+		<td>
+		  <span class="fn-22" style="font-size: 22px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b><br>@01397426/-=*{~!}</span>
+		</td>
+		<td>
+		  <span>관리자 메뉴 - 타이틀</span>
+		</td>
+		<td>
+		  <span>22px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-20</label>
+		</td>
+		<td>
+		  <span class="fn-20" style="font-size: 20px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b></span>
+		</td>
+		<td>
+		  <span>풀스크린 모달 - 타이틀</span>
+		</td>
+		<td>
+		  <span>20px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-18</label>
+		</td>
+		<td>
+		  <span class="fn-18" style="font-size: 18px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b></span>
+		</td>
+		<td>
+		  <span>점프 모달 - 검색어 입력창<br>잔디 커넥트 - 헤더 타이틀</span>
+		</td>
+		<td>
+		  <span>18px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-16</label>
+		</td>
+		<td>
+		  <span class="fn-16" style="font-size: 16px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b></span>
+		</td>
+		<td>
+		  <span>관리자 메뉴 - 헤더 타이틀<br>LNB - 팀 이름<br>팀 목록 - 팀 이름<br>모달 - 헤더 타이틀</span>
+		</td>
+		<td>
+		  <span>16px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-15</label>
+		</td>
+		<td>
+		  <span class="fn-15" style="font-size: 15px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b></span>
+		</td>
+		<td>
+		  <span>우측 패널 - 헤더 타이틀<br>탭 네비게이션 - 메뉴<br>파일 리스트 - 파일 명<br>챗 뷰 - 시스템 메시지 (날짜)<br>ESM - 타이틀</span>
+		</td>
+		<td>
+		  <span>15px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-14</label>
+		</td>
+		<td>
+		  <span class="fn-14" style="font-size: 14px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b></span>
+		</td>
+		<td>
+		  <span>SNB - 타이틀<br>드롭다운 메뉴<br>토픽 & 채팅 리스트 - 이름<br>챗 뷰 - 시스템 메시지 (일반)<br>코멘트 - 본문</span>
+		</td>
+		<td>
+		  <span>14px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-13</label>
+		</td>
+		<td>
+		  <span class="fn-13" style="font-size: 13px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b></span>
+		</td>
+		<td>
+		  <span>커스텀 셀렉트 박스 버튼 - 레이블<br>코멘트 - 작성자 이름<br>필터 드롭다운 - 레이블<br>필터 토글 버튼 - 레이블</span>
+		</td>
+		<td>
+		  <span>13px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-12</label>
+		</td>
+		<td>
+		  <span class="fn-12" style="font-size: 12px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b></span>
+		</td>
+		<td>
+		  <span>캡슐 레이블 텍스트<br>투표 & 할 일 카드 - 설명<br>할 일 상세 - 시스템 메시지<br>할 일 카드 목록 - 기한</span>
+		</td>
+		<td>
+		  <span>12px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-11</label>
+		</td>
+		<td>
+		  <span class="fn-11" style="font-size: 11px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b></span>
+		</td>
+		<td>
+		  <span>입력 글자 수 정보 텍스트<br>좋아요 메뉴 레이블<br>읽음 메뉴 레이블<br>멘션 & 조직도 멤버 목록 - 부서명</span>
+		</td>
+		<td>
+		  <span>11px</span>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">fn-10</label>
+		</td>
+		<td>
+		  <span class="fn-10" style="font-size: 10px;">효과적인 팀 워크 가벼워진 업무,<br><b>협업툴 잔디</b><br>Collaboration tool <b>JANDI</b></span>
+		</td>
+		<td>
+		  <span>메시지 & 코멘트 - 타임 스탬프</span>
+		</td>
+		<td>
+		  <span>10px</span>
+		</td>
+	  </tr>
+	</tbody>
+  </table>
+  
+  <h1>Components</h1>
+  <h3>Buttons (Box types)</h3>
+  <table>
+	<tbody>
+	  <tr>
+		<th>
+		  <span><em>클래스명</em>Class Name</span>
+		</th>
+		<th>
+		  <span><em>미리보기</em>Preview</span>
+		</th>
+		<th>
+		  <!-- 외관 종류 (box type)
+					  
+			  1. Rounded-edge : 각 모서리만 둥근 형태
+			  2. Circular-shaped : 좌우측 모서리가 둥근 형태
+			  3. Transparent : 배경이 투명한 형태
+			  4. Outlined : 외곽선이 있는 형태
+			  5. Arrow-shaped : 좌/우측이 화살표 형태 -->
+		  <span><em>외관</em>Appearance</span>
+		</th>
+		<th>
+		  <span><em>컬러</em>Color</span>
+		</th>
+		<th>
+		  <!-- 폰트의 크기 종류 (공통)
+					  
+			  1. Caption : 11px
+			  2. eXtra Small : 12px
+			  3. Small : 13px
+			  4. Default : 15px
+			  5. Medium : 16px
+			  6. Large : 18px
+			  7. eXtra Large : 20px
+			  8. Title : 22px -->
+		  <span><em>크기</em>Size</span>
+		</th>
+		<th>
+		  <!-- 조합 형태 종류 (box type)
+					  
+			  1. label-only : 아이콘 없이 레이블만 있는 형태
+			  2. icon-only : 레이블 없이 아이콘만 있는 형태
+			  3. left-icon : 아이콘이 레이블 좌측에 있는 형태
+			  4. right-icon : 아이콘이 레이블 우측에 있는 형태
+			  5. has-dropdown : 드롭다운(화살표)가 같이 있는 형태 -->
+		  <span><em>조합 형태</em>Combination</span>
+		</th>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">jui-button-confirm</label>
+		</td>
+		<td>
+		  <button class="jui-button-confirm">
+			<label>Confirm</label>
+		  </button>
+		</td>
+		<td>
+		  <select id="select-appearance" style="font-size: 13px;">
+			<option value="0" label="" disabled>select appearance</option>
+			<option value="1" label="" selected>1. Rounded-edge</option>
+			<option value="2" label="" >2. Circular-shaped</option>
+			<option value="3" label="" >3. Transparent</option>
+			<option value="4" label="" >4. Outlined</option>
+			<option value="5" label="" >5. Arrow-shaped (Left)</option>
+			<option value="6" label="" >6. Arrow-shaped (Right)</option>
+		  </select>
+		</td>
+		<td>
+		  <select id="select-color" style="font-size: 13px;">
+			<option value="0" label="" disabled>select color</option>
+			<option value="1" label="" selected>color-confirm</option>
+			<option value="2" label="" >color-alert</option>
+			<option value="3" label="" >color-cancel</option>
+			<option value="4" label="" >color-mono</option>
+		  </select>
+		</td>
+		<td>
+		  <input type="number" value="13" style="width: 50%;">
+<!-- 		  $base-font-size -->
+		</td>
+		<td>
+		  <select id="select-combination" style="font-size: 13px;">
+			<option value="0" label="" disabled>select combination</option>
+			<option value="1" label="" selected>label-only</option>
+			<option value="2" label="" >left-icon</option>
+			<option value="3" label="" >right-icon</option>
+			<option value="4" label="" >icon-only</option>
+			<option value="5" label="" >label-has-dropdown</option>
+			<option value="6" label="" >icon-has-dropdown</option>
+		  </select>
+		</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">jui-button-confirm</label>
+		</td>
+		<td>
+		  <button class="jui-button-confirm outlined">
+			<label>1초만에 회원가입하기</label>
+			<i class="right-pos typcn typcn-chevron-right"></i>
+		  </button>
+		</td>
+		<td><span>Outlined</span></td>
+		<td><span>$color-confirm</span></td>
+		<td>$base-font-size</td>
+		<td>right-icon</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">jui-button-alert circular-shaped</label>
+		</td>
+		<td>
+		  <button class="jui-button-alert circular-shaped">
+			<i class="left-pos typcn typcn-delete"></i>
+			<label>Terminate this app</label>
+		  </button>
+		</td>
+		<td><span>Circular-shaped</span></td>
+		<td>$color-alert</td>
+		<td>$base-font-size</td>
+		<td>left-icon</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">jui-button [disabled]</label>
+		</td>
+		<td>
+		  <button class="jui-button" disabled>
+			<label>Disabled</label>
+		  </button>
+		</td>
+		<td><span>Rounded-edge</span></td>
+		<td>$color-mono</td>
+		<td>$base-font-size</td>
+		<td>label-only</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">jui-button-cancel left-arrow-shaped</label>
+		</td>
+		<td>
+		  <button class="jui-button-cancel left-arrow-shaped" >
+			<label>뒤로</label>
+		  </button>
+		</td>
+		<td><span>Arrow-shaped (Left)</span></td>
+		<td>$color-white</td>
+		<td>$base-font-size</td>
+		<td>label-only</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">jui-button-cancel right-arrow-shaped</label>
+		</td>
+		<td>
+		  <button class="jui-button-cancel right-arrow-shaped" >
+			<i class="typcn typcn-media-fast-forward"></i>
+			<!--<label>다음</label>-->
+		  </button>
+		</td>
+		<td><span>Arrow-shaped (Right)</span></td>
+		<td>$color-white</td>
+		<td>$base-font-size</td>
+		<td>icon-only</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">jui-button-cancel transparent dropdown</label>
+		</td>
+		<td>
+		  <button class="jui-button-cancel transparent dropdown">
+			<label>24</label>
+			<i class="right-pos typcn typcn-arrow-sorted-down icon-arrow"></i>
+		  </button>
+		  
+		  <div class="jui-dropdown dropdown-menu">
+			
+			<!-- has group title -->
+			<div class="group">
+			  <h5 class="group-title fn-12" style="font-size: 12px;">옵션 그룹명</h5>
+			  <ul class="fn-14" style="font-size: 14px;">
+			    <li>멤버 관리하기</li>
+			    <li>멤버 영구 차단하기</li>
+			  </ul>
+			</div>
+			
+			
+			<!-- has left-icon group -->
+			<div class="group">
+			  <ul class="fn-14" style="font-size: 14px;">
+			    <li class="flex"><i class="icon left-pos typcn typcn-filter"></i>멤버 필터 설정</li>
+			    <li class="flex"><i class="icon left-pos typcn typcn-times"></i>멤버 삭제</li>
+			  </ul>
+			</div>
+			
+			
+			<!-- has sub-menu group -->
+			<div class="group">
+			  <ul class="fn-14" style="font-size: 14px;">
+			    <li class="flex has-subgroup"><i class="icon submenu right-pos typcn typcn-media-play"></i>선택한 멤버 이동 ...
+			      <div class="jui-dropdown dropdown-menu">
+			        <!-- has left-icon group -->
+			        <div class="group">
+				      <ul class="fn-14" style="font-size: 14px;">
+					    <li class="flex"><i class="icon left-pos typcn typcn-clipboard"></i>관리 부서 Management Dep.</li>
+					    <li class="flex"><i class="icon left-pos typcn typcn-clipboard"></i>개발 부서</li>
+					  </ul>
+					</div>
+			      </div>
+			    </li>
+			    <li class="flex has-subgroup"><i class="icon submenu right-pos typcn typcn-media-play"></i>선택한 멤버 아카이브 ...
+			      <div class="jui-dropdown dropdown-menu left-pos">
+			        <!-- has left-icon group -->
+			        <div class="group">
+				      <ul class="fn-14" style="font-size: 14px;">
+					    <li class="flex"><i class="icon left-pos typcn typcn-book"></i>영구 보관</li>
+					    <li class="flex"><i class="icon left-pos typcn typcn-book"></i>임시 보관 (30일)</li>
+					  </ul>
+					</div>
+			      </div>
+			    </li>
+			  </ul>
+			</div>
+			
+			
+			<!-- has selectable indicator -->
+			<div class="group opt-selectable">
+			  <h5 class="group-title fn-12" style="font-size: 12px;">선택 가능 옵션</h5>
+			  <ul class="fn-14" style="font-size: 14px;">
+			    <li class="selected"><i class="icon left-pos typcn typcn-tick"></i><span>부서 정보 변경 시 일괄 적용</span></li>
+			    <li><i class="icon left-pos typcn typcn-tick"></i><span>직책 정보 변경 시 개별 멤버에게만 적용</span></li>
+			    <li><i class="icon left-pos typcn typcn-tick"></i><span>반영하지 않음</span></li>
+			  </ul>
+			</div>
+			
+			
+		  </div>
+		  
+		</td>
+		<td><span>Transparent</span></td>
+		<td>$color-white</td>
+		<td>$base-font-size</td>
+		<td>has-dropdown</td>
+	  </tr>
+	</tbody>
+  </table>
+  
+  <h3>Buttons (Text types)</h3>
+  <table>
+	<tbody>
+	  <tr >
+		<th>
+		  <span><em>클래스명</em>Class Name</span>
+		</th>
+		<th>
+		  <span><em>미리보기</em>Preview</span>
+		</th>
+		<th>
+		  <!-- 외관 종류 (text type)
+					  
+			  1. Text : 텍스트만 있는 형태 -->
+		  <span><em>외관</em>Appearance</span>
+		</th>
+		<th>
+		  <span><em>컬러</em>Color</span>
+		</th>
+		<th>
+		  <!-- 폰트의 크기 종류 (공통)
+					  
+			  1. Caption : 11px
+			  2. eXtra Small : 12px
+			  3. Small : 13px
+			  4. Default : 15px
+			  5. Medium : 16px
+			  6. Large : 18px
+			  7. eXtra Large : 20px
+			  8. Title : 22px -->
+		  <span><em>크기</em>Size</span>
+		</th>
+		<th>
+		  <!-- 조합 형태 종류 (text type)
+					  
+			  1. label-only : 아이콘 없이 레이블만 있는 형태
+			  2. left-icon : 아이콘이 레이블 좌측에 있는 형태
+			  3. right-icon : 아이콘이 레이블 우측에 있는 형태
+			  4. has-dropdown : 드롭다운(화살표)가 같이 있는 형태 -->
+		  <span><em>조합 형태</em>Combination</span>
+		</th>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">jui-text-link</label>
+		</td>
+		<td>
+		  <a href="#" class="jui-text-link" >
+			<label>더 알아보기</label>
+		  </a>
+		</td>
+		<td><span>-</span></td>
+		<td>$color-mono</td>
+		<td>$small-font-size :13px</td>
+		<td>text-only</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <label class="class-name">jui-text-link-confirm</label>
+		</td>
+		<td>
+		  <a href="#" class="jui-text-link-confirm" >
+			<label>Upgrade plan now!</label>
+			<i class="typcn typcn-arrow-right"></i>
+		  </a>
+		</td>
+		<td><span>-</span></td>
+		<td>$color-confirm</td>
+		<td>$small-font-size :13px</td>
+		<td>right-icon</td>
+	  </tr>
+	</tbody>
+  </table>
+  
+  
+
+
+
+  <script src="./colorGenTest.js"></script>
+  
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  
+  <script>
+  
+  $('.dropdown').click(function() {
+	if( $(this).hasClass('open') ){
+	  $(this).removeClass('open');
+	}
+	else {
+	   $(this).addClass('open');
+	}
+  });
+  
+  $('.dropdown-menu .opt-selectable li').click(function() {
+	if( $(this).hasClass('selected') ){
+	  //$(this).removeClass('open');
+	}
+	else {
+	  $(this).parent().find('li').removeClass('selected');
+	  $(this).addClass('selected');
+	}
+  });
+  
+  
+  $('.dropdown-menu').click(function() {
+	$('.dropdown').removeClass('open');
+  });
+  
+  $('.switch-button').click(function() {
+	if( $(this).hasClass('switch-on') ){
+	  $(this).removeClass('switch-on');
+	  $('#jndApp').removeClass('theme-dark');
+	}
+	else {
+	  $(this).addClass('switch-on');
+	  $('#jndApp').addClass('theme-dark');
+	}
+  });
+  
+  var colorCount = 1;
+  
+  
+  $('._baseColor').click(function() {
+	
+	var baseColorObj = $(this); //.removeClass('_baseColor')
+	var targetObj = baseColorObj.clone().appendTo(baseColorObj.parent()).addClass('_target');
+	
+	if ( colorCount === 1){
+	  // create base-hover 
+	  minusRGB(targetObj, targetObj[0].style.backgroundColor, 39, 25, 13);
+    }
+    else if (colorCount === 2) {
+	  // create active-hover 
+	  minusRGB(targetObj, targetObj[0].style.backgroundColor, 58, 46, 13);
+    }
+    
+    colorCount = colorCount + 1;
+    	
+  });
+  
+  
+  function minusRGB(target, basecolor, red, green, blue) {
+	
+	var initColor = basecolor.replace(/(^rgb\()/g, "").replace(/(\)$)/g, ""); // e.g. rgb(0, 196, 115) -> 0, 196, 115
+	var redColor = parseInt(initColor.split(',')[0]) - red;
+	var greenColor = parseInt(initColor.split(',')[1]) - green;
+	var blueColor = parseInt(initColor.split(',')[2]) - blue;
+
+	console.log(redColor, greenColor, blueColor);
+	
+	var result = "rgb(" + redColor + ", " + greenColor + ", " + blueColor + ")";
+	
+	target[0].style.backgroundColor = result;
+	
+	target.attr('title', result);
+	
+  }
+  
+  
+  </script>
+  
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+@import 'variables';
+@import 'mixins';
+
+
+
+
+body {
+	-webkit-font-smoothing: antialiased;
+	font-family: Helvetica Neue, sans-serif;
+	padding: $base-font-size;
+	margin: 0;
+}
+
+/* Basic Anchor Tag */
+a {
+  cursor: $value-pointer;
+  outline: $value-none;
+  display: $display-inline-block;
+  
+  font-weight: $light-font-weight;
+  font-size: $small-font-size;
+  line-height: $base-line-height;
+  
+  color: $color-mono-969696;
+  
+  @include clearfix;
+  
+  &:hover {
+	color: $color-mono-828282;
+  }
+  &:active {
+	color: $color-mono-828282;
+  }
+  &:focus {
+	color: $color-mono-828282;
+  }
+  
+  label {
+	cursor: $value-inherit;
+  }
+  
+  i {
+	font-size: $base-font-size*1.2;
+	display: $display-inline-block;
+	vertical-align: $value-middle;
+	
+	&:first-child {
+	  @include float-left;
+	}
+	&:last-child {
+	  @include float-right;
+	}
+  }
+}
+
+a.jui-text-link-confirm {
+  color: $color-confirm;
+
+  &:not([disabled]):hover {
+	color: $color-confirm-hovered;
+  }
+	
+  &:not([disabled]):active {
+	color: $color-confirm-pressed;
+  }
+	
+  &:not([disabled]):focus {
+	color: $color-confirm-pressed;
+  }
+}
+
+/* Basic Button Tag */
+button {
+  position: relative;
+  box-sizing: border-box;
+}
+
+button[class*="jui-button"] {
+  outline: $value-none;
+  cursor: $value-pointer;
+	
+  padding: $padding-base $padding-base*2;
+  border: $border-default-transparent;
+  border-radius: $border-round-base;
+	
+  background-color: $color-mono;
+  
+  @include base-font-style;
+  font-weight: $bold-font-weight;
+  
+  label {
+	//color: inherit;
+	position: $pos-relative;
+	display: $display-inline-block;
+	pointer-events: $value-none;
+  }
+  
+  i {
+	//color: inherit;
+	position: $pos-relative;
+
+	font-size: $base-font-size*1.2;
+	height: $base-font-size*1.2;
+
+	@include typicon-pos-fix;
+	
+	&.right-pos {
+	  margin-right: -($base-font-size*0.3);
+	  margin-left: $base-font-size*0.2;
+	  @include float-right;
+	}
+	
+	&.left-pos{
+	  margin-left: -($base-font-size*0.3);
+	  margin-right: $base-font-size*0.2;
+	  @include float-left;
+	}
+  }
+  
+  &:not([disabled]):active {
+	box-shadow: $box-shadow-button-inset;
+  }
+  
+  &[disabled] {
+	@include when-disabled();
+  }
+}
+
+
+

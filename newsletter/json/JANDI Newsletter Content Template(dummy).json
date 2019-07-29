@@ -1,0 +1,165 @@
+{
+  "section": [
+    {
+      "sectionID": 0,
+      "sectIonOrder": 0,
+      "sectionTitle": "잔디 일을 바꾸다",
+      "sectionLayout": "col-1-grid"
+    },
+    {
+      "sectionID": 1,
+      "sectIonOrder": 1,
+      "sectionTitle": "스마트워크를 말하다",
+      "sectionLayout": "col-2-grid"
+    },
+    {
+      "sectionID": 2,
+      "sectIonOrder": 2,
+      "sectionTitle": "잔디 활용 팁",
+      "sectionLayout": "list"
+    },
+    {
+      "sectionID": 3,
+      "sectIonOrder": 3,
+      "sectionTitle": "이벤트 소식",
+      "sectionLayout": "col-1-grid"
+    }
+  ],
+  "contents": [
+    {
+      "targetSectionID": 0,
+      "contentID": 11,
+      "contentThumbnail": "./img_local/1.gurogu.jpg",
+      "contentTitle": "[비영리] 구로구소기업소상공인회의 간편 전자 결재 시스템, 어떻게 만들었을까요?",
+      "contentLink": "http://blog.jandi.com/ko/2018/11/14/customerstories-gurokbiz/",
+      "contentDescription": "잔디를 도입한 후 모든 회원들에게 투명하게 업무와 재정 흐름을 공개할 수 있게 된 구로구소기업소상공인회. 조직 안정화와 스마트워크를 구축하게 된 계기와 그 구체적인 변화는 무엇일까요?",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 0,
+      "contentID": 17,
+      "contentThumbnail": "./img_local/181109_워시엔조이.jpg",
+      "contentTitle": "[유통] 셀프빨래방 업계 1위 워시엔조이의 잠재고객을 놓치지 않는 비법은?",
+      "contentLink": "http://blog.jandi.com/ko/2018/11/08/customercase-washenjoy/",
+      "contentDescription": "경쟁이 갈수록 심해지는 셀프빨래방 업계에서 워시엔조이는 어떻게 1위를 지킬 수 있을까요? 단 하나의 고객도 놓치지 않는 워시엔조이의 정확하고 빠른 고객 대응 시스템이 잔디를 통해 가능해졌다고 합니다. 스피드가 생명인 워시엔조이의 협업 문화에 대해서 알아볼까요?",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 12,
+      "contentThumbnail": "./img_local/2.twopeople.jpg",
+      "contentTitle": "2명이서 20만 유저 관리하기\n#1 온라인편",
+      "contentLink": "http://blog.jandi.com/ko/2018/11/27/working_cx/",
+      "contentDescription": "고객경험(Customer Experience)의 의미를 알고 계신가요? CX의 의미 그리고 잔디 CX팀이 어떤 툴(Tool)을 사용하고 어떻게 일을 하는지 소개해 드립니다. #온라인편",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 13,
+      "contentThumbnail": "./img_local/3.nps.png",
+      "contentTitle": "서비스 성과 지표로 고민중이세요?\n① NPS 개념알기",
+      "contentLink": "http://blog.jandi.com/ko/2018/11/07/what_is_nps/",
+      "contentDescription": "잔디 CX 팀은 Customer Experience 라는 팀 이름에 걸맞게 '사용자들이 잔디를 추천하는 지수'인 'NPS (Net Promoter Score)'를 저희 팀 만의 서비스 성과 지표로...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 19,
+      "contentThumbnail": "./img_local/2_electron.jpg",
+      "contentTitle": "전자결재가 기업의 생산성을 낮추는 이유",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/31/electronicpayment/",
+      "contentDescription": "과거의 형식을 그룹웨어 또는 사내 시스템에 그대로 옮긴 ‘전자결재’는 최근의 업무 환경에 어울리지 않습니다...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 21,
+      "contentThumbnail": "./img_local/5_sns+noti.png",
+      "contentTitle": "SNS 소식 잔디로 받아보기",
+      "contentLink": "http://blog.jandi.com/ko/2018/09/20/jandi_sns_integration/",
+      "contentDescription": "어느 날, 저희 팀에 고객 문의가 들어왔습니다. “페이스북 페이지도 잔디 토픽에 연동해서 볼 수 있나요?” ...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 22,
+      "contentThumbnail": "./img_local/3_email.jpg",
+      "contentTitle": "이메일이 기업의 생산성을 낮추는 이유",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/29/goodbye_email/",
+      "contentDescription": "이메일은 10년이 넘도록 업무 협업을 위한 도구로서 자리매김해 왔습니다. 사내에서 메일을 주 커뮤니케이션 용도로 사용할 때...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 23,
+      "contentThumbnail": "./img_local/3_email.jpg",
+      "contentTitle": "이메일이 기업의 생산성을 낮추는 이유",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/29/goodbye_email/",
+      "contentDescription": "이메일은 10년이 넘도록 업무 협업을 위한 도구로서 자리매김해 왔습니다. 사내에서 메일을 주 커뮤니케이션 용도로 사용할 때...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 24,
+      "contentThumbnail": "./img_local/3_email.jpg",
+      "contentTitle": "이메일이 기업의 생산성을 낮추는 이유",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/29/goodbye_email/",
+      "contentDescription": "이메일은 10년이 넘도록 업무 협업을 위한 도구로서 자리매김해 왔습니다. 사내에서 메일을 주 커뮤니케이션 용도로 사용할 때...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 1,
+      "contentID": 25,
+      "contentThumbnail": "./img_local/3_email.jpg",
+      "contentTitle": "이메일이 기업의 생산성을 낮추는 이유",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/29/goodbye_email/",
+      "contentDescription": "이메일은 10년이 넘도록 업무 협업을 위한 도구로서 자리매김해 왔습니다. 사내에서 메일을 주 커뮤니케이션 용도로 사용할 때...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 2,
+      "contentID": 14,
+      "contentThumbnail": "./img_local/4.alert.png",
+      "contentTitle": "원격 매장/매니저 출퇴근 알람 잔디로 받기\n(코무: 코딩 무관함)",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/15/location_check_with_jandi/",
+      "contentDescription": "다양한 지역의 빨래방을 방문해야하는 매니저님이 무인 빨래방 관리를 위해 특정 매장에 방문한 경우, 이를 잔디 알람으로 받아 볼 수 있을까요?...",
+      "contentAuthor": "워시엔조이 - 봉재원"
+    },
+    {
+      "targetSectionID": 2,
+      "contentID": 15,
+      "contentThumbnail": "./img_local/5.npo.jpg",
+      "contentTitle": "비영리조직의 스마트워크",
+      "contentLink": "http://blog.jandi.com/ko/2018/11/06/smartwork_for_npo/",
+      "contentDescription": "공익적 활동을 하는 다양한 비영리 단체 그리고 사회적 기업들을 많이 만납니다. 그들이 일하는 방식들을 많이 접하면서, 왜 비영리조직이야 말로 효율적인 업무방식...",
+      "contentAuthor": "前 테크숩 사무국장 - 정지훈"
+    },
+    {
+      "targetSectionID": 2,
+      "contentID": 18,
+      "contentThumbnail": "./img_local/4_connect+story.png",
+      "contentTitle": "잔디 커넥트 이야기 : 웹훅 살짝 들춰보기",
+      "contentLink": "http://blog.jandi.com/ko/2018/10/19/jandi_connect_story_webhook/",
+      "contentDescription": "구체적인 서비스를 언급한 활용 사례 보다는 다양한 사례를 만들기 위해 바탕으로 사용되는 잔디 커넥트 항목 중 웹훅(Webhook)의 용어와 원리에 대한...",
+      "contentAuthor": "와디즈 - 홍무열"
+    },
+    {
+      "targetSectionID": 2,
+      "contentID": 20,
+      "contentThumbnail": "./img_local/5_sns+noti.png",
+      "contentTitle": "SNS 소식 잔디로 받아보기",
+      "contentLink": "http://blog.jandi.com/ko/2018/09/20/jandi_sns_integration/",
+      "contentDescription": "어느 날, 저희 팀에 고객 문의가 들어왔습니다. “페이스북 페이지도 잔디 토픽에 연동해서 볼 수 있나요?” ...",
+      "contentAuthor": "JANDI"
+    },
+    {
+      "targetSectionID": 3,
+      "contentID": 16,
+      "contentThumbnail": "./img_local/6.seminar.jpg",
+      "contentTitle": "",
+      "contentLink": "https://docs.google.com/forms/d/e/1FAIpQLSfS2qo34RXA6IEZOzcvaP3CC37eGZNOaBO2Kqq2TwKz0ee51g/viewform",
+      "contentDescription": "",
+      "contentAuthor": ""
+    }
+  ]
+}
